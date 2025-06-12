@@ -6,7 +6,7 @@
   <link href="https://liuxingzhe.github.io/blog//blog/atom.xml" rel="self"/>
   
   <link href="https://liuxingzhe.github.io/blog//blog/"/>
-  <updated>2025-06-12T13:09:07.341Z</updated>
+  <updated>2025-06-12T14:01:12.663Z</updated>
   <id>https://liuxingzhe.github.io/blog//blog/</id>
   
   <author>
@@ -17,13 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AI 洞察日报 基于Cloudflare + Gemini 每日 AI 资讯聚合平台：CloudFlare-AI-Insight-Daily</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/06/11/ai-dong-cha-ri-bao-ji-yu-cloudflaregemini-mei-ri-ai-zi-xun-ju-he-ping-tai-cloudflareaiinsightdai/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/06/11/ai-dong-cha-ri-bao-ji-yu-cloudflaregemini-mei-ri-ai-zi-xun-ju-he-ping-tai-cloudflareaiinsightdai/</id>
+    <published>2025-06-12T05:41:03.000Z</published>
+    <updated>2025-06-12T14:01:12.663Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 什么是 AI 洞察日报？</p><p>2 核心优势与功能亮点</p><p>3 适用人群及价值</p><p>4 AI 洞察日报如何使用&#x2F;官网地址</p><h2 id="什么是-AI-洞察日报？"><a href="#什么是-AI-洞察日报？" class="headerlink" title="什么是 AI 洞察日报？"></a>什么是 AI 洞察日报？</h2><p>AI 洞察日报是一个智能内容聚合和生成平台，构建于 Cloudflare Workers 之上。它每日从行业新闻、热门开源项目、前沿学术论文中精选内容，并通过 Google Gemini 模型生成简洁、易读的摘要，自动发布到 GitHub Pages，让你高效掌握 AI 领域动态。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/06/AI-%E6%B4%9E%E5%AF%9F%E6%97%A5%E6%8A%A5-%E5%9F%BA%E4%BA%8ECloudflare-Gemini-%E6%AF%8F%E6%97%A5-AI-%E8%B5%84%E8%AE%AF%E8%81%9A%E5%90%88%E5%B9%B3%E5%8F%B0%EF%BC%9ACloudFlare-AI-Insight-Daily.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202908%202424'%3E%3C/svg%3E" alt="AI 洞察日报 基于Cloudflare + Gemini 每日 AI 资讯聚合平台：CloudFlare-AI-Insight-Daily"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/06/AI-%E6%B4%9E%E5%AF%9F%E6%97%A5%E6%8A%A5-%E5%9F%BA%E4%BA%8ECloudflare-Gemini-%E6%AF%8F%E6%97%A5-AI-%E8%B5%84%E8%AE%AF%E8%81%9A%E5%90%88%E5%B9%B3%E5%8F%B0%EF%BC%9ACloudFlare-AI-Insight-Daily.jpg" alt="AI 洞察日报 基于Cloudflare + Gemini 每日 AI 资讯聚合平台：CloudFlare-AI-Insight-Daily"></a></p><h2 id="核心优势与功能亮点"><a href="#核心优势与功能亮点" class="headerlink" title="核心优势与功能亮点"></a>核心优势与功能亮点</h2><ul><li><strong>边缘部署与零运维成本</strong><br>基于 Cloudflare Workers，借助边缘网络实现高性能和高可用，无需服务器维护。</li><li><strong>AI 驱动的内容处理</strong><br>集成 Google Gemini 模型，自动筛选并生成高质量的内容摘要，凸显重点，缩短阅读时间。</li><li><strong>灵活接入多源订阅</strong><br>支持 Folo 格式订阅源，轻松添加任意信息源，实现定制化聚合。</li><li><strong>全流程自动更新</strong><br>借助 GitHub Actions 实现每天自动获取、处理和发布新内容的闭环流程。</li><li><strong>架构高度可扩展</strong><br>除 AI 可用于任何主题日报，易于拓展并用于其他领域，比如 Web3、游戏快讯或投资摘要。</li><li><strong>一键发布静态网站</strong><br>自动生成 GitHub Pages 静态站点，内容可在线查阅与分享，便捷高效。</li></ul><h2 id="适用人群及价值"><a href="#适用人群及价值" class="headerlink" title="适用人群及价值"></a>适用人群及价值</h2><p>针对不同人群提出多项实用解决方案：</p><ul><li><strong>AI 从业者与研究者</strong><br>⋅ 痛点：信息量大，筛选耗时。<br>⋅ 方案：自动提炼核心内容，5 分钟内掌握最新动态。</li><li><strong>内容创作者与科技媒体人</strong><br>⋅ 痛点：选题与素材搜集困难。<br>⋅ 方案：聚合最新资讯，提供 Gemini 模型生成的播客&#x2F;视频口播稿，提升创作效率。</li><li><strong>开发者与技术爱好者</strong><br>⋅ 痛点：缺少实战项目练习。<br>⋅ 方案：项目架构清晰、开源，便于学以致用与二次定制。</li><li><strong>AI 好奇者与终身学习者</strong><br>⋅ 痛点：术语繁杂、更新快。<br>⋅ 方案：阅读 AI 生成的日报，直观理解行业动态，拓宽知识边界。</li></ul><h2 id="AI-洞察日报如何使用-官网地址"><a href="#AI-洞察日报如何使用-官网地址" class="headerlink" title="AI 洞察日报如何使用&#x2F;官网地址"></a>AI 洞察日报如何使用&#x2F;官网地址</h2><p><strong>在线阅读地址：</strong></p><ul><li>🌐 <strong>主站点(GitHub Pages )</strong> ：<a href="https://justlovemaki.github.io/CloudFlare-AI-Insight-Daily/today/book/">website-1</a></li><li>📖 <strong>备用站点(Cloudflare)</strong> ：<a href="https://ai-today.justlikemaki.vip/">website-2</a></li></ul><p>GitHub地址：<a href="https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily">https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily</a></p><p>其他类似：<a href="https://www.ahhhhfs.com/70852/">Open Source Daily：开源项目日报 每日精选高效工具</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 什么是 AI 洞察日报？&lt;/p&gt;
+&lt;p&gt;2 核心优势与功能亮点&lt;/p&gt;
+&lt;p&gt;3 适用人群及价值&lt;/p&gt;
+&lt;p&gt;4 AI 洞察日报如何使用&amp;#x2F;官网地址&lt;/p&gt;
+&lt;h2 id=&quot;什么是-AI-洞察日报</summary>
+      
+    
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
+    
+    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AI视频制作全攻略入门到精通</title>
     <link href="https://liuxingzhe.github.io/blog//blog/2025/06/11/ai-shi-pin-zhi-zuo-quan-gong-lue-ru-men-dao/"/>
     <id>https://liuxingzhe.github.io/blog//blog/2025/06/11/ai-shi-pin-zhi-zuo-quan-gong-lue-ru-men-dao/</id>
     <published>2025-06-12T05:07:42.000Z</published>
-    <updated>2025-06-12T13:09:07.341Z</updated>
+    <updated>2025-06-12T14:01:13.618Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 课程信息</p><p>2 课程大纲</p><p>3 课程下载</p><h2 id="课程信息"><a href="#课程信息" class="headerlink" title="课程信息"></a>课程信息</h2><p>AI视频制作全攻略入门到精通，夸克网盘课程。这套课程系统呈现了AI视频制作的全流程，涵盖核心内容，适合从零基础入门到高级创作需求。内容分为三大板块：一是各类AI软件使用教学，包括即梦AI、可灵AI、豆包AI、Kimi、蜗牛AI等；二是Midjourney绘画从注册开通、参数设置、画廊应用到高级卡通头像案例的进阶实践；三是视频剪辑与后期处理技巧，涉及剪映、PS创成式安装使用、Luma老照片动效、老照片修复与上色、高级放大、去水印抠图、一键试衣与一键变高清等实用工具操作。</p><p>课程案例丰富多样，既有“萌宠模仿人跳舞”“猫咪做饭”“熊猫做饭”“小猫种菜”等趣味视频，也包含“美女换装”“狐妖变身”“不同风格写真”“励志语录”“心灵鸡汤”“成语故事”“古诗文朗读”等主题创意呈现；还介绍了“历史解说”“文旅宣传”“汽车穿越四季”“浪漫烟花文字”“花开延时”“宠物摆摊”“央妈宣传”等行业级应用。</p><p>学习者能掌握从剧本创作、角色选择、提示词撰写，到视频生成、剪辑合成与风格统一的核心法则。无论想要制作商业短视频、社交平台内容，还是个人创意项目，都能从中获取全面技能和思路，迅速提升制作效率与视觉品质。</p><h2 id="课程大纲"><a href="#课程大纲" class="headerlink" title="课程大纲"></a>课程大纲</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/06/AI%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%85%A8%E6%94%BB%E7%95%A5%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201032%202960'%3E%3C/svg%3E" alt="AI视频制作全攻略入门到精通"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/06/AI%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%85%A8%E6%94%BB%E7%95%A5%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.jpg" alt="AI视频制作全攻略入门到精通"></a></p><h2 id="课程下载"><a href="#课程下载" class="headerlink" title="课程下载"></a>课程下载</h2><p>下载地址：<a href="https://pan.quark.cn/s/2e1303c49482">夸克网盘</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 课程信息</p><p>2 课程大纲</p><p>3 课程下载</p><h2 id="课程信息"><a href="#课程信息" class="headerlink" title="课程信息"></a>课程信息</h2><p>AI视频制作全攻略入门到精通，夸克网盘课程。这套课程系统呈现了AI视频制作的全流程，涵盖核心内容，适合从零基础入门到高级创作需求。内容分为三大板块：一是各类AI软件使用教学，包括即梦AI、可灵AI、豆包AI、Kimi、蜗牛AI等；二是Midjourney绘画从注册开通、参数设置、画廊应用到高级卡通头像案例的进阶实践；三是视频剪辑与后期处理技巧，涉及剪映、PS创成式安装使用、Luma老照片动效、老照片修复与上色、高级放大、去水印抠图、一键试衣与一键变高清等实用工具操作。</p><p>课程案例丰富多样，既有“萌宠模仿人跳舞”“猫咪做饭”“熊猫做饭”“小猫种菜”等趣味视频，也包含“美女换装”“狐妖变身”“不同风格写真”“励志语录”“心灵鸡汤”“成语故事”“古诗文朗读”等主题创意呈现；还介绍了“历史解说”“文旅宣传”“汽车穿越四季”“浪漫烟花文字”“花开延时”“宠物摆摊”“央妈宣传”等行业级应用。</p><p>学习者能掌握从剧本创作、角色选择、提示词撰写，到视频生成、剪辑合成与风格统一的核心法则。无论想要制作商业短视频、社交平台内容，还是个人创意项目，都能从中获取全面技能和思路，迅速提升制作效率与视觉品质。</p><h2 id="课程大纲"><a href="#课程大纲" class="headerlink" title="课程大纲"></a>课程大纲</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/06/AI%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%85%A8%E6%94%BB%E7%95%A5%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/06/AI%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%85%A8%E6%94%BB%E7%95%A5%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.jpg" alt="AI视频制作全攻略入门到精通"></a></p><h2 id="课程下载"><a href="#课程下载" class="headerlink" title="课程下载"></a>课程下载</h2><p>下载地址：<a href="https://pan.quark.cn/s/2e1303c49482">夸克网盘</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
     
     
       
@@ -578,34 +609,6 @@
     <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
     
     <category term="电商运营" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%94%B5%E5%95%86%E8%BF%90%E8%90%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>智能 AI 训练营自媒体必看课程</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/06/08/zhi-neng-ai-xun-lian-ying-zi-mei-ti-bi-kan/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/06/08/zhi-neng-ai-xun-lian-ying-zi-mei-ti-bi-kan/</id>
-    <published>2025-06-09T03:05:50.000Z</published>
-    <updated>2025-06-12T07:50:37.206Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 课程信息</p><p>2 课程大纲</p><p>3 课程下载</p><h2 id="课程信息"><a href="#课程信息" class="headerlink" title="课程信息"></a>课程信息</h2><p>智能 AI 训练营自媒体必看课程，夸克网盘课程。这门专为自媒体从业者设计的AI课程，助你系统掌握人工智能在内容创作与运营中的实战应用。课程从AI基础认知起步，详解ChatGPT的42种功能场景，手把手教你高效调教模型、编写优质提示词，甚至自动化处理Excel等办公任务。</p><p>进入高阶阶段，你将对比主流AI工具特性，掌握提示词工程核心技巧，成为自己的AI教练。文本创作模块解锁三大实用工具：AI可化身文案大师自动产出选题与稿件，横扫多平台写作需求；图像与视频环节提供零门槛解决方案，从免费制图工具到全流程视频脚本生成，小白也能产出专业级作品。</p><p>职场应用篇更将AI融入日常：制定科学工作计划、一键生成思维导图、快速制作高质量PPT。课程通过真实案例解析数据驱动决策逻辑，教你用AI精准定位用户需求，提升内容传播效率与品牌竞争力，真正实现高效创作与精准获客的双重突破。</p><h2 id="课程大纲"><a href="#课程大纲" class="headerlink" title="课程大纲"></a>课程大纲</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/06/%E6%99%BA%E8%83%BD-AI-%E8%AE%AD%E7%BB%83%E8%90%A5%E8%87%AA%E5%AA%92%E4%BD%93%E5%BF%85%E7%9C%8B%E8%AF%BE%E7%A8%8B.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/06/%E6%99%BA%E8%83%BD-AI-%E8%AE%AD%E7%BB%83%E8%90%A5%E8%87%AA%E5%AA%92%E4%BD%93%E5%BF%85%E7%9C%8B%E8%AF%BE%E7%A8%8B.jpg" alt="智能 AI 训练营自媒体必看课程"></a></p><h2 id="课程下载"><a href="#课程下载" class="headerlink" title="课程下载"></a>课程下载</h2><p>下载地址：<a href="https://pan.quark.cn/s/60cc921609de" title="智能 AI 训练营自媒体必看课程下载">夸克网盘</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 课程信息&lt;/p&gt;
-&lt;p&gt;2 课程大纲&lt;/p&gt;
-&lt;p&gt;3 课程下载&lt;/p&gt;
-&lt;h2 id=&quot;课程信息&quot;&gt;&lt;a href=&quot;#课程信息&quot; class=&quot;headerlink&quot; title=&quot;课程信息&quot;&gt;&lt;/a&gt;</summary>
-      
-    
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
