@@ -6,7 +6,7 @@
   <link href="https://liuxingzhe.github.io/blog//blog/atom.xml" rel="self"/>
   
   <link href="https://liuxingzhe.github.io/blog//blog/"/>
-  <updated>2025-07-31T19:00:10.326Z</updated>
+  <updated>2025-08-02T19:00:11.702Z</updated>
   <id>https://liuxingzhe.github.io/blog//blog/</id>
   
   <author>
@@ -17,13 +17,444 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DLSS Swapper：一键管理与切换DLSS、FSR 和 XeSS DLL，实现游戏画质自由切换</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/02/dlssswapper-yi-jian-guan-li-yu-qie-huan-dlssfsr-he-xessdll-shi-xian-you-xi-hua-zhi-zi-you/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/02/dlssswapper-yi-jian-guan-li-yu-qie-huan-dlssfsr-he-xessdll-shi-xian-you-xi-hua-zhi-zi-you/</id>
+    <published>2025-08-02T10:19:04.000Z</published>
+    <updated>2025-08-02T19:00:11.702Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 DLSS Swapper介绍</p><p>2 DLSS Swapper主要用途：</p><p>2.1 DLSS Swapper支持平台与使用方式</p><p>2.2 DLSS Swapper关键注意点：</p><p>2.3 DLSS Swapper系统与硬件要求</p><p>3 DLSS Swapper如何使用</p><h2 id="DLSS-Swapper介绍"><a href="#DLSS-Swapper介绍" class="headerlink" title="DLSS Swapper介绍"></a>DLSS Swapper介绍</h2><p>DLSS Swapper 是一款专注于 DLSS、FSR 和 XeSS 的 DLL 管理工具，通过替换游戏中这些渲染模块接口库，你可以无需更新游戏本体就能切换或回退相关技术版本。它支持 Steam、GOG、Epic Games、Ubisoft Connect、Xbox App 和 Battle.net 平台，可通过“Add Game”按钮自行添加其他游戏。</p><p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="68747470733a2f2f6265657261646d6f6f72652e6769746875622e696f2f646c73732d737761707065722f696d616765732f75736167652f75736167655f342e676966 | DLSS Swapper：一键管理与切换DLSS、FSR 和 XeSS DLL，实现游戏画质自由切换"><img src="//camo.githubusercontent.com/ae980ae2b32f192021f07a6b402df765f1066ff7ef1e4bd7ce0ffcfdad633470/68747470733a2f2f6265657261646d6f6f72652e6769746875622e696f2f646c73732d737761707065722f696d616765732f75736167652f75736167655f342e676966" alt="68747470733a2f2f6265657261646d6f6f72652e6769746875622e696f2f646c73732d737761707065722f696d616765732f75736167652f75736167655f342e676966 | DLSS Swapper：一键管理与切换DLSS、FSR 和 XeSS DLL，实现游戏画质自由切换"></p><h2 id="DLSS-Swapper主要用途："><a href="#DLSS-Swapper主要用途：" class="headerlink" title="DLSS Swapper主要用途："></a>DLSS Swapper主要用途：</h2><ul><li>便捷下载、管理和切换不同版本的 DLSS、FSR、XeSS DLL。</li><li>在某些游戏中用于修复性能下降、图形伪影提升或游戏闪退问题。</li><li>无需更新整个游戏即可实验最新渲染技术版本（或回退旧版）进行对比。</li></ul><h3 id="DLSS-Swapper支持平台与使用方式"><a href="#DLSS-Swapper支持平台与使用方式" class="headerlink" title="DLSS Swapper支持平台与使用方式"></a>DLSS Swapper支持平台与使用方式</h3><p>DLSS Swapper 可从 GitHub Releases 页面获取最新版，也可通过 Winget 安装，命令如下：</p><pre><code>winget install --id=beeradmoore.dlss-swapper -e</code></pre><p>这是目前官方唯一稳定的获取途径。</p><h3 id="DLSS-Swapper关键注意点："><a href="#DLSS-Swapper关键注意点：" class="headerlink" title="DLSS Swapper关键注意点："></a>DLSS Swapper关键注意点：</h3><ul><li>无法将 DLSS 添加至不支持 DLSS 的游戏中。</li><li>替换后不一定提升性能或彻底消除伪影。</li><li>有时可能导致游戏无法运行，此时可恢复原始 DLL 解决问题。</li><li>工具推荐观看 Digital Foundation 关于 “Lego Builder’s Journey Ray Tracing Showcase + DLSS 2.2 升级分析” 的视频，相关讨论从视频的第 11 分 40 秒处开始。</li></ul><h3 id="DLSS-Swapper系统与硬件要求"><a href="#DLSS-Swapper系统与硬件要求" class="headerlink" title="DLSS Swapper系统与硬件要求"></a>DLSS Swapper系统与硬件要求</h3><table><thead><tr><th>项目</th><th>要求</th></tr></thead><tbody><tr><td>操作系统</td><td>Windows 10 64‑bit（版本 20H1，内部版本 19041）</td></tr><tr><td>显卡</td><td>任意厂商显卡支持</td></tr></tbody></table><h2 id="DLSS-Swapper如何使用"><a href="#DLSS-Swapper如何使用" class="headerlink" title="DLSS Swapper如何使用"></a>DLSS Swapper如何使用</h2><p>下载地址：<a href="https://pan.quark.cn/s/ce8c22b4ad41" title="DLSS Swapper：一键管理与切换DLSS、FSR 和 XeSS DLL">网盘</a></p><p>GitHub地址：<a href="https://github.com/beeradmoore/dlss-swapper">https://github.com/beeradmoore/dlss-swapper</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 DLSS Swapper介绍&lt;/p&gt;
+&lt;p&gt;2 DLSS Swapper主要用途：&lt;/p&gt;
+&lt;p&gt;2.1 DLSS Swapper支持平台与使用方式&lt;/p&gt;
+&lt;p&gt;2.2 DLSS Swapper关键注意点</summary>
+      
+    
+    
+    
+    <category term="软件" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="软件" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Windows" scheme="https://liuxingzhe.github.io/blog//blog/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>抖音快手短视频带货实操投流</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/02/dou-yin-kuai-shou-duan-shi-pin-dai-huo-shi-cao/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/02/dou-yin-kuai-shou-duan-shi-pin-dai-huo-shi-cao/</id>
+    <published>2025-08-02T09:48:58.000Z</published>
+    <updated>2025-08-02T19:00:13.440Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 🎯抖音快手短视频带货实操投流课程概览</p><p>2 🔧抖音快手短视频带货实操投流课程板块大纲</p><p>2.1 一、带货基础入门</p><p>2.2 二、选品与起号技巧</p><p>2.3 三、短视频剪辑与爆款打造</p><p>2.4 四、真人出镜与实拍提升</p><p>2.5 五、AI与数字人玩法</p><p>2.6 六、投流与流量变现</p><p>2.7 七、图文与混剪赛道（补充）</p><p>3 🧩抖音快手短视频带货实操投流适合人群</p><p>4 📌抖音快手短视频带货实操投流课程亮点</p><p>5 抖音快手短视频带货实操投流学习地址</p><h2 id="🎯抖音快手短视频带货实操投流课程概览"><a href="#🎯抖音快手短视频带货实操投流课程概览" class="headerlink" title="🎯抖音快手短视频带货实操投流课程概览"></a>🎯抖音快手短视频带货实操投流课程概览</h2><p>抖音快手短视频带货实操投流,本课程体系共涵盖超120节短视频带货实操课程，涵盖从账号起号、内容剪辑、选品上架、数字人制作，到投流转化与实拍实训等完整链路。通过案例教学与工具实操，帮助学员实现从0到变现的高效跃迁。</p><hr><h2 id="🔧抖音快手短视频带货实操投流课程板块大纲"><a href="#🔧抖音快手短视频带货实操投流课程板块大纲" class="headerlink" title="🔧抖音快手短视频带货实操投流课程板块大纲"></a>🔧抖音快手短视频带货实操投流课程板块大纲</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/%E6%8A%96%E9%9F%B3%E5%BF%AB%E6%89%8B%E7%9F%AD%E8%A7%86%E9%A2%91%E5%B8%A6%E8%B4%A7%E5%AE%9E%E6%93%8D%E6%8A%95%E6%B5%81.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20890%201362'%3E%3C/svg%3E" alt="抖音快手短视频带货实操投流"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/%E6%8A%96%E9%9F%B3%E5%BF%AB%E6%89%8B%E7%9F%AD%E8%A7%86%E9%A2%91%E5%B8%A6%E8%B4%A7%E5%AE%9E%E6%93%8D%E6%8A%95%E6%B5%81.jpg" alt="抖音快手短视频带货实操投流"></a></p><h3 id="一、带货基础入门"><a href="#一、带货基础入门" class="headerlink" title="一、带货基础入门"></a>一、带货基础入门</h3><ul><li>带货赛道全景解析与变现模型</li><li>带货案例拆解，找准适合自己的路径</li><li>小黄车开通与商品上架实操</li><li>账号基础装修与对标分析</li></ul><h3 id="二、选品与起号技巧"><a href="#二、选品与起号技巧" class="headerlink" title="二、选品与起号技巧"></a>二、选品与起号技巧</h3><ul><li>三大爆品筛选法则</li><li>微付费自然量起号策略</li><li>不露脸账号的起号技巧</li><li>实操爆款选品路径（抖音&#x2F;快手）</li></ul><h3 id="三、短视频剪辑与爆款打造"><a href="#三、短视频剪辑与爆款打造" class="headerlink" title="三、短视频剪辑与爆款打造"></a>三、短视频剪辑与爆款打造</h3><ul><li>视频脚本创作公式</li><li>新人剪辑逻辑与混剪技法</li><li>镜头替换、音画分离、字幕处理</li><li>爆款镜头剪辑与转场实操</li><li>视频封面、标题与贴纸设计</li></ul><h3 id="四、真人出镜与实拍提升"><a href="#四、真人出镜与实拍提升" class="headerlink" title="四、真人出镜与实拍提升"></a>四、真人出镜与实拍提升</h3><ul><li>出镜拍摄工具准备与场景搭建</li><li>灯光布置、拍摄技巧与提词器使用</li><li>拍摄剪辑串联流程</li><li>真人出镜分镜脚本与表演训练</li></ul><h3 id="五、AI与数字人玩法"><a href="#五、AI与数字人玩法" class="headerlink" title="五、AI与数字人玩法"></a>五、AI与数字人玩法</h3><ul><li>数字人生成与剪辑应用</li><li>抠像、画中画、调色、特效添加全流程</li><li>AI工具降本增效用法教学</li></ul><h3 id="六、投流与流量变现"><a href="#六、投流与流量变现" class="headerlink" title="六、投流与流量变现"></a>六、投流与流量变现</h3><ul><li>巨量千川&amp;磁力金牛系统投放逻辑</li><li>小店随心推界面与操作详解</li><li>人群定向、预算分配与ROI优化</li><li>数据复盘方法与转化路径重构</li></ul><h3 id="七、图文与混剪赛道（补充）"><a href="#七、图文与混剪赛道（补充）" class="headerlink" title="七、图文与混剪赛道（补充）"></a>七、图文与混剪赛道（补充）</h3><ul><li>图文账号起号与选品策略</li><li>混剪素材获取与搬运防范处理</li><li>图文剪辑与封面设计技巧</li></ul><hr><h2 id="🧩抖音快手短视频带货实操投流适合人群"><a href="#🧩抖音快手短视频带货实操投流适合人群" class="headerlink" title="🧩抖音快手短视频带货实操投流适合人群"></a>🧩抖音快手短视频带货实操投流适合人群</h2><ul><li>想通过短视频实现副业变现的零基础小白</li><li>渴望系统掌握选品剪辑投流全链路技能的电商从业者</li><li>想打造不露脸短视频账号的内容创作者</li><li>有产品但缺乏内容&#x2F;流量的商家和品牌主</li></ul><hr><h2 id="📌抖音快手短视频带货实操投流课程亮点"><a href="#📌抖音快手短视频带货实操投流课程亮点" class="headerlink" title="📌抖音快手短视频带货实操投流课程亮点"></a>📌抖音快手短视频带货实操投流课程亮点</h2><ul><li>内容全链路闭环覆盖，操作性极强</li><li>爆款视频剪辑+投流转化+AI辅助教学</li><li>真人出镜、数字人、图文三大路径自由组合</li><li>陪跑式教学设计，适配不同基础与需求</li><li>支持快速起号，提升转化效率与播放量</li></ul><hr><h2 id="抖音快手短视频带货实操投流学习地址"><a href="#抖音快手短视频带货实操投流学习地址" class="headerlink" title="抖音快手短视频带货实操投流学习地址"></a>抖音快手短视频带货实操投流学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/34ca9290930b" title="抖音快手短视频带货实操投流学习地址">抖音快手短视频带货实操投流</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 🎯抖音快手短视频带货实操投流课程概览&lt;/p&gt;
+&lt;p&gt;2 🔧抖音快手短视频带货实操投流课程板块大纲&lt;/p&gt;
+&lt;p&gt;2.1 一、带货基础入门&lt;/p&gt;
+&lt;p&gt;2.2 二、选品与起号技巧&lt;/p&gt;
+&lt;p&gt;2.3 </summary>
+      
+    
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="短视频" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小红书爆款种草视频图文实操课</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/02/xiao-hong-shu-bao-kuan-chong-cao-shi-pin-tu-wen-shi/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/02/xiao-hong-shu-bao-kuan-chong-cao-shi-pin-tu-wen-shi/</id>
+    <published>2025-08-02T08:40:03.000Z</published>
+    <updated>2025-08-02T19:00:15.683Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 小红书变现体系：从零开始打造爆款账号</p><p>1.1 🔍 账号与店铺运营入门</p><p>1.2 🎯 选品策略与对标分析</p><p>1.3 ✍️ 爆款笔记打造逻辑</p><p>1.4 📈 曝光与成交技巧</p><p>1.5 🎬 视频剪辑与内容创作</p><p>1.6 💡 实操+AI工具加持</p><p>2 小红书爆款种草视频图文实操课适合人群：</p><p>3 小红书爆款种草视频图文实操课学习地址</p><h2 id="小红书变现体系：从零开始打造爆款账号"><a href="#小红书变现体系：从零开始打造爆款账号" class="headerlink" title="小红书变现体系：从零开始打造爆款账号"></a>小红书变现体系：从零开始打造爆款账号</h2><p>小红书爆款种草视频图文实操课，这套视频课程系统梳理了在小红书平台从账号搭建、店铺开设到选品转化的完整路径，适合想在内容电商赛道精准变现的人群。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/%E5%B0%8F%E7%BA%A2%E4%B9%A6%E7%88%86%E6%AC%BE%E7%A7%8D%E8%8D%89%E8%A7%86%E9%A2%91%E5%9B%BE%E6%96%87%E5%AE%9E%E6%93%8D%E8%AF%BE.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/%E5%B0%8F%E7%BA%A2%E4%B9%A6%E7%88%86%E6%AC%BE%E7%A7%8D%E8%8D%89%E8%A7%86%E9%A2%91%E5%9B%BE%E6%96%87%E5%AE%9E%E6%93%8D%E8%AF%BE.jpg" alt="小红书爆款种草视频图文实操课"></a></p><hr><h3 id="🔍-账号与店铺运营入门"><a href="#🔍-账号与店铺运营入门" class="headerlink" title="🔍 账号与店铺运营入门"></a>🔍 账号与店铺运营入门</h3><p>课程前半部分聚焦于基础运营流程，包括如何开设小红书店铺、填写发货退货等必要信息、设置客服系统与促销活动等功能；同时，教学覆盖了手机与电脑两端的上架操作，降低新手上手门槛。</p><hr><h3 id="🎯-选品策略与对标分析"><a href="#🎯-选品策略与对标分析" class="headerlink" title="🎯 选品策略与对标分析"></a>🎯 选品策略与对标分析</h3><p>通过对小红书、淘宝、多多、抖音等平台的选品方法对比分析，课程讲解如何精准找到适合投放的产品及源头货源。同时辅以“对标账号”识别与跟款策略，帮助学员更快速锁定趋势爆品。</p><hr><h3 id="✍️-爆款笔记打造逻辑"><a href="#✍️-爆款笔记打造逻辑" class="headerlink" title="✍️ 爆款笔记打造逻辑"></a>✍️ 爆款笔记打造逻辑</h3><p>课程中大量篇幅讲解了如何撰写高转化的爆款笔记文案、设计点击率高的封面与标题，并详细讲解了发布频率、时间节点与内容规范。配合AI工具自动生成文案与标题，提升效率。</p><hr><h3 id="📈-曝光与成交技巧"><a href="#📈-曝光与成交技巧" class="headerlink" title="📈 曝光与成交技巧"></a>📈 曝光与成交技巧</h3><p>针对如何提升笔记曝光量、提高小眼睛播放量、获取实际成交等转化环节，课程给出具体可落地的操作策略，如截流打法、图文组合种草术、爆款封面设计标准等。</p><hr><h3 id="🎬-视频剪辑与内容创作"><a href="#🎬-视频剪辑与内容创作" class="headerlink" title="🎬 视频剪辑与内容创作"></a>🎬 视频剪辑与内容创作</h3><p>从原创视频拍摄技巧到违规判罚应对，再到如何无痕拍单、批量处理订单，课程提供了完整的视频与图文内容创作标准，搭配后台数据分析帮助优化内容策略。</p><hr><h3 id="💡-实操-AI工具加持"><a href="#💡-实操-AI工具加持" class="headerlink" title="💡 实操+AI工具加持"></a>💡 实操+AI工具加持</h3><p>课程最后还配套了实操演示，从选题库搭建到内容发布全过程一一拆解，利用AI工具完成脚本生成、封面设计与运营策略，帮助学员掌握平台推流机制与高效互动手法。</p><hr><h2 id="小红书爆款种草视频图文实操课适合人群："><a href="#小红书爆款种草视频图文实操课适合人群：" class="headerlink" title="小红书爆款种草视频图文实操课适合人群："></a><strong>小红书爆款种草视频图文实操课适合人群：</strong></h2><ul><li>小红书新手商家</li><li>想通过内容变现的普通用户</li><li>自媒体人或短视频博主</li><li>想通过AI提升内容效率的内容运营者</li></ul><hr><h2 id="小红书爆款种草视频图文实操课学习地址"><a href="#小红书爆款种草视频图文实操课学习地址" class="headerlink" title="小红书爆款种草视频图文实操课学习地址"></a>小红书爆款种草视频图文实操课学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/83b8d829d70d" title="小红书爆款种草视频图文实操课学习地址">小红书爆款种草视频图文实操课</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 小红书变现体系：从零开始打造爆款账号&lt;/p&gt;
+&lt;p&gt;1.1 🔍 账号与店铺运营入门&lt;/p&gt;
+&lt;p&gt;1.2 🎯 选品策略与对标分析&lt;/p&gt;
+&lt;p&gt;1.3 ✍️ 爆款笔记打造逻辑&lt;/p&gt;
+&lt;p&gt;1.4 📈</summary>
+      
+    
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="短视频" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新媒体写作实战，学握最值得投资的职场技能，提升你的挣钱能力</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/02/xin-mei-ti-xie-zuo-shi-zhan-xue-wo-zui-zhi-de-tou-zi-de-zhi-chang-ji-neng-ti-sheng-ni-de-zheng-qian/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/02/xin-mei-ti-xie-zuo-shi-zhan-xue-wo-zui-zhi-de-tou-zi-de-zhi-chang-ji-neng-ti-sheng-ni-de-zheng-qian/</id>
+    <published>2025-08-02T07:23:35.000Z</published>
+    <updated>2025-08-02T19:00:16.739Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 新媒体写作：撬动职场能力的杠杆</p><p>2 📚课程结构概览</p><p>2.1 🟢 快速入门模块（第1-3讲）</p><p>2.2 🔧 成稿能力模块（第4-9讲）</p><p>2.3 🔍 写作进阶模块（第10-14讲）</p><p>2.4 🎯 选题能力模块（第15-17讲）</p><p>2.5 📦 素材收集模块（第18-20讲）</p><p>2.6 📝 标题优化模块（第21-23讲）</p><p>2.7 💰 写作变现模块（第24-25讲）</p><p>3 课程适合人群</p><p>4 新媒体写作实战学习地址</p><h2 id="新媒体写作：撬动职场能力的杠杆"><a href="#新媒体写作：撬动职场能力的杠杆" class="headerlink" title="新媒体写作：撬动职场能力的杠杆"></a>新媒体写作：撬动职场能力的杠杆</h2><p>在这个表达泛滥却内容稀缺的时代，写作已成为最值得投资的核心技能之一。会写作的人，往往能更快脱颖而出，不仅强化表达力，更能实现在职场、创业或副业中的变现能力。这套<strong>新媒体写作实战课程</strong> 正是为渴望提升表达力和内容输出能力的人而设计，帮助你用文字构建影响力，实现长期价值积累与收入转化。</p><hr><h2 id="📚课程结构概览"><a href="#📚课程结构概览" class="headerlink" title="📚课程结构概览"></a>📚课程结构概览</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/%E6%96%B0%E5%AA%92%E4%BD%93%E5%86%99%E4%BD%9C%E5%AE%9E%E6%88%98%EF%BC%8C%E5%AD%A6%E6%8F%A1%E6%9C%80%E5%80%BC%E5%BE%97%E6%8A%95%E8%B5%84%E7%9A%84%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD%EF%BC%8C%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%8C%A3%E9%92%B1%E8%83%BD%E5%8A%9B.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/%E6%96%B0%E5%AA%92%E4%BD%93%E5%86%99%E4%BD%9C%E5%AE%9E%E6%88%98%EF%BC%8C%E5%AD%A6%E6%8F%A1%E6%9C%80%E5%80%BC%E5%BE%97%E6%8A%95%E8%B5%84%E7%9A%84%E8%81%8C%E5%9C%BA%E6%8A%80%E8%83%BD%EF%BC%8C%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%8C%A3%E9%92%B1%E8%83%BD%E5%8A%9B.jpg" alt="新媒体写作实战，学握最值得投资的职场技能，提升你的挣钱能力"></a></p><h4 id="🟢-快速入门模块（第1-3讲）"><a href="#🟢-快速入门模块（第1-3讲）" class="headerlink" title="🟢 快速入门模块（第1-3讲）"></a>🟢 快速入门模块（第1-3讲）</h4><ul><li>写作如何放大个人能力</li><li>写作从哪一步开始更轻松</li><li>写好文章的5大标准思维</li></ul><h4 id="🔧-成稿能力模块（第4-9讲）"><a href="#🔧-成稿能力模块（第4-9讲）" class="headerlink" title="🔧 成稿能力模块（第4-9讲）"></a>🔧 成稿能力模块（第4-9讲）</h4><ul><li>搭建文章结构的方法</li><li>写出吸睛开头的3个技巧</li><li>打造有感染力结尾的3个要素</li><li>建立统一的写作标准</li><li>加减法写作技巧，提升内容深度</li><li>高效修改，提升整体成稿质量</li></ul><h4 id="🔍-写作进阶模块（第10-14讲）"><a href="#🔍-写作进阶模块（第10-14讲）" class="headerlink" title="🔍 写作进阶模块（第10-14讲）"></a>🔍 写作进阶模块（第10-14讲）</h4><ul><li>阅读粘性从哪来的？写作逻辑揭秘</li><li>构建严谨结构，提升说服力</li><li>让论证更精彩、语言更悦读</li><li>打造吸引人的故事感</li><li>写出有共鸣的金句技巧</li></ul><h4 id="🎯-选题能力模块（第15-17讲）"><a href="#🎯-选题能力模块（第15-17讲）" class="headerlink" title="🎯 选题能力模块（第15-17讲）"></a>🎯 选题能力模块（第15-17讲）</h4><ul><li>爆款选题的底层逻辑</li><li>5种实用选题策划技巧</li><li>如何从日常中挖掘选题灵感</li></ul><h4 id="📦-素材收集模块（第18-20讲）"><a href="#📦-素材收集模块（第18-20讲）" class="headerlink" title="📦 素材收集模块（第18-20讲）"></a>📦 素材收集模块（第18-20讲）</h4><ul><li>常用的8大素材搜索渠道</li><li>提升素材质量的6大搜索技巧</li><li>素材日常积累的3种方法</li></ul><h4 id="📝-标题优化模块（第21-23讲）"><a href="#📝-标题优化模块（第21-23讲）" class="headerlink" title="📝 标题优化模块（第21-23讲）"></a>📝 标题优化模块（第21-23讲）</h4><ul><li>标题的核心价值</li><li>写出独特标题的5种技巧</li><li>激发灵感的5条标题思考路径</li></ul><h4 id="💰-写作变现模块（第24-25讲）"><a href="#💰-写作变现模块（第24-25讲）" class="headerlink" title="💰 写作变现模块（第24-25讲）"></a>💰 写作变现模块（第24-25讲）</h4><ul><li>如何打造个人品牌并扩展影响力</li><li>写作变现的多种可执行路径</li></ul><hr><p>这套课程由浅入深，围绕“写作力→选题力→表达力→变现力”完整闭环设计，适合任何想通过文字实现影响力或收入增长的人学习。</p><h2 id="课程适合人群"><a href="#课程适合人群" class="headerlink" title="课程适合人群"></a><strong>课程适合人群</strong></h2><ul><li>想打造个人IP的新媒体从业者</li><li>希望提升职场表达能力的上班族</li><li>有副业变现需求的自由职业者与宝妈</li><li>想系统学写作的小白和内容创作者</li></ul><p>如果你还不会写作，你正在错过一个低成本、高回报、可持续的成长通道。现在，是写作变现的黄金时代。</p><h2 id="新媒体写作实战学习地址"><a href="#新媒体写作实战学习地址" class="headerlink" title="新媒体写作实战学习地址"></a>新媒体写作实战学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/7eaf4f5f318d" title="新媒体写作实战学习地址">新媒体写作实战，学握最值得投资的职场技能，提升你的挣钱能力</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 新媒体写作：撬动职场能力的杠杆&lt;/p&gt;
+&lt;p&gt;2 📚课程结构概览&lt;/p&gt;
+&lt;p&gt;2.1 🟢 快速入门模块（第1-3讲）&lt;/p&gt;
+&lt;p&gt;2.2 🔧 成稿能力模块（第4-9讲）&lt;/p&gt;
+&lt;p&gt;2.3 🔍</summary>
+      
+    
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="短视频" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>21天走出焦虑抑郁系统课程</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/01/21-tian-zou-chu-jiao-lu-yi-yu-xi-tong/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/01/21-tian-zou-chu-jiao-lu-yi-yu-xi-tong/</id>
+    <published>2025-08-02T02:36:46.000Z</published>
+    <updated>2025-08-02T19:00:17.749Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 21天走出焦虑抑郁系统课程简介</p><p>1.1 21天走出焦虑抑郁系统课程核心模块概览</p><p>1.1.1 ✅ 重建信念与自我接纳</p><p>1.1.2 ✅ 对症疏导与情绪修复</p><p>1.1.3 ✅ 心理重塑与内在疗愈</p><p>1.1.4 ✅ 生活方式转化与身心能量提升</p><p>1.2 21天走出焦虑抑郁系统课程教学特色</p><p>2 21天走出焦虑抑郁系统课程学习地址</p><h2 id="21天走出焦虑抑郁系统课程简介"><a href="#21天走出焦虑抑郁系统课程简介" class="headerlink" title="21天走出焦虑抑郁系统课程简介"></a>21天走出焦虑抑郁系统课程简介</h2><p>21天走出焦虑抑郁系统课程,这是一门为期21天的系统疗愈课程，旨在帮助学员有效摆脱焦虑、抑郁、强迫思维等困扰，重拾生活的掌控感与幸福感。课程融合认知行为疗法、情绪释放练习与生活方式优化策略，通过科学、系统的方式，唤醒内在修复力，助力心理与生理的全面复原。</p><h3 id="21天走出焦虑抑郁系统课程核心模块概览"><a href="#21天走出焦虑抑郁系统课程核心模块概览" class="headerlink" title="21天走出焦虑抑郁系统课程核心模块概览"></a>21天走出焦虑抑郁系统课程核心模块概览</h3><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/21%E5%A4%A9%E8%B5%B0%E5%87%BA%E7%84%A6%E8%99%91%E6%8A%91%E9%83%81%E7%B3%BB%E7%BB%9F%E8%AF%BE%E7%A8%8B.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20922%201042'%3E%3C/svg%3E" alt="21天走出焦虑抑郁系统课程"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/21%E5%A4%A9%E8%B5%B0%E5%87%BA%E7%84%A6%E8%99%91%E6%8A%91%E9%83%81%E7%B3%BB%E7%BB%9F%E8%AF%BE%E7%A8%8B.jpg" alt="21天走出焦虑抑郁系统课程"></a></p><h4 id="✅-重建信念与自我接纳"><a href="#✅-重建信念与自我接纳" class="headerlink" title="✅ 重建信念与自我接纳"></a>✅ 重建信念与自我接纳</h4><ul><li><strong>第一课：恢复的第一大信念</strong></li><li><strong>第十二课：接受自己</strong></li><li><strong>第十三课：让心放松，放下难过的事</strong></li><li><strong>第十五课：绽放自我</strong></li></ul><p>通过调整认知模式与内在信念，逐步建立健康的自我形象与情绪韧性。</p><h4 id="✅-对症疏导与情绪修复"><a href="#✅-对症疏导与情绪修复" class="headerlink" title="✅ 对症疏导与情绪修复"></a>✅ 对症疏导与情绪修复</h4><ul><li><strong>第二至第四课：39种症状的应对方法（上中下）</strong></li><li><strong>第五课：抑郁情绪、社交恐惧症等消除方法</strong></li><li><strong>第六至第七课：强迫思维的改变方法</strong></li><li><strong>第八课：失眠的恢复</strong></li><li><strong>第九课：完美主义的改变</strong></li><li><strong>第二十课：为什么症状一直在</strong></li></ul><p>逐一解析常见心理与生理症状背后的成因，并提供实用的缓解与转化方法。</p><h4 id="✅-心理重塑与内在疗愈"><a href="#✅-心理重塑与内在疗愈" class="headerlink" title="✅ 心理重塑与内在疗愈"></a>✅ 心理重塑与内在疗愈</h4><ul><li><strong>第十课：重塑生命，填补心灵的缺失</strong></li><li><strong>第十一课：破除原生家庭的困境</strong></li><li><strong>第十四课：走出死循环</strong></li><li><strong>第二十一课：真正的恢复</strong></li></ul><p>聚焦情感创伤修复，打破思维与行为的负循环，逐步走向真正的心理自由。</p><h4 id="✅-生活方式转化与身心能量提升"><a href="#✅-生活方式转化与身心能量提升" class="headerlink" title="✅ 生活方式转化与身心能量提升"></a>✅ 生活方式转化与身心能量提升</h4><ul><li><strong>第十六课：关系成功</strong></li><li><strong>第十七课：提高身体能量</strong></li><li><strong>第十八课：怎么运动才有效</strong></li><li><strong>第十九课：恢复的心态</strong></li></ul><p>通过有效运动、能量管理与关系觉察，增强身体恢复力，培养积极健康的生活态度。</p><h3 id="21天走出焦虑抑郁系统课程教学特色"><a href="#21天走出焦虑抑郁系统课程教学特色" class="headerlink" title="21天走出焦虑抑郁系统课程教学特色"></a>21天走出焦虑抑郁系统课程教学特色</h3><ul><li>理论与实操结合，便于日常落地应用</li><li>每日一课，循序渐进修复思维与情绪</li><li>聚焦个体差异，提供多样应对策略</li><li>帮助学员重建信任感与安全感，真正走出心理困境</li></ul><hr><p>这门课程不仅适合深受焦虑与抑郁困扰的人群，也适合希望改善心理状态、提升情绪能量与生命质量的所有人群。通过持续学习与练习，将疗愈力真正内化为日常生活的一部分。</p><h2 id="21天走出焦虑抑郁系统课程学习地址"><a href="#21天走出焦虑抑郁系统课程学习地址" class="headerlink" title="21天走出焦虑抑郁系统课程学习地址"></a>21天走出焦虑抑郁系统课程学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/b0e382691c88" title="21天走出焦虑抑郁系统课程学习地址">21天走出焦虑抑郁系统课程</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 21天走出焦虑抑郁系统课程简介&lt;/p&gt;
+&lt;p&gt;1.1 21天走出焦虑抑郁系统课程核心模块概览&lt;/p&gt;
+&lt;p&gt;1.1.1 ✅ 重建信念与自我接纳&lt;/p&gt;
+&lt;p&gt;1.1.2 ✅ 对症疏导与情绪修复&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="社交职场" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%A4%BE%E4%BA%A4%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare AI 图片生成工具（Stable Diffusion XL）—中英文提示词 + 自动翻译，免费实用</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/01/cloudflareai-tu-pian-sheng-cheng-gong-ju-stablediffusionxl-zhong-ying-wen-ti-shi-ci-zi-dong-fan-yi-mian-fei/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/01/cloudflareai-tu-pian-sheng-cheng-gong-ju-stablediffusionxl-zhong-ying-wen-ti-shi-ci-zi-dong-fan-yi-mian-fei/</id>
+    <published>2025-08-02T02:25:04.000Z</published>
+    <updated>2025-08-02T19:00:18.811Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 AI 图片生成</p><p>1.1 模型支持</p><p>1.2 提示词与翻译</p><p>2 Cloudflare AI 图片生成工具使用方式</p><h2 id="AI-图片生成"><a href="#AI-图片生成" class="headerlink" title="AI 图片生成"></a>AI 图片生成</h2><p>CZL在线工具箱推出了一款基于Cloudflare Workers AI的免费在线AI图片生成服务，用户可无缝集成多种生成式AI模型并在全球GPU网络上运行，无需安装任何客户端或插件。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/Cloudflare-AI-%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%EF%BC%88Stable-Diffusion-XL%EF%BC%89%E2%80%94%E4%B8%AD%E8%8B%B1%E6%96%87%E6%8F%90%E7%A4%BA%E8%AF%8D-%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%AE%9E%E7%94%A8.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/Cloudflare-AI-%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%EF%BC%88Stable-Diffusion-XL%EF%BC%89%E2%80%94%E4%B8%AD%E8%8B%B1%E6%96%87%E6%8F%90%E7%A4%BA%E8%AF%8D-%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%AE%9E%E7%94%A8.jpg" alt="Cloudflare AI 图片生成工具（Stable Diffusion XL）—中英文提示词 + 自动翻译，免费实用"></a></p><h3 id="模型支持"><a href="#模型支持" class="headerlink" title="模型支持"></a>模型支持</h3><p>本工具采用Stability AI最新一代Stable Diffusion XL（SDXL）模型，结合U-Net、VAE及CLIP等核心模块，专为更逼真、更细腻的图像输出而设计。</p><h3 id="提示词与翻译"><a href="#提示词与翻译" class="headerlink" title="提示词与翻译"></a>提示词与翻译</h3><p>支持中英文双语提示词输入，并能自动将中文提示翻译为英文，帮助创作者获得更精准的生成效果和更丰富的创意表达。</p><h2 id="Cloudflare-AI-图片生成工具使用方式"><a href="#Cloudflare-AI-图片生成工具使用方式" class="headerlink" title="Cloudflare AI 图片生成工具使用方式"></a>Cloudflare AI 图片生成工具使用方式</h2><p>访问工具页面后，直接在“提示词”输入框中填写描述，点击“生成图片”即可快速得到AI渲染的高质量图像，整个过程无需注册或付费。</p><p>地址：<a href="https://onepage.czl.net/tools/cf_worker-text2img/">https://onepage.czl.net/tools/cf_worker-text2img/</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 AI 图片生成&lt;/p&gt;
+&lt;p&gt;1.1 模型支持&lt;/p&gt;
+&lt;p&gt;1.2 提示词与翻译&lt;/p&gt;
+&lt;p&gt;2 Cloudflare AI 图片生成工具使用方式&lt;/p&gt;
+&lt;h2 id=&quot;AI-图片生成&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
+    
+    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>seal_generation：免费在线印章生成与提取工具 一键制作做旧防伪印章</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/01/sealgeneration-mian-fei-zai-xian-yin-zhang-sheng-cheng-yu-ti-qu-gong-ju-yi-jian-zhi-zuo-zuo-jiu-fang-wei/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/01/sealgeneration-mian-fei-zai-xian-yin-zhang-sheng-cheng-yu-ti-qu-gong-ju-yi-jian-zhi-zuo-zuo-jiu-fang-wei/</id>
+    <published>2025-08-02T02:04:52.000Z</published>
+    <updated>2025-08-02T19:00:19.890Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 seal_generation概况</p><p>2 seal_generation工具简介</p><p>3 seal_generation主要功能</p><p>3.1 印章提取</p><p>3.2 印章生成</p><p>4 seal_generation使用步骤</p><p>5 seal_generation如何使用</p><h2 id="seal-generation概况"><a href="#seal-generation概况" class="headerlink" title="seal_generation概况"></a>seal_generation概况</h2><p>seal_generation是一款免费在线印章生成与提取工具，该工具来自CZL在线工具箱，提供印章提取与印章生成功能，满足用户对线上印章制作和识别的多样化需求。印章提取模块可自动从带印章图片中识别并提取红色印章图像；印章生成模块则支持多项参数自定义，包括公司名称、印章类型、编码与中间数字，并可添加防伪纹路、毛边和做旧效果，轻松创建符合视觉与安全需求的印章。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/seal_generation%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%8D%B0%E7%AB%A0%E7%94%9F%E6%88%90%E4%B8%8E%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7-%E4%B8%80%E9%94%AE%E5%88%B6%E4%BD%9C%E5%81%9A%E6%97%A7%E9%98%B2%E4%BC%AA%E5%8D%B0%E7%AB%A0.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203012%202652'%3E%3C/svg%3E" alt="seal_generation：免费在线印章生成与提取工具 一键制作做旧防伪印章"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/seal_generation%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%8D%B0%E7%AB%A0%E7%94%9F%E6%88%90%E4%B8%8E%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7-%E4%B8%80%E9%94%AE%E5%88%B6%E4%BD%9C%E5%81%9A%E6%97%A7%E9%98%B2%E4%BC%AA%E5%8D%B0%E7%AB%A0.jpg" alt="seal_generation：免费在线印章生成与提取工具 一键制作做旧防伪印章"></a></p><h2 id="seal-generation工具简介"><a href="#seal-generation工具简介" class="headerlink" title="seal_generation工具简介"></a>seal_generation工具简介</h2><p>CZL在线工具箱推出的这款免费测试版工具，免注册、免下载，界面简洁，操作直观。用户无需安装任何软件，只需在浏览器中访问网页即可完成印章提取与生成。</p><h2 id="seal-generation主要功能"><a href="#seal-generation主要功能" class="headerlink" title="seal_generation主要功能"></a>seal_generation主要功能</h2><h3 id="印章提取"><a href="#印章提取" class="headerlink" title="印章提取"></a>印章提取</h3><ul><li>上传含有印章的图片</li><li>系统自动识别并提取红色印章，生成独立印章图</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/seal_generation%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%8D%B0%E7%AB%A0%E7%94%9F%E6%88%90%E4%B8%8E%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7-%E4%B8%80%E9%94%AE%E5%88%B6%E4%BD%9C%E5%81%9A%E6%97%A7%E9%98%B2%E4%BC%AA%E5%8D%B0%E7%AB%A0-%E6%8F%90%E5%8F%96.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202056%201898'%3E%3C/svg%3E" alt="seal_generation：免费在线印章生成与提取工具 一键制作做旧防伪印章"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/seal_generation%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%8D%B0%E7%AB%A0%E7%94%9F%E6%88%90%E4%B8%8E%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7-%E4%B8%80%E9%94%AE%E5%88%B6%E4%BD%9C%E5%81%9A%E6%97%A7%E9%98%B2%E4%BC%AA%E5%8D%B0%E7%AB%A0-%E6%8F%90%E5%8F%96.jpg" alt="seal_generation：免费在线印章生成与提取工具 一键制作做旧防伪印章"></a></p><h3 id="印章生成"><a href="#印章生成" class="headerlink" title="印章生成"></a>印章生成</h3><ul><li><strong>公司名称列表设置</strong> ：自由输入或选择已有公司名称</li><li><strong>印章类型列表设置</strong> ：支持企业公章、财务章、合同章等</li><li><strong>印章编码与中间数字</strong> ：自定义印章编号格式，设置中间序号</li><li><strong>五角星与内圈圆形</strong> ：多种样式可选，满足不同印章规范</li><li><strong>防伪纹路</strong> ：添加复杂纹路提高安全性</li><li><strong>毛边与做旧效果</strong> ：模拟传统刻章工艺质感</li></ul><h2 id="seal-generation使用步骤"><a href="#seal-generation使用步骤" class="headerlink" title="seal_generation使用步骤"></a>seal_generation使用步骤</h2><ol><li>点击“选择图片文件”上传原图</li><li>在“提取的印章”区域查看自动提取结果</li><li>切换至“印章基本设置”面板，自定义各项参数</li><li>预览生成效果后下载印章图</li></ol><h2 id="seal-generation如何使用"><a href="#seal-generation如何使用" class="headerlink" title="seal_generation如何使用"></a>seal_generation如何使用</h2><p>访问地址：<a href="https://onepage.czl.net/tools/seal_generation/">https://onepage.czl.net/tools/seal_generation/</a></p><p><a href="https://www.ahhhhfs.com/73314/">免费在线电子印章生成器，一键定制专业印章</a></p><p><a href="https://www.ahhhhfs.com/63500/">DrawStampUtils-在线制作电子印章的工具</a></p><p><a href="https://www.ahhhhfs.com/60760/">免费电子印章在线制作工具-电子印章生成器</a></p><p><a href="https://www.ahhhhfs.com/30316/">395印章生成器-在线电子印章,电子公章生成器</a></p><p><a href="https://www.ahhhhfs.com/30032/">免费专业电子印章,电子公章在线生成-制图网</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 seal_generation概况&lt;/p&gt;
+&lt;p&gt;2 seal_generation工具简介&lt;/p&gt;
+&lt;p&gt;3 seal_generation主要功能&lt;/p&gt;
+&lt;p&gt;3.1 印章提取&lt;/p&gt;
+&lt;p&gt;3.2 </summary>
+      
+    
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
+    
+    <category term="实用工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>交个朋友短视频创业集训班</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/01/jiao-ge-peng-you-duan-shi-pin-chuang-ye-ji/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/01/jiao-ge-peng-you-duan-shi-pin-chuang-ye-ji/</id>
+    <published>2025-08-01T07:34:34.000Z</published>
+    <updated>2025-08-02T19:00:21.192Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 交个朋友短视频创业集训班课程概览</p><p>2 交个朋友短视频创业集训班课程核心模块拆解</p><p>2.1 📌 创业策略与定位</p><p>2.2 🎬 内容创作方法</p><p>2.3 📈 数据运营与算法逻辑</p><p>2.4 💰 多元变现路径</p><p>3 交个朋友短视频创业集训班课程亮点</p><p>4 交个朋友短视频创业集训班学习地址</p><h2 id="交个朋友短视频创业集训班课程概览"><a href="#交个朋友短视频创业集训班课程概览" class="headerlink" title="交个朋友短视频创业集训班课程概览"></a>交个朋友短视频创业集训班课程概览</h2><p>《交个朋友》2024短视频创业集训班，围绕普通人如何通过短视频系统起号并实现流量变现，设计了覆盖策略、实操与变现路径的全套教学内容。课程采用“定战略—做内容—看数据—搞变现”的闭环框架，帮助学员从0到1构建个人IP或商业账号，并掌握平台规则与增长底层逻辑。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/%E4%BA%A4%E4%B8%AA%E6%9C%8B%E5%8F%8B%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%9B%E4%B8%9A%E9%9B%86%E8%AE%AD%E7%8F%AD.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/%E4%BA%A4%E4%B8%AA%E6%9C%8B%E5%8F%8B%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%9B%E4%B8%9A%E9%9B%86%E8%AE%AD%E7%8F%AD.jpg" alt="交个朋友短视频创业集训班"></a></p><hr><h2 id="交个朋友短视频创业集训班课程核心模块拆解"><a href="#交个朋友短视频创业集训班课程核心模块拆解" class="headerlink" title="交个朋友短视频创业集训班课程核心模块拆解"></a>交个朋友短视频创业集训班课程核心模块拆解</h2><h3 id="📌-创业策略与定位"><a href="#📌-创业策略与定位" class="headerlink" title="📌 创业策略与定位"></a>📌 创业策略与定位</h3><ul><li><strong>2定模式：五大变现模型</strong><br>介绍适合普通人上手的5种短视频创业盈利方式，结合当下趋势剖析适配场景。</li><li><strong>选赛道与对标账号分析</strong><br>通过挖掘垂直赛道、分析爆款账号，精准找准内容方向与创作灵感。</li><li><strong>人设与视觉体系搭建</strong><br>利用“万能人设公式”快速明确角色定位，配套账号装修四件套，完成账号包装。</li></ul><hr><h3 id="🎬-内容创作方法"><a href="#🎬-内容创作方法" class="headerlink" title="🎬 内容创作方法"></a>🎬 内容创作方法</h3><ul><li><strong>选题机制与内容引爆点</strong><br>教你掌握吸粉选题公式、内容吸睛九要素，提升用户停留与互动欲望。</li><li><strong>视频形式与脚本结构</strong><br>拆解4类可快速复制的视频类型，并教授5种人人可掌握的短视频脚本写法。</li><li><strong>黄金开头与标题模版</strong><br>精准三步法打造高完播率开场，套用爆款标题框架激发点击欲望。</li><li><strong>话题标签与素材管理</strong><br>掌握打标签、设定话题的技巧，并搭建高效素材库以保证内容持续产出。</li></ul><hr><h3 id="📈-数据运营与算法逻辑"><a href="#📈-数据运营与算法逻辑" class="headerlink" title="📈 数据运营与算法逻辑"></a>📈 数据运营与算法逻辑</h3><ul><li><strong>平台规则与算法机制</strong><br>深入解读短视频平台流量分发逻辑，帮助账号突破冷启动瓶颈。</li><li><strong>用户心理与互动提升</strong><br>教你读懂用户兴趣与需求，从而提升点赞、评论、收藏和转发等多维数据表现。</li><li><strong>数据拆解与优化提升</strong><br>涵盖从完播率到转发率的逐项优化方法，帮助内容稳步上分。</li></ul><hr><h3 id="💰-多元变现路径"><a href="#💰-多元变现路径" class="headerlink" title="💰 多元变现路径"></a>💰 多元变现路径</h3><ul><li><strong>知识付费体系搭建</strong><br>从0构建IP知识变现闭环，4节课讲透内容+信任+产品的变现模型。</li><li><strong>商业广告与星图合作</strong><br>引导学员迈入品牌广告合作通道，掌握百万网红如何接入星图项目。</li><li><strong>中视频与本地号变现</strong><br>解析中视频激励计划与本地生活探店的运营与收益机制，实现“内容即收入”。</li></ul><hr><h2 id="交个朋友短视频创业集训班课程亮点"><a href="#交个朋友短视频创业集训班课程亮点" class="headerlink" title="交个朋友短视频创业集训班课程亮点"></a>交个朋友短视频创业集训班课程亮点</h2><p>本课程将创作者从内容结构、视觉呈现、平台机制、用户运营、商业转化等五大层面全面武装，适合打算通过短视频打造个人品牌、变现副业、探索流量商业化的普通人、自由职业者、电商从业者及线下商家。配套实操模版与可复制流程，降低试错成本，提高短视频创业成功率。</p><h2 id="交个朋友短视频创业集训班学习地址"><a href="#交个朋友短视频创业集训班学习地址" class="headerlink" title="交个朋友短视频创业集训班学习地址"></a>交个朋友短视频创业集训班学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/6491608e05d8" title="交个朋友短视频创业集训班学习地址">交个朋友短视频创业集训班</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 交个朋友短视频创业集训班课程概览&lt;/p&gt;
+&lt;p&gt;2 交个朋友短视频创业集训班课程核心模块拆解&lt;/p&gt;
+&lt;p&gt;2.1 📌 创业策略与定位&lt;/p&gt;
+&lt;p&gt;2.2 🎬 内容创作方法&lt;/p&gt;
+&lt;p&gt;2.3 📈</summary>
+      
+    
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="短视频" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>饭局智慧中国式应酬攻略24节</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/08/01/fan-ju-zhi-hui-zhong-guo-shi-ying-chou-gong-lue-2/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/08/01/fan-ju-zhi-hui-zhong-guo-shi-ying-chou-gong-lue-2/</id>
+    <published>2025-08-01T07:15:16.000Z</published>
+    <updated>2025-08-02T19:00:21.975Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 饭桌不是吃饭那么简单，它是通往事业与人脉的高速通道</p><p>2 饭局智慧中国式应酬攻略24节课程结构概览</p><p>3 饭局智慧中国式应酬攻略24节主要内容亮点</p><p>4 饭局智慧中国式应酬攻略24节谁适合学习这门课程？</p><p>5 饭局智慧中国式应酬攻略24节学习地址</p><h2 id="饭桌不是吃饭那么简单，它是通往事业与人脉的高速通道"><a href="#饭桌不是吃饭那么简单，它是通往事业与人脉的高速通道" class="headerlink" title="饭桌不是吃饭那么简单，它是通往事业与人脉的高速通道"></a>饭桌不是吃饭那么简单，它是通往事业与人脉的高速通道</h2><p>这套《饭局智慧中国式应酬攻略24节》课程，以饭局为切入点，全面讲解了中国式应酬中的潜规则、礼仪与高阶沟通技巧，适合希望提升社交能力、扩展高质量人脉、增强情商表现的职场人士和创业者。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/%E9%A5%AD%E5%B1%80%E6%99%BA%E6%85%A7%E4%B8%AD%E5%9B%BD%E5%BC%8F%E5%BA%94%E9%85%AC%E6%94%BB%E7%95%A524%E8%8A%82-.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/%E9%A5%AD%E5%B1%80%E6%99%BA%E6%85%A7%E4%B8%AD%E5%9B%BD%E5%BC%8F%E5%BA%94%E9%85%AC%E6%94%BB%E7%95%A524%E8%8A%82-.jpg" alt="饭局智慧中国式应酬攻略24节"></a></p><h2 id="饭局智慧中国式应酬攻略24节课程结构概览"><a href="#饭局智慧中国式应酬攻略24节课程结构概览" class="headerlink" title="饭局智慧中国式应酬攻略24节课程结构概览"></a>饭局智慧中国式应酬攻略24节课程结构概览</h2><p>课程共24节，从如何看懂一个“局”、如何成为受欢迎的饭局角色，到具体的敬酒破冰技巧、送礼讲究、席间谈资、气氛掌控，再到文化差异下的应变之道，每节课都提供了可实操、接地气的高情商社交策略。</p><h2 id="饭局智慧中国式应酬攻略24节主要内容亮点"><a href="#饭局智慧中国式应酬攻略24节主要内容亮点" class="headerlink" title="饭局智慧中国式应酬攻略24节主要内容亮点"></a>饭局智慧中国式应酬攻略24节主要内容亮点</h2><ul><li><strong>读懂局势</strong> ：掌握饭局背后的格局与逻辑，明确自己的角色定位；</li><li><strong>饭桌礼仪细节</strong> ：着装、入席、敬酒、称呼，每一步都有讲究；</li><li><strong>打通人脉</strong> ：借助高端谈资、情绪引导与站台技巧打开高阶圈层；</li><li><strong>氛围营造</strong> ：打造“宾主尽欢”的酒局体验，让人记住你的人不止一次；</li><li><strong>破冰与升温</strong> ：酒桌话术、情绪调节、适时幽默，为交流加分；</li><li><strong>出场不掉价</strong> ：从买单艺术、送礼品味，到控局手腕，全方位塑造社交魅力；</li><li><strong>文化适配力</strong> ：深入分析不同地域风俗，教你如何“入乡随俗不失礼”。</li></ul><h2 id="饭局智慧中国式应酬攻略24节谁适合学习这门课程？"><a href="#饭局智慧中国式应酬攻略24节谁适合学习这门课程？" class="headerlink" title="饭局智慧中国式应酬攻略24节谁适合学习这门课程？"></a>饭局智慧中国式应酬攻略24节谁适合学习这门课程？</h2><ul><li>经常参与商务应酬的职场精英</li><li>想要拓展高端人脉的创业者</li><li>有社交恐惧但希望改变的年轻人</li><li>渴望提升情商与饭局表达力的人群</li></ul><p>这门课不是让你逢场作戏，而是教你在饭桌上展现真正的分寸感、人情味与洞察力，让你不仅吃得体面，更吃出价值。</p><h2 id="饭局智慧中国式应酬攻略24节学习地址"><a href="#饭局智慧中国式应酬攻略24节学习地址" class="headerlink" title="饭局智慧中国式应酬攻略24节学习地址"></a>饭局智慧中国式应酬攻略24节学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/ebf8bcac605a" title="饭局智慧中国式应酬攻略24节学习地址">饭局智慧中国式应酬攻略24节</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 饭桌不是吃饭那么简单，它是通往事业与人脉的高速通道&lt;/p&gt;
+&lt;p&gt;2 饭局智慧中国式应酬攻略24节课程结构概览&lt;/p&gt;
+&lt;p&gt;3 饭局智慧中国式应酬攻略24节主要内容亮点&lt;/p&gt;
+&lt;p&gt;4 饭局智慧中国式应</summary>
+      
+    
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="社交职场" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%A4%BE%E4%BA%A4%E8%81%8C%E5%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2025剪辑特效1对1就业营实操</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/2025-jian-ji-te-xiao-1-dui-1-jiu-ye-ying/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/2025-jian-ji-te-xiao-1-dui-1-jiu-ye-ying/</id>
+    <published>2025-08-01T01:38:40.000Z</published>
+    <updated>2025-08-02T19:00:23.820Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 🎬 2025剪辑特效1对1就业营实操课程概览｜影视剪辑特效就业全能班</p><p>2 📚 2025剪辑特效1对1就业营实操课程目录板块（大致模块划分）</p><p>2.1 模块一：PR剪辑系统训练</p><p>2.2 模块二：AE视觉特效与动画</p><p>2.3 模块三：调色与音频后期</p><p>2.4 模块四：手机摄影+剪映专业版</p><p>2.5 模块五：商业项目剪辑实战</p><p>2.6 模块六：就业与变现提升</p><p>3 ✅ 2025剪辑特效1对1就业营实操课学完你将收获</p><p>4 👥 2025剪辑特效1对1就业营实操课适合人群</p><p>5 2025剪辑特效1对1就业营实操课程学习地址</p><h2 id="🎬-2025剪辑特效1对1就业营实操课程概览｜影视剪辑特效就业全能班"><a href="#🎬-2025剪辑特效1对1就业营实操课程概览｜影视剪辑特效就业全能班" class="headerlink" title="🎬 2025剪辑特效1对1就业营实操课程概览｜影视剪辑特效就业全能班"></a>🎬 2025剪辑特效1对1就业营实操课程概览｜影视剪辑特效就业全能班</h2><p>2025剪辑特效1对1就业营实操,这是一套专为零基础用户打造的系统性影视后期课程，覆盖从剪辑软件操作到特效设计、调色配音、商业案例、手机拍摄，再到就业接单的全流程技能训练。课程由资深导师亲授，通过真实项目实战带学，帮助学员高效积累作品与经验，顺利迈入剪辑特效行业。</p><hr><h2 id="📚-2025剪辑特效1对1就业营实操课程目录板块（大致模块划分）"><a href="#📚-2025剪辑特效1对1就业营实操课程目录板块（大致模块划分）" class="headerlink" title="📚 2025剪辑特效1对1就业营实操课程目录板块（大致模块划分）"></a>📚 2025剪辑特效1对1就业营实操课程目录板块（大致模块划分）</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/2025%E5%89%AA%E8%BE%91%E7%89%B9%E6%95%881%E5%AF%B91%E5%B0%B1%E4%B8%9A%E8%90%A5%E5%AE%9E%E6%93%8D.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20860%201722'%3E%3C/svg%3E" alt="2025剪辑特效1对1就业营实操"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/2025%E5%89%AA%E8%BE%91%E7%89%B9%E6%95%881%E5%AF%B91%E5%B0%B1%E4%B8%9A%E8%90%A5%E5%AE%9E%E6%93%8D.jpg" alt="2025剪辑特效1对1就业营实操"></a></p><h3 id="模块一：PR剪辑系统训练"><a href="#模块一：PR剪辑系统训练" class="headerlink" title="模块一：PR剪辑系统训练"></a>模块一：PR剪辑系统训练</h3><ul><li>软件界面与工程设置</li><li>多轨道操作与素材剪辑技巧</li><li>关键帧、转场、字幕、混合模式</li><li>视频速度控制与导出设置</li></ul><h3 id="模块二：AE视觉特效与动画"><a href="#模块二：AE视觉特效与动画" class="headerlink" title="模块二：AE视觉特效与动画"></a>模块二：AE视觉特效与动画</h3><ul><li>图层、蒙版与三维空间</li><li>跟踪抠像、合成与表达式</li><li>文字动画、粒子插件（Particular）</li><li>光效、动态链接、酷炫案例拆解</li></ul><h3 id="模块三：调色与音频后期"><a href="#模块三：调色与音频后期" class="headerlink" title="模块三：调色与音频后期"></a>模块三：调色与音频后期</h3><ul><li>色彩基础与调色预设使用</li><li>AU音频插件与剪辑配音处理</li><li>花字、语言转写与文字特效应用</li></ul><h3 id="模块四：手机摄影-剪映专业版"><a href="#模块四：手机摄影-剪映专业版" class="headerlink" title="模块四：手机摄影+剪映专业版"></a>模块四：手机摄影+剪映专业版</h3><ul><li>手机拍大片的构图技巧与运镜方法</li><li>Vlog、探店、好物案例拍摄解析</li><li>剪映剪辑流程与口播视频制作</li></ul><h3 id="模块五：商业项目剪辑实战"><a href="#模块五：商业项目剪辑实战" class="headerlink" title="模块五：商业项目剪辑实战"></a>模块五：商业项目剪辑实战</h3><ul><li>企业宣传片与产品片剪辑思维</li><li>案例导向项目演练与点评指导</li></ul><h3 id="模块六：就业与变现提升"><a href="#模块六：就业与变现提升" class="headerlink" title="模块六：就业与变现提升"></a>模块六：就业与变现提升</h3><ul><li>剪辑兼职接单方法</li><li>简历作品集制作</li><li>就业推荐与行业对接辅导</li></ul><hr><h2 id="✅-2025剪辑特效1对1就业营实操课学完你将收获"><a href="#✅-2025剪辑特效1对1就业营实操课学完你将收获" class="headerlink" title="✅ 2025剪辑特效1对1就业营实操课学完你将收获"></a>✅ 2025剪辑特效1对1就业营实操课学完你将收获</h2><ul><li>独立完成宣传片、短视频、商业项目剪辑与特效制作能力</li><li>精通PR、AE、AU、剪映、手机拍摄等多工具组合运用</li><li>打造完整作品集，掌握接单与就业技巧</li><li>从0到1构建剪辑职业路径，轻松跨入内容创作与后期行业</li><li>获得导师1对1辅导与就业推荐支持</li></ul><hr><h2 id="👥-2025剪辑特效1对1就业营实操课适合人群"><a href="#👥-2025剪辑特效1对1就业营实操课适合人群" class="headerlink" title="👥 2025剪辑特效1对1就业营实操课适合人群"></a>👥 2025剪辑特效1对1就业营实操课适合人群</h2><ul><li>对视频剪辑与影视后期感兴趣的零基础入门者</li><li>想学一门技能实现副业变现或自由职业的打工人</li><li>希望转行进入影视&#x2F;短视频&#x2F;新媒体行业的在职人员或学生</li><li>想系统掌握剪辑技能并快速积累作品经验的内容创作者</li></ul><h2 id="2025剪辑特效1对1就业营实操课程学习地址"><a href="#2025剪辑特效1对1就业营实操课程学习地址" class="headerlink" title="2025剪辑特效1对1就业营实操课程学习地址"></a>2025剪辑特效1对1就业营实操课程学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/58c962cb1ffb" title="2025剪辑特效1对1就业营实操学习地址">2025剪辑特效1对1就业营实操</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 🎬 2025剪辑特效1对1就业营实操课程概览｜影视剪辑特效就业全能班&lt;/p&gt;
+&lt;p&gt;2 📚 2025剪辑特效1对1就业营实操课程目录板块（大致模块划分）&lt;/p&gt;
+&lt;p&gt;2.1 模块一：PR剪辑系统训练&lt;</summary>
+      
+    
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="摄影剪辑" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UP简历：在线AI简历工具，5分钟轻松打造专业简历</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/up-jian-li-zai-xian-ai-jian-li-gong-ju-5-fen-zhong-qing-song-da-zao-zhuan-ye/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/up-jian-li-zai-xian-ai-jian-li-gong-ju-5-fen-zhong-qing-song-da-zao-zhuan-ye/</id>
+    <published>2025-08-01T01:23:30.000Z</published>
+    <updated>2025-08-02T19:00:24.779Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 什么是 UP 简历？</p><p>2 UP简历核心功能亮点</p><p>2.1 支持AI智能生成与个性化优化</p><p>2.2 专业模板与灵活排版编辑</p><p>2.3 高清PDF导出，格式稳定无水印</p><p>3 UP简历适用人群与使用场景</p><p>4 UP简历版本与价格说明</p><p>5 UP简历使用流程简述</p><p>6 UP简历官网地址</p><h2 id="什么是-UP-简历？"><a href="#什么是-UP-简历？" class="headerlink" title="什么是 UP 简历？"></a>什么是 UP 简历？</h2><p>UP简历是一款免费的在线AI简历生成与优化平台，用户只需5分钟便能创建一份具备行业标准、高匹配度且设计美观的专业简历。AI以对话形式引导填写，通过智能分析岗位JD，实现内容、关键词、排版的一体化优化 。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/UP%E7%AE%80%E5%8E%86%EF%BC%9A%E5%9C%A8%E7%BA%BFAI%E7%AE%80%E5%8E%86%E5%B7%A5%E5%85%B7%EF%BC%8C5%E5%88%86%E9%92%9F%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E4%B8%93%E4%B8%9A%E7%AE%80%E5%8E%86.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203622%202680'%3E%3C/svg%3E" alt="UP简历：在线AI简历工具，5分钟轻松打造专业简历"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/UP%E7%AE%80%E5%8E%86%EF%BC%9A%E5%9C%A8%E7%BA%BFAI%E7%AE%80%E5%8E%86%E5%B7%A5%E5%85%B7%EF%BC%8C5%E5%88%86%E9%92%9F%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E4%B8%93%E4%B8%9A%E7%AE%80%E5%8E%86.jpg" alt="UP简历：在线AI简历工具，5分钟轻松打造专业简历"></a></p><h2 id="UP简历核心功能亮点"><a href="#UP简历核心功能亮点" class="headerlink" title="UP简历核心功能亮点"></a>UP简历核心功能亮点</h2><h3 id="支持AI智能生成与个性化优化"><a href="#支持AI智能生成与个性化优化" class="headerlink" title="支持AI智能生成与个性化优化"></a>支持AI智能生成与个性化优化</h3><p>输入职位和行业背景后，AI会自动生成多条高亮工作经历，将平凡描述转化为量化成果。提供一键专业润色和实时拼写、语法纠错，确保简历措辞严谨、表达专业 。用户也可以粘贴目标岗位的职位描述，系统自动提取关键词，提升简历与JD的契合度 。</p><h3 id="专业模板与灵活排版编辑"><a href="#专业模板与灵活排版编辑" class="headerlink" title="专业模板与灵活排版编辑"></a>专业模板与灵活排版编辑</h3><p>平台拥有多款由HR与设计师共同研发的高颜值模板，排版布局直观、易于阅读，便于HR在几秒内捕捉求职者核心优势。拖拽操作设计直观，如同制作PPT一般，无需具备排版经验，极大降低使用门槛 。</p><h3 id="高清PDF导出，格式稳定无水印"><a href="#高清PDF导出，格式稳定无水印" class="headerlink" title="高清PDF导出，格式稳定无水印"></a>高清PDF导出，格式稳定无水印</h3><p>支持生成适配各行业的简历模板，简历可一键导出为高清 PDF。免费版用户可导出一份无水印简历，避免格式错乱／乱码问题 。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/UP%E7%AE%80%E5%8E%86%EF%BC%9A%E5%9C%A8%E7%BA%BFAI%E7%AE%80%E5%8E%86%E5%B7%A5%E5%85%B7%EF%BC%8C5%E5%88%86%E9%92%9F%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E4%B8%93%E4%B8%9A%E7%AE%80%E5%8E%8601.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203622%202680'%3E%3C/svg%3E" alt="UP简历：在线AI简历工具，5分钟轻松打造专业简历"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/UP%E7%AE%80%E5%8E%86%EF%BC%9A%E5%9C%A8%E7%BA%BFAI%E7%AE%80%E5%8E%86%E5%B7%A5%E5%85%B7%EF%BC%8C5%E5%88%86%E9%92%9F%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E4%B8%93%E4%B8%9A%E7%AE%80%E5%8E%8601.jpg" alt="UP简历：在线AI简历工具，5分钟轻松打造专业简历"></a></p><h2 id="UP简历适用人群与使用场景"><a href="#UP简历适用人群与使用场景" class="headerlink" title="UP简历适用人群与使用场景"></a>UP简历适用人群与使用场景</h2><p>适合应届毕业生、职场新人、转行者以及频繁更新简历的职场人士。特别适合缺乏简历写作经验但渴望用专业措辞展示成果的人群 。</p><h2 id="UP简历版本与价格说明"><a href="#UP简历版本与价格说明" class="headerlink" title="UP简历版本与价格说明"></a>UP简历版本与价格说明</h2><p>免费版提供核心AI生成功能和一次高清PDF导出机会。Pro会员为月费约 19.9 元，拥有不限次数生成与导出、解锁全部高级模板、支持模拟面试与求职信生成等额外功能 。</p><h2 id="UP简历使用流程简述"><a href="#UP简历使用流程简述" class="headerlink" title="UP简历使用流程简述"></a>UP简历使用流程简述</h2><ul><li>注册后填写求职目标、教育与工作经历等基本信息；AI自动生成简历初稿，通常耗时 3–5 分钟</li><li>可进一步优化工作经历、润色措辞、纠错、与岗位JD匹配关键词</li><li>用拖拽编辑器调整模块与模板风格</li><li>最后导出成PDF格式，方便投递与打印</li></ul><p>UP简历结合了AI生成与岗位关键词匹配优势，让简历既简洁流畅又符合ATS规则，同时降低排版与写作难度。</p><h2 id="UP简历官网地址"><a href="#UP简历官网地址" class="headerlink" title="UP简历官网地址"></a>UP简历官网地址</h2><p>地址：<a href="https://upcv.tech/">https://upcv.tech/</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 什么是 UP 简历？&lt;/p&gt;
+&lt;p&gt;2 UP简历核心功能亮点&lt;/p&gt;
+&lt;p&gt;2.1 支持AI智能生成与个性化优化&lt;/p&gt;
+&lt;p&gt;2.2 专业模板与灵活排版编辑&lt;/p&gt;
+&lt;p&gt;2.3 高清PDF导出，格式稳定</summary>
+      
+    
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
+    
+    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PoPo开源AI工具：用自然语言生成MMD角色动作与表情</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/popo-kai-yuan-ai-gong-ju-yong-zi-ran-yu-yan-sheng-cheng-mmd-jiao-se-dong-zuo-yu/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/popo-kai-yuan-ai-gong-ju-yong-zi-ran-yu-yan-sheng-cheng-mmd-jiao-se-dong-zuo-yu/</id>
+    <published>2025-08-01T00:48:14.000Z</published>
+    <updated>2025-08-02T19:00:26.205Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 PoPo简介</p><p>2 PoPo功能亮点</p><p>3 PoPo技术架构</p><p>4 MPL 语言优势</p><p>4.1 示例训练流程</p><p>5 PoPo社区与演进历程</p><p>6 PoPo使用方式</p><h2 id="PoPo简介"><a href="#PoPo简介" class="headerlink" title="PoPo简介"></a>PoPo简介</h2><p>PoPo 是一个开源 AI 工具，允许用户通过自然语言控制 MikuMikuDance（MMD）角色的骨骼动作和面部表情。你只需输入文字描述，PoPo 就能生成精确的 MPL（MMD Pose Language）脚本，驱动骨骼动画和角色表情的实时渲染 。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85.jpg" alt="PoPo开源AI工具：用自然语言生成MMD角色动作与表情"></a></p><h2 id="PoPo功能亮点"><a href="#PoPo功能亮点" class="headerlink" title="PoPo功能亮点"></a>PoPo功能亮点</h2><p>PoPo 支持“挥右手、大笑邀请晚餐”等语句输入，输出结构化的 MPL 代码，可直接控制胳膊、手指、面部 morph 等部位，生成可靠且一致的姿势。渲染快速流畅，专门针对日系角色骨骼结构和物理约束做了优化 。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85-01.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202970%202312'%3E%3C/svg%3E" alt="PoPo开源AI工具：用自然语言生成MMD角色动作与表情"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85-01.jpg" alt="PoPo开源AI工具：用自然语言生成MMD角色动作与表情"></a></p><h2 id="PoPo技术架构"><a href="#PoPo技术架构" class="headerlink" title="PoPo技术架构"></a>PoPo技术架构</h2><ul><li>前端采用 Next.js 与 shadcn&#x2F;ui + TypeScript</li><li>渲染基于 Babylon.js 搭载 babylon‑mmd 插件</li><li>核心使用 GPT‑4o‑mini 模型 fine‑tune，将自然语言映射为 MPL 语义脚本</li><li>项目部署在 Vercel 平台</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85-02.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202962%201934'%3E%3C/svg%3E" alt="PoPo开源AI工具：用自然语言生成MMD角色动作与表情"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85-02.jpg" alt="PoPo开源AI工具：用自然语言生成MMD角色动作与表情"></a></p><h2 id="MPL-语言优势"><a href="#MPL-语言优势" class="headerlink" title="MPL 语言优势"></a>MPL 语言优势</h2><p>作为 MMD 专用的语义姿势描述语言，MPL 避免复杂的四元数数值训练，更具可读性和可调试性。这样训练的模型表现更稳定，姿势更符合人体运动规则，输出结果容易修改调试，并更具一致性 。</p><h3 id="示例训练流程"><a href="#示例训练流程" class="headerlink" title="示例训练流程"></a>示例训练流程</h3><p>训练数据使用如下结构：</p><pre><code>&#123;  &quot;messages&quot;:[    &#123;&quot;role&quot;:&quot;system&quot;,&quot;content&quot;:&quot;Generate MMD Pose Language (MPL) script from description.&quot;&#125;,    &#123;&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Description: arms down&quot;&#125;,    &#123;&quot;role&quot;:&quot;assistant&quot;,&quot;content&quot;:&quot;arm_l bend forward 40;arm_r bend forward 40;&quot;&#125;  ]&#125;</code></pre><p>这种设计帮助模型快速收敛，保持输出一致，并让结果具备结构化语义的可调性 。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85-03.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202970%202312'%3E%3C/svg%3E" alt="PoPo开源AI工具：用自然语言生成MMD角色动作与表情"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/PoPo%E5%BC%80%E6%BA%90AI%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%A8%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90MMD%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C%E4%B8%8E%E8%A1%A8%E6%83%85-03.jpg" alt="PoPo开源AI工具：用自然语言生成MMD角色动作与表情"></a></p><h2 id="PoPo社区与演进历程"><a href="#PoPo社区与演进历程" class="headerlink" title="PoPo社区与演进历程"></a>PoPo社区与演进历程</h2><p>PoPo 前身是 MiKaPo 项目，通过 MediaPipe 实时捕获人体姿势再映射到 MMD 骨骼；而 PoPo 则跳过中间步骤，直接从文本生成 MPL 脚本控制骨骼模型 。当前训练集约 160 个姿势样本，表现已较好，仍欢迎用户贡献更多高质量训练数据以进一步优化模型 。</p><h2 id="PoPo使用方式"><a href="#PoPo使用方式" class="headerlink" title="PoPo使用方式"></a>PoPo使用方式</h2><p>用户可访问在线演示站点 popo.love，选择“深空之眼 三相·梵天『无间玩伴』”等示例模型，通过输入自然语言描述生成对应动作与表情。GitHub 上提供完整源码与贡献指南，采用 GPL‑3.0 开源协议 。</p><p>PoPo 将自然语言、AI 模型与 MMD 动画结合，通过语义语言 MPL 为用户提供直观且高效的动作创作体验。在不断扩展数据集与优化模型之后，它有望成为日系角色动画制作的重要工具。</p><p>体验地址：<a href="https://popo.love/">https://popo.love/</a></p><p>GitHub地址：<a href="https://github.com/AmyangXYZ/PoPo">https://github.com/AmyangXYZ/PoPo</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 PoPo简介&lt;/p&gt;
+&lt;p&gt;2 PoPo功能亮点&lt;/p&gt;
+&lt;p&gt;3 PoPo技术架构&lt;/p&gt;
+&lt;p&gt;4 MPL 语言优势&lt;/p&gt;
+&lt;p&gt;4.1 示例训练流程&lt;/p&gt;
+&lt;p&gt;5 PoPo社区与演进历程&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
+    
+    
+    <category term="GitHub项目" scheme="https://liuxingzhe.github.io/blog//blog/tags/GitHub%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PixTrim：免费在线无损压缩与裁剪图像神器</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/pixtrim-mian-fei-zai-xian-wu-sun-ya-suo-yu-cai-jian-tu-xiang/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/pixtrim-mian-fei-zai-xian-wu-sun-ya-suo-yu-cai-jian-tu-xiang/</id>
+    <published>2025-07-31T23:38:03.000Z</published>
+    <updated>2025-08-02T19:00:29.489Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 PixTrim 是什么？</p><p>2 PixTrim功能亮点</p><p>2.1 尺寸调整</p><p>2.2 精准裁剪</p><p>2.3 智能压缩</p><p>2.4 格式转换</p><p>2.5 翻转与旋转</p><p>3 PixTrim安全与使用流程</p><p>4 PixTrim用户场景推荐</p><p>5 PixTrim与其他同类工具对比</p><p>6 PixTrim如何使用</p><h2 id="PixTrim-是什么？"><a href="#PixTrim-是什么？" class="headerlink" title="PixTrim 是什么？"></a>PixTrim 是什么？</h2><p>PixTrim 是一款纯浏览器端图片处理工具，用户可在无需安装软件的情况下完成尺寸调整、裁剪、压缩、格式转换、翻转与旋转等操作，并支持 JPG、PNG、WebP、AVIF、HEIC 等主流格式，单文件可达 10 MB。所有文件通过 HTTPS 上传，在安全服务器中处理，并在 6 小时内自动删除。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/PixTrim%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E6%97%A0%E6%8D%9F%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F%E7%A5%9E%E5%99%A8-main.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/PixTrim%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E6%97%A0%E6%8D%9F%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F%E7%A5%9E%E5%99%A8-main.jpg" alt="PixTrim：免费在线无损压缩与裁剪图像神器"></a></p><h2 id="PixTrim功能亮点"><a href="#PixTrim功能亮点" class="headerlink" title="PixTrim功能亮点"></a>PixTrim功能亮点</h2><h3 id="尺寸调整"><a href="#尺寸调整" class="headerlink" title="尺寸调整"></a>尺寸调整</h3><p>可按自定义尺寸改变图像的宽高，同时保持长宽比不变，非常适合社交媒体、网页展示或打印使用。</p><h3 id="精准裁剪"><a href="#精准裁剪" class="headerlink" title="精准裁剪"></a>精准裁剪</h3><p>支持手动选择裁剪区域，或使用预设比例进行快速裁剪，确保图像主体突出清晰。</p><h3 id="智能压缩"><a href="#智能压缩" class="headerlink" title="智能压缩"></a>智能压缩</h3><p>提供基于质量设置的压缩选项，推荐使用 70–80% 压缩质量，即可显著减少文件大小而不明显影响视觉效果。</p><h3 id="格式转换"><a href="#格式转换" class="headerlink" title="格式转换"></a>格式转换</h3><p>用户可在 JPG、PNG、WebP、AVIF、HEIC 等格式之间进行转换，选择适合透明背景、动画或最小体积需求的格式。</p><h3 id="翻转与旋转"><a href="#翻转与旋转" class="headerlink" title="翻转与旋转"></a>翻转与旋转</h3><p>支持水平或垂直翻转图像，以及以 90°、180°、270° 等角度旋转，可用于自拍镜像、布局调整或构图优化。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/PixTrim%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E6%97%A0%E6%8D%9F%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F%E7%A5%9E%E5%99%A8.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202962%202356'%3E%3C/svg%3E" alt="PixTrim：免费在线无损压缩与裁剪图像神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/PixTrim%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E6%97%A0%E6%8D%9F%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F%E7%A5%9E%E5%99%A8.jpg" alt="PixTrim：免费在线无损压缩与裁剪图像神器"></a></p><h2 id="PixTrim安全与使用流程"><a href="#PixTrim安全与使用流程" class="headerlink" title="PixTrim安全与使用流程"></a>PixTrim安全与使用流程</h2><p>上传过程通过 HTTPS 安全传输，图像将在服务器处理后 6 小时内自动删除，保障隐私安全。<br>操作步骤非常直观：选择图像 → 输入期望尺寸或选项 → 点击应用 → 下载结果。</p><h2 id="PixTrim用户场景推荐"><a href="#PixTrim用户场景推荐" class="headerlink" title="PixTrim用户场景推荐"></a>PixTrim用户场景推荐</h2><ul><li>面向网页加载速度优化的站长或开发者</li><li>需要高效处理多种格式、批量压缩图片的内容创作者</li><li>寻找简单易用、零安装门槛的在线工具</li></ul><h2 id="PixTrim与其他同类工具对比"><a href="#PixTrim与其他同类工具对比" class="headerlink" title="PixTrim与其他同类工具对比"></a>PixTrim与其他同类工具对比</h2><p>与 Simple Image Resizer、PicResize、iLoveIMG 等在线工具相比，PixTrim 功能更丰富，支持更多格式如 AVIF 和 HEIC，且集成尺寸调整、格式转换与翻转功能于一体，非常适合一次性完成多种操作。</p><h2 id="PixTrim如何使用"><a href="#PixTrim如何使用" class="headerlink" title="PixTrim如何使用"></a>PixTrim如何使用</h2><p>PixTrim 提供了全面的基础图片编辑功能，界面简洁易用，支持主流格式转换与压缩，且无需注册使用。它非常适合对效率、质量、安全有要求的用户。无论是社交平台展示、网站内容准备还是电商素材优化，都能轻松满足需求。</p><p>官网地址：<a href="https://pixtrim.com/">https://pixtrim.com/</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 PixTrim 是什么？&lt;/p&gt;
+&lt;p&gt;2 PixTrim功能亮点&lt;/p&gt;
+&lt;p&gt;2.1 尺寸调整&lt;/p&gt;
+&lt;p&gt;2.2 精准裁剪&lt;/p&gt;
+&lt;p&gt;2.3 智能压缩&lt;/p&gt;
+&lt;p&gt;2.4 格式转换&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
+    
+    
+    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视</title>
+    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/kinby-quan-neng-mei-ti-bo-fang-qi-wu-feng-lian-jie-emby-yu-jellyfin-quan-ping-tai-chang-xiang-gao-qing/"/>
+    <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/kinby-quan-neng-mei-ti-bo-fang-qi-wu-feng-lian-jie-emby-yu-jellyfin-quan-ping-tai-chang-xiang-gao-qing/</id>
+    <published>2025-07-31T21:01:18.000Z</published>
+    <updated>2025-08-02T19:00:30.505Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 Kinby概述</p><p>1.1 Kinby关键功能</p><p>1.2 功能地图与开发计划</p><p>1.3 Pro 与收费策略</p><p>2 Kinby与 Emby &#x2F; Jellyfin 的协同价值</p><p>3 Kinby典型应用场景</p><p>4 Kinby如何使用</p><h2 id="Kinby概述"><a href="#Kinby概述" class="headerlink" title="Kinby概述"></a>Kinby概述</h2><p>Kinby 是一款专为家庭娱乐与个人影院场景打造的全平台媒体播放器，支持无缝连接 Emby 与 Jellyfin 服务器，实现本地媒体库的高速串流与智能管理。其核心优势在于跨设备覆盖——Windows、macOS、Linux、Android、Android TV 均已支持，iOS、Apple TV 与 HarmonyOS 版本正在开发中，可真正做到“随时随地看自己的片库”。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/Kinby%E5%85%A8%E8%83%BD%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%9A%E6%97%A0%E7%BC%9D%E8%BF%9E%E6%8E%A5Emby%E4%B8%8EJellyfin%EF%BC%8C%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%95%85%E4%BA%AB%E9%AB%98%E6%B8%85%E5%BD%B1%E8%A7%86-screenshot.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201536%201024'%3E%3C/svg%3E" alt="Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/Kinby%E5%85%A8%E8%83%BD%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%9A%E6%97%A0%E7%BC%9D%E8%BF%9E%E6%8E%A5Emby%E4%B8%8EJellyfin%EF%BC%8C%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%95%85%E4%BA%AB%E9%AB%98%E6%B8%85%E5%BD%B1%E8%A7%86-screenshot.jpg" alt="Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视"></a></p><h3 id="Kinby关键功能"><a href="#Kinby关键功能" class="headerlink" title="Kinby关键功能"></a>Kinby关键功能</h3><ul><li><strong>全平台支持</strong> ：同一账号可在电脑、手机与电视端之间切换播放进度，无需手动同步。</li><li><strong>媒体服务连接</strong> ：通过 Token 或 URL 即可快速接入 Emby &#x2F; Jellyfin 服务器，界面自动拉取封面与元数据。</li><li><strong>高速流畅</strong> ：内置优化播放引擎，4K HDR 文件也能秒开无卡顿。</li><li><strong>现代化界面</strong> ：极简暗色 UI、可自定义主题色，支持触控与遥控双操作。</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/Kinby%E5%85%A8%E8%83%BD%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%9A%E6%97%A0%E7%BC%9D%E8%BF%9E%E6%8E%A5Emby%E4%B8%8EJellyfin%EF%BC%8C%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%95%85%E4%BA%AB%E9%AB%98%E6%B8%85%E5%BD%B1%E8%A7%86-01.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202734%201932'%3E%3C/svg%3E" alt="Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/Kinby%E5%85%A8%E8%83%BD%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%9A%E6%97%A0%E7%BC%9D%E8%BF%9E%E6%8E%A5Emby%E4%B8%8EJellyfin%EF%BC%8C%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%95%85%E4%BA%AB%E9%AB%98%E6%B8%85%E5%BD%B1%E8%A7%86-01.jpg" alt="Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视"></a></p><h3 id="功能地图与开发计划"><a href="#功能地图与开发计划" class="headerlink" title="功能地图与开发计划"></a>功能地图与开发计划</h3><p>已完成：多格式解码、Emby 支持、Jellyfin 支持、跨端账户同步。<br>开发中：Plex 支持、云端配置同步、代理设置、弹幕、自动跳过片头片尾等模块，后续版本将陆续解锁。</p><h3 id="Pro-与收费策略"><a href="#Pro-与收费策略" class="headerlink" title="Pro 与收费策略"></a>Pro 与收费策略</h3><ul><li><strong>免费版</strong> ：永久免费，最多可绑定 3 台媒体服务器，涵盖主流播放功能。</li><li><strong>Pro 年付</strong> ：不限设备数量，可添加 10 台服务器，并支持设置云同步与优先技术支持（即将上线）。</li><li><strong>Pro 永久</strong> ：一次付费终身使用，可绑定 20 台服务器，享受终身免费更新及新功能抢先体验。</li><li>所有 Pro 方案均享 7 天无理由退款，购买入口位于应用内“升级到 Pro”按钮。</li></ul><h2 id="Kinby与-Emby-Jellyfin-的协同价值"><a href="#Kinby与-Emby-Jellyfin-的协同价值" class="headerlink" title="Kinby与 Emby &#x2F; Jellyfin 的协同价值"></a>Kinby与 Emby &#x2F; Jellyfin 的协同价值</h2><ul><li><strong>Emby</strong> 提供网页仪表盘、移动同步与硬件实时转码，方便远程管理家庭媒体库；Kinby 接入后即可跨端观看且保留 Emby 用户、家长控制等特性。</li><li><strong>Jellyfin</strong> 完全开源、无订阅限制，强调 “your media, your server, your way”；Kinby 让 Jellyfin 服务器上的影片在电视与移动端获得近原生体验，且未来支持自动片头跳过等高级功能。</li><li>Jellyfin 的虚拟“Libraries”概念可在 Kinby 中保持一致，方便分类动漫、纪录片或自制视频。</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/Kinby%E5%85%A8%E8%83%BD%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%9A%E6%97%A0%E7%BC%9D%E8%BF%9E%E6%8E%A5Emby%E4%B8%8EJellyfin%EF%BC%8C%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%95%85%E4%BA%AB%E9%AB%98%E6%B8%85%E5%BD%B1%E8%A7%86-02.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202734%201932'%3E%3C/svg%3E" alt="Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视 02 | Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/Kinby%E5%85%A8%E8%83%BD%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%9A%E6%97%A0%E7%BC%9D%E8%BF%9E%E6%8E%A5Emby%E4%B8%8EJellyfin%EF%BC%8C%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%95%85%E4%BA%AB%E9%AB%98%E6%B8%85%E5%BD%B1%E8%A7%86-02.jpg" alt="Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视 02 | Kinby全能媒体播放器：无缝连接Emby与Jellyfin，全平台畅享高清影视"></a></p><h2 id="Kinby典型应用场景"><a href="#Kinby典型应用场景" class="headerlink" title="Kinby典型应用场景"></a>Kinby典型应用场景</h2><ul><li><strong>家庭影院</strong> ：在 NAS 上部署 Emby 服务器，用 Kinby 将 4K 蓝光片库串流到客厅大屏，享受原盘级画质。</li><li><strong>差旅人士</strong> ：出差途中用 Kinby 登录家中 Jellyfin 服务器，通过蜂窝网络继续追剧，缓存离线观影。</li><li><strong>多终端协同</strong> ：在电视端观看影片途中，可直接在手机上续播，进度秒级同步，无需重复拖动时间轴。</li></ul><blockquote><p>借助 Kinby，用户可将现有 Emby 或 Jellyfin 服务器的优势发挥到多终端生态，并通过未来的 Plex 扩展进一步统一媒体体验。</p></blockquote><h2 id="Kinby如何使用"><a href="#Kinby如何使用" class="headerlink" title="Kinby如何使用"></a>Kinby如何使用</h2><p>下载地址：<a href="https://pan.quark.cn/s/0130c5620075" title="Kinby全能媒体播放器客户端下载地址">网盘</a></p><p>官网地址：<a href="https://kinby.xac.one/">https://kinby.xac.one/</a></p><p>GitHub地址：<a href="https://github.com/kinby-official/kinby-release">https://github.com/kinby-official/kinby-release</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
+&lt;p&gt;1 Kinby概述&lt;/p&gt;
+&lt;p&gt;1.1 Kinby关键功能&lt;/p&gt;
+&lt;p&gt;1.2 功能地图与开发计划&lt;/p&gt;
+&lt;p&gt;1.3 Pro 与收费策略&lt;/p&gt;
+&lt;p&gt;2 Kinby与 Emby &amp;#x2F; Jell</summary>
+      
+    
+    
+    
+    <category term="软件" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="Android" scheme="https://liuxingzhe.github.io/blog//blog/tags/Android/"/>
+    
+    <category term="Mac" scheme="https://liuxingzhe.github.io/blog//blog/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SandboxFinder：HarmonyOS 沙箱文件浏览器，浏览器里就能管控应用文件</title>
     <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/sandboxfinderharmonyos-sha-xiang-wen-jian-liu-lan-qi-liu-lan-qi-li-jiu-neng-guan-kong-ying-yong/"/>
     <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/sandboxfinderharmonyos-sha-xiang-wen-jian-liu-lan-qi-liu-lan-qi-li-jiu-neng-guan-kong-ying-yong/</id>
     <published>2025-07-31T09:33:58.000Z</published>
-    <updated>2025-07-31T19:00:10.326Z</updated>
+    <updated>2025-08-02T19:00:32.250Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 SandboxFinder简介</p><p>2 SandboxFinder核心功能</p><p>2.1 沙箱文件系统</p><p>2.2 Web 界面</p><p>2.3 文件操作</p><p>3 沙箱目录速查</p><p>4 SandboxFinder快速上手</p><p>5 SandboxFinder适用场景与优势</p><p>6 SandboxFinder如何使用&#x2F;项目地址</p><h2 id="SandboxFinder简介"><a href="#SandboxFinder简介" class="headerlink" title="SandboxFinder简介"></a>SandboxFinder简介</h2><p>SandboxFinder是一个专为 HarmonyOS 应用开发者设计的<strong>沙箱文件浏览器</strong> ，通过内置 HTTP 服务器提供 Web 界面访问应用沙箱目录。专为 HarmonyOS 应用开发者打造，提供一种直观、高效的方式来访问和管理应用沙箱目录。通过内置的轻量级 HTTP 服务器，开发者可以在任意设备（模拟器或真机）上，使用浏览器快速浏览和操作应用内部文件，显著提升调试效率。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/SandboxFinder%EF%BC%9AHarmonyOS-%E6%B2%99%E7%AE%B1%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E9%87%8C%E5%B0%B1%E8%83%BD%E7%AE%A1%E6%8E%A7%E5%BA%94%E7%94%A8%E6%96%87%E4%BB%B6.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202952%202092'%3E%3C/svg%3E" alt="SandboxFinder：HarmonyOS 沙箱文件浏览器，浏览器里就能管控应用文件"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/SandboxFinder%EF%BC%9AHarmonyOS-%E6%B2%99%E7%AE%B1%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E9%87%8C%E5%B0%B1%E8%83%BD%E7%AE%A1%E6%8E%A7%E5%BA%94%E7%94%A8%E6%96%87%E4%BB%B6.jpg" alt="SandboxFinder：HarmonyOS 沙箱文件浏览器，浏览器里就能管控应用文件"></a></p><h2 id="SandboxFinder核心功能"><a href="#SandboxFinder核心功能" class="headerlink" title="SandboxFinder核心功能"></a>SandboxFinder核心功能</h2><h3 id="沙箱文件系统"><a href="#沙箱文件系统" class="headerlink" title="沙箱文件系统"></a>沙箱文件系统</h3><ul><li>内置基于 TCP Socket 的轻量级 HTTP 服务器，启动后即提供文件浏览服务。</li><li>默认监听 7777 端口，可按需自定义。</li><li>支持模拟器与真机，方便联调与测试。</li><li>自动识别文本、图片、音视频与 SQLite 数据库等多种文件类型。</li></ul><h3 id="Web-界面"><a href="#Web-界面" class="headerlink" title="Web 界面"></a>Web 界面</h3><ul><li>前端采用 Vue 3 + Tailwind CSS，界面自适应不同分辨率。</li><li>提供目录快捷入口（filesDir、cacheDir、tempDir、databaseDir 等），点击即跳转。</li><li>支持名称、大小、时间多维排序，以及实时关键字搜索。</li><li>内嵌预览组件，可直接查看文本、图片、视频、音频与数据库表。</li></ul><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul><li>新建、删除、重命名等基础操作一应俱全。</li><li>大文件分块、拖放、多选上传，稳定处理 GB 级文件。</li><li>直链下载，适合自动化脚本或浏览器直接保存。</li></ul><h2 id="沙箱目录速查"><a href="#沙箱目录速查" class="headerlink" title="沙箱目录速查"></a>沙箱目录速查</h2><p>HarmonyOS 将应用数据隔离在 filesDir、cacheDir、tempDir、databaseDir 等路径，确保存储安全且互不干扰。这些目录均可通过 SandboxFinder 快捷访问，便于日志抓取、数据库调试与临时文件清理。</p><h2 id="SandboxFinder快速上手"><a href="#SandboxFinder快速上手" class="headerlink" title="SandboxFinder快速上手"></a>SandboxFinder快速上手</h2><ol><li>在项目根目录执行 <code>ohpm install @cxy/sandboxfinder</code> 并同步依赖。</li><li>调用 <code>SandboxFinder.run()</code>，默认即可启动 7777 端口服务；如需修改，传入自定义端口号。</li><li>确保手机与电脑在同一 Wi-Fi，浏览器访问 <code>http://设备IP:端口</code> 即可。</li></ol><h2 id="SandboxFinder适用场景与优势"><a href="#SandboxFinder适用场景与优势" class="headerlink" title="SandboxFinder适用场景与优势"></a>SandboxFinder适用场景与优势</h2><ul><li><strong>调试</strong> ：无需 hdc 拉文件，浏览器即看即改，缩短排查耗时。</li><li><strong>演示</strong> ：在团队分享或课堂教学中，通过 URL 直接展示应用沙箱结构，提高讲解效率。</li><li><strong>自动化</strong> ：结合直链下载，可用脚本定时同步日志或数据库，便于持续集成。</li></ul><p>通过以上特性，SandboxFinder 成为 HarmonyOS 开发环境下的高效文件管理利器，帮助开发者专注业务而非繁琐的设备文件操作。</p><h2 id="SandboxFinder如何使用-项目地址"><a href="#SandboxFinder如何使用-项目地址" class="headerlink" title="SandboxFinder如何使用&#x2F;项目地址"></a>SandboxFinder如何使用&#x2F;项目地址</h2><p>GitHub地址：<a href="https://github.com/iHongRen/SandboxFinder">https://github.com/iHongRen/SandboxFinder</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 SandboxFinder简介</p><p>2 SandboxFinder核心功能</p><p>2.1 沙箱文件系统</p><p>2.2 Web 界面</p><p>2.3 文件操作</p><p>3 沙箱目录速查</p><p>4 SandboxFinder快速上手</p><p>5 SandboxFinder适用场景与优势</p><p>6 SandboxFinder如何使用&#x2F;项目地址</p><h2 id="SandboxFinder简介"><a href="#SandboxFinder简介" class="headerlink" title="SandboxFinder简介"></a>SandboxFinder简介</h2><p>SandboxFinder是一个专为 HarmonyOS 应用开发者设计的<strong>沙箱文件浏览器</strong> ，通过内置 HTTP 服务器提供 Web 界面访问应用沙箱目录。专为 HarmonyOS 应用开发者打造，提供一种直观、高效的方式来访问和管理应用沙箱目录。通过内置的轻量级 HTTP 服务器，开发者可以在任意设备（模拟器或真机）上，使用浏览器快速浏览和操作应用内部文件，显著提升调试效率。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/SandboxFinder%EF%BC%9AHarmonyOS-%E6%B2%99%E7%AE%B1%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E9%87%8C%E5%B0%B1%E8%83%BD%E7%AE%A1%E6%8E%A7%E5%BA%94%E7%94%A8%E6%96%87%E4%BB%B6.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/SandboxFinder%EF%BC%9AHarmonyOS-%E6%B2%99%E7%AE%B1%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E9%87%8C%E5%B0%B1%E8%83%BD%E7%AE%A1%E6%8E%A7%E5%BA%94%E7%94%A8%E6%96%87%E4%BB%B6.jpg" alt="SandboxFinder：HarmonyOS 沙箱文件浏览器，浏览器里就能管控应用文件"></a></p><h2 id="SandboxFinder核心功能"><a href="#SandboxFinder核心功能" class="headerlink" title="SandboxFinder核心功能"></a>SandboxFinder核心功能</h2><h3 id="沙箱文件系统"><a href="#沙箱文件系统" class="headerlink" title="沙箱文件系统"></a>沙箱文件系统</h3><ul><li>内置基于 TCP Socket 的轻量级 HTTP 服务器，启动后即提供文件浏览服务。</li><li>默认监听 7777 端口，可按需自定义。</li><li>支持模拟器与真机，方便联调与测试。</li><li>自动识别文本、图片、音视频与 SQLite 数据库等多种文件类型。</li></ul><h3 id="Web-界面"><a href="#Web-界面" class="headerlink" title="Web 界面"></a>Web 界面</h3><ul><li>前端采用 Vue 3 + Tailwind CSS，界面自适应不同分辨率。</li><li>提供目录快捷入口（filesDir、cacheDir、tempDir、databaseDir 等），点击即跳转。</li><li>支持名称、大小、时间多维排序，以及实时关键字搜索。</li><li>内嵌预览组件，可直接查看文本、图片、视频、音频与数据库表。</li></ul><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul><li>新建、删除、重命名等基础操作一应俱全。</li><li>大文件分块、拖放、多选上传，稳定处理 GB 级文件。</li><li>直链下载，适合自动化脚本或浏览器直接保存。</li></ul><h2 id="沙箱目录速查"><a href="#沙箱目录速查" class="headerlink" title="沙箱目录速查"></a>沙箱目录速查</h2><p>HarmonyOS 将应用数据隔离在 filesDir、cacheDir、tempDir、databaseDir 等路径，确保存储安全且互不干扰。这些目录均可通过 SandboxFinder 快捷访问，便于日志抓取、数据库调试与临时文件清理。</p><h2 id="SandboxFinder快速上手"><a href="#SandboxFinder快速上手" class="headerlink" title="SandboxFinder快速上手"></a>SandboxFinder快速上手</h2><ol><li>在项目根目录执行 <code>ohpm install @cxy/sandboxfinder</code> 并同步依赖。</li><li>调用 <code>SandboxFinder.run()</code>，默认即可启动 7777 端口服务；如需修改，传入自定义端口号。</li><li>确保手机与电脑在同一 Wi-Fi，浏览器访问 <code>http://设备IP:端口</code> 即可。</li></ol><h2 id="SandboxFinder适用场景与优势"><a href="#SandboxFinder适用场景与优势" class="headerlink" title="SandboxFinder适用场景与优势"></a>SandboxFinder适用场景与优势</h2><ul><li><strong>调试</strong> ：无需 hdc 拉文件，浏览器即看即改，缩短排查耗时。</li><li><strong>演示</strong> ：在团队分享或课堂教学中，通过 URL 直接展示应用沙箱结构，提高讲解效率。</li><li><strong>自动化</strong> ：结合直链下载，可用脚本定时同步日志或数据库，便于持续集成。</li></ul><p>通过以上特性，SandboxFinder 成为 HarmonyOS 开发环境下的高效文件管理利器，帮助开发者专注业务而非繁琐的设备文件操作。</p><h2 id="SandboxFinder如何使用-项目地址"><a href="#SandboxFinder如何使用-项目地址" class="headerlink" title="SandboxFinder如何使用&#x2F;项目地址"></a>SandboxFinder如何使用&#x2F;项目地址</h2><p>GitHub地址：<a href="https://github.com/iHongRen/SandboxFinder">https://github.com/iHongRen/SandboxFinder</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
     
     
       
@@ -53,9 +484,9 @@
     <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/123-ge-yu-qian-an-li-di-yi-ban-shi-po-ren-xing-xian-jing-shou-hu-ni-de/"/>
     <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/123-ge-yu-qian-an-li-di-yi-ban-shi-po-ren-xing-xian-jing-shou-hu-ni-de/</id>
     <published>2025-07-31T09:17:15.000Z</published>
-    <updated>2025-07-31T19:00:11.815Z</updated>
+    <updated>2025-08-02T19:00:34.242Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 💡 123个亏钱案例（第一版）</p><p>2 123个亏钱案例（第一版）目录</p><p>2.1 ❌ 信任的代价：熟人即风险</p><p>2.2 🎲 认知的幻觉：输在盲目自信</p><p>2.3 ⚖️ 创业VS投机：亏也要亏得明白</p><p>2.4 📂 123个案例的三大警示类别</p><p>2.4.1 🔍 一、识人不明：熟人的刀最锋利</p><p>2.4.2 🕵️ 二、遇人不淑：糖衣包裹的毒药</p><p>2.4.3 💥 三、不自量力：野心吞噬理智</p><p>3 123个亏钱案例（第一版）学习地址</p><h2 id="💡-123个亏钱案例（第一版）"><a href="#💡-123个亏钱案例（第一版）" class="headerlink" title="💡 123个亏钱案例（第一版）"></a>💡 123个亏钱案例（第一版）</h2><p>123个亏钱案例（第一版）识破人性陷阱，守护你的钱包，赚钱的逻辑往往相似，但亏钱的原因千奇百怪。这123个真实案例或许不能教你致富，却能帮你避开无数深坑。许多人以为亏损源于贪小便宜，实则根源在于“人”——轻信熟人、错付信任、高估能力，最终被欲望和人性反噬。</p><h2 id="123个亏钱案例（第一版）目录"><a href="#123个亏钱案例（第一版）目录" class="headerlink" title="123个亏钱案例（第一版）目录"></a>123个亏钱案例（第一版）目录</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/123%E4%B8%AA%E4%BA%8F%E9%92%B1%E6%A1%88%E4%BE%8B%EF%BC%88%E7%AC%AC%E4%B8%80%E7%89%88%EF%BC%89.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202712%203350'%3E%3C/svg%3E" alt="123个亏钱案例（第一版）"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/123%E4%B8%AA%E4%BA%8F%E9%92%B1%E6%A1%88%E4%BE%8B%EF%BC%88%E7%AC%AC%E4%B8%80%E7%89%88%EF%BC%89.jpg" alt="123个亏钱案例（第一版）"></a></p><h4 id="❌-信任的代价：熟人即风险"><a href="#❌-信任的代价：熟人即风险" class="headerlink" title="❌ 信任的代价：熟人即风险"></a>❌ 信任的代价：熟人即风险</h4><p>你以为借钱给朋友是情谊见证，对方却视你为冤大头；<br>你以为恋人带你投资是安全感，对方却瞄准了你的本金；<br>你以为亲戚合作是家族互助，结果生意崩盘亲情撕裂。<br>从信用卡出借、担保兜底，到合伙创业、投资“关系户”，超30%的案例印证：<strong>情感绑架是财富的第一杀手</strong> 。</p><h4 id="🎲-认知的幻觉：输在盲目自信"><a href="#🎲-认知的幻觉：输在盲目自信" class="headerlink" title="🎲 认知的幻觉：输在盲目自信"></a>🎲 认知的幻觉：输在盲目自信</h4><p>短期盈利让人误以为掌握财富密码，实则只是运气加持。<br>炒股、炒币、P2P、灰色项目… 一次失手便赔光积累，甚至背上债务。<br>这不是投资，是赌徒心理的投机——<strong>久赌必输的铁律</strong> ，在拉长的时间线上无人幸免。</p><h4 id="⚖️-创业VS投机：亏也要亏得明白"><a href="#⚖️-创业VS投机：亏也要亏得明白" class="headerlink" title="⚖️ 创业VS投机：亏也要亏得明白"></a>⚖️ 创业VS投机：亏也要亏得明白</h4><p>做实业的亏损尚能换取经验，而投机游戏只留下空洞教训。<br>多数人未做好亏损准备，幻想“只赚不赔”，但除了打工，世间从无稳赚生意。<br><strong>对自己过度信任</strong> ，比轻信他人更危险：你坚信眼光独到，却忽略了运气退潮后的裸泳现实。</p><hr><h3 id="📂-123个案例的三大警示类别"><a href="#📂-123个案例的三大警示类别" class="headerlink" title="📂 123个案例的三大警示类别"></a>📂 123个案例的三大警示类别</h3><p>（以下分类提炼自案例目录关键词）</p><h4 id="🔍-一、识人不明：熟人的刀最锋利"><a href="#🔍-一、识人不明：熟人的刀最锋利" class="headerlink" title="🔍 一、识人不明：熟人的刀最锋利"></a>🔍 <strong>一、识人不明：熟人的刀最锋利</strong></h4><ul><li><p>熟人坑熟人、借信用卡、校园贷担保</p></li><li><p>亲戚会员店、合伙开店、被踢出公司</p></li><li><p>无借条借款、亲情绑架、家族生意失控</p></li></ul><h4 id="🕵️-二、遇人不淑：糖衣包裹的毒药"><a href="#🕵️-二、遇人不淑：糖衣包裹的毒药" class="headerlink" title="🕵️ 二、遇人不淑：糖衣包裹的毒药"></a>🕵️ <strong>二、遇人不淑：糖衣包裹的毒药</strong></h4><ul><li><p>神秘项目、刷钻骗局、“旺铺”陷阱</p></li><li><p>抖音兼职、会费刷单、假流量生意</p></li><li><p>微商代理、假大佬、电商培训割韭菜</p></li><li><p>美女诈骗、野鸡驾校、手游代理坑</p></li></ul><h4 id="💥-三、不自量力：野心吞噬理智"><a href="#💥-三、不自量力：野心吞噬理智" class="headerlink" title="💥 三、不自量力：野心吞噬理智"></a>💥 <strong>三、不自量力：野心吞噬理智</strong></h4><ul><li><p>股票暴富梦、奶茶店倒闭、P2P暴雷</p></li><li><p>炒房失败、猫舍亏损、灰产覆灭</p></li><li><p>逆风翻盘幻想、空气净化器滞销</p></li><li><p>比特币做空、虚拟币跟风、VR诊疗泡沫</p></li></ul><h2 id="123个亏钱案例（第一版）学习地址"><a href="#123个亏钱案例（第一版）学习地址" class="headerlink" title="123个亏钱案例（第一版）学习地址"></a>123个亏钱案例（第一版）学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/2309c606aa9d" title="123个亏钱案例（第一版）">123个亏钱案例（第一版）</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 💡 123个亏钱案例（第一版）</p><p>2 123个亏钱案例（第一版）目录</p><p>2.1 ❌ 信任的代价：熟人即风险</p><p>2.2 🎲 认知的幻觉：输在盲目自信</p><p>2.3 ⚖️ 创业VS投机：亏也要亏得明白</p><p>2.4 📂 123个案例的三大警示类别</p><p>2.4.1 🔍 一、识人不明：熟人的刀最锋利</p><p>2.4.2 🕵️ 二、遇人不淑：糖衣包裹的毒药</p><p>2.4.3 💥 三、不自量力：野心吞噬理智</p><p>3 123个亏钱案例（第一版）学习地址</p><h2 id="💡-123个亏钱案例（第一版）"><a href="#💡-123个亏钱案例（第一版）" class="headerlink" title="💡 123个亏钱案例（第一版）"></a>💡 123个亏钱案例（第一版）</h2><p>123个亏钱案例（第一版）识破人性陷阱，守护你的钱包，赚钱的逻辑往往相似，但亏钱的原因千奇百怪。这123个真实案例或许不能教你致富，却能帮你避开无数深坑。许多人以为亏损源于贪小便宜，实则根源在于“人”——轻信熟人、错付信任、高估能力，最终被欲望和人性反噬。</p><h2 id="123个亏钱案例（第一版）目录"><a href="#123个亏钱案例（第一版）目录" class="headerlink" title="123个亏钱案例（第一版）目录"></a>123个亏钱案例（第一版）目录</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/08/123%E4%B8%AA%E4%BA%8F%E9%92%B1%E6%A1%88%E4%BE%8B%EF%BC%88%E7%AC%AC%E4%B8%80%E7%89%88%EF%BC%89.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/08/123%E4%B8%AA%E4%BA%8F%E9%92%B1%E6%A1%88%E4%BE%8B%EF%BC%88%E7%AC%AC%E4%B8%80%E7%89%88%EF%BC%89.jpg" alt="123个亏钱案例（第一版）"></a></p><h4 id="❌-信任的代价：熟人即风险"><a href="#❌-信任的代价：熟人即风险" class="headerlink" title="❌ 信任的代价：熟人即风险"></a>❌ 信任的代价：熟人即风险</h4><p>你以为借钱给朋友是情谊见证，对方却视你为冤大头；<br>你以为恋人带你投资是安全感，对方却瞄准了你的本金；<br>你以为亲戚合作是家族互助，结果生意崩盘亲情撕裂。<br>从信用卡出借、担保兜底，到合伙创业、投资“关系户”，超30%的案例印证：<strong>情感绑架是财富的第一杀手</strong> 。</p><h4 id="🎲-认知的幻觉：输在盲目自信"><a href="#🎲-认知的幻觉：输在盲目自信" class="headerlink" title="🎲 认知的幻觉：输在盲目自信"></a>🎲 认知的幻觉：输在盲目自信</h4><p>短期盈利让人误以为掌握财富密码，实则只是运气加持。<br>炒股、炒币、P2P、灰色项目… 一次失手便赔光积累，甚至背上债务。<br>这不是投资，是赌徒心理的投机——<strong>久赌必输的铁律</strong> ，在拉长的时间线上无人幸免。</p><h4 id="⚖️-创业VS投机：亏也要亏得明白"><a href="#⚖️-创业VS投机：亏也要亏得明白" class="headerlink" title="⚖️ 创业VS投机：亏也要亏得明白"></a>⚖️ 创业VS投机：亏也要亏得明白</h4><p>做实业的亏损尚能换取经验，而投机游戏只留下空洞教训。<br>多数人未做好亏损准备，幻想“只赚不赔”，但除了打工，世间从无稳赚生意。<br><strong>对自己过度信任</strong> ，比轻信他人更危险：你坚信眼光独到，却忽略了运气退潮后的裸泳现实。</p><hr><h3 id="📂-123个案例的三大警示类别"><a href="#📂-123个案例的三大警示类别" class="headerlink" title="📂 123个案例的三大警示类别"></a>📂 123个案例的三大警示类别</h3><p>（以下分类提炼自案例目录关键词）</p><h4 id="🔍-一、识人不明：熟人的刀最锋利"><a href="#🔍-一、识人不明：熟人的刀最锋利" class="headerlink" title="🔍 一、识人不明：熟人的刀最锋利"></a>🔍 <strong>一、识人不明：熟人的刀最锋利</strong></h4><ul><li><p>熟人坑熟人、借信用卡、校园贷担保</p></li><li><p>亲戚会员店、合伙开店、被踢出公司</p></li><li><p>无借条借款、亲情绑架、家族生意失控</p></li></ul><h4 id="🕵️-二、遇人不淑：糖衣包裹的毒药"><a href="#🕵️-二、遇人不淑：糖衣包裹的毒药" class="headerlink" title="🕵️ 二、遇人不淑：糖衣包裹的毒药"></a>🕵️ <strong>二、遇人不淑：糖衣包裹的毒药</strong></h4><ul><li><p>神秘项目、刷钻骗局、“旺铺”陷阱</p></li><li><p>抖音兼职、会费刷单、假流量生意</p></li><li><p>微商代理、假大佬、电商培训割韭菜</p></li><li><p>美女诈骗、野鸡驾校、手游代理坑</p></li></ul><h4 id="💥-三、不自量力：野心吞噬理智"><a href="#💥-三、不自量力：野心吞噬理智" class="headerlink" title="💥 三、不自量力：野心吞噬理智"></a>💥 <strong>三、不自量力：野心吞噬理智</strong></h4><ul><li><p>股票暴富梦、奶茶店倒闭、P2P暴雷</p></li><li><p>炒房失败、猫舍亏损、灰产覆灭</p></li><li><p>逆风翻盘幻想、空气净化器滞销</p></li><li><p>比特币做空、虚拟币跟风、VR诊疗泡沫</p></li></ul><h2 id="123个亏钱案例（第一版）学习地址"><a href="#123个亏钱案例（第一版）学习地址" class="headerlink" title="123个亏钱案例（第一版）学习地址"></a>123个亏钱案例（第一版）学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/2309c606aa9d" title="123个亏钱案例（第一版）">123个亏钱案例（第一版）</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
     
     
       
@@ -84,9 +515,9 @@
     <link href="https://liuxingzhe.github.io/blog//blog/2025/07/31/sai-pu-jian-shen-zhuan-ye-shi-pin-jie-zhi-1980/"/>
     <id>https://liuxingzhe.github.io/blog//blog/2025/07/31/sai-pu-jian-shen-zhuan-ye-shi-pin-jie-zhi-1980/</id>
     <published>2025-07-31T08:20:20.000Z</published>
-    <updated>2025-07-31T19:00:13.410Z</updated>
+    <updated>2025-08-02T19:00:35.977Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 赛普健身专业视频合集价值与概览</p><p>2 赛普健身专业视频核心训练模块</p><p>2.1 系统化训练方案</p><p>2.2 运动损伤与康复</p><p>2.3 饮食营养与工具图表</p><p>3 学员收益</p><p>4 赛普健身专业视频学习地址</p><h2 id="赛普健身专业视频合集价值与概览"><a href="#赛普健身专业视频合集价值与概览" class="headerlink" title="赛普健身专业视频合集价值与概览"></a>赛普健身专业视频合集价值与概览</h2><p>赛普健身专业视频 价值19800元，涵盖从理论到实操的全面课程。付费课程提供系统化教学，配合中外文献与健身流行观点，为每个训练环节提供科学依据。官方教学视频直观呈现动作要领，帮助学员快速掌握要领与技巧。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2023/08/%E8%B5%9B%E6%99%AE%E5%81%A5%E8%BA%AB%E4%B8%93%E4%B8%9A%E8%A7%86%E9%A2%91-%E4%BB%B7%E5%80%BC19800%E5%85%83-new.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2023/08/%E8%B5%9B%E6%99%AE%E5%81%A5%E8%BA%AB%E4%B8%93%E4%B8%9A%E8%A7%86%E9%A2%91-%E4%BB%B7%E5%80%BC19800%E5%85%83-new.jpg" alt="赛普健身专业视频 价值19800元"></a></p><h2 id="赛普健身专业视频核心训练模块"><a href="#赛普健身专业视频核心训练模块" class="headerlink" title="赛普健身专业视频核心训练模块"></a>赛普健身专业视频核心训练模块</h2><h3 id="系统化训练方案"><a href="#系统化训练方案" class="headerlink" title="系统化训练方案"></a>系统化训练方案</h3><ul><li><p><strong>减脂训练</strong> 与<strong>增肌训练</strong> ：结合器械与徒手动作，按目标进行周期化编排。</p></li><li><p><strong>部位专项训练</strong> ：手臂、肩部、背部、胸部、腹部、腿部、臀部各自独立课程，让每个肌群都能得到针对性锻炼。</p></li><li><p><strong>小器械与徒手训练</strong> ：在家也能完成的多样化练习，满足不同健身环境需求。</p></li></ul><h3 id="运动损伤与康复"><a href="#运动损伤与康复" class="headerlink" title="运动损伤与康复"></a>运动损伤与康复</h3><p>专设运动损伤与康复板块，详细讲解常见运动伤痛的成因与自我康复方法。体态矫正课程帮助改善不良姿势，预防训练过程中的潜在伤害。</p><h3 id="饮食营养与工具图表"><a href="#饮食营养与工具图表" class="headerlink" title="饮食营养与工具图表"></a>饮食营养与工具图表</h3><ul><li><p><strong>饮食营养</strong> ：提供科学的食物GI表与热量消耗参考，帮助合理制定膳食计划。</p></li><li><p><strong>实用工具图表</strong> ：BMI对应表、骨骼肌百分比对照表、人体肌肉骨骼神经图谱、体质判断对照图等，可视化数据支持健身效果评估。</p></li></ul><h2 id="学员收益"><a href="#学员收益" class="headerlink" title="学员收益"></a>学员收益</h2><p>学员完成本合集后，将具备科学训练思维、精准饮食规划与自我康复能力，能够根据个人目标灵活调整训练方案，真正实现健康与体型的双重提升。</p><h2 id="赛普健身专业视频学习地址"><a href="#赛普健身专业视频学习地址" class="headerlink" title="赛普健身专业视频学习地址"></a>赛普健身专业视频学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/7d4bc94ae5b9">夸克网盘</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 赛普健身专业视频合集价值与概览</p><p>2 赛普健身专业视频核心训练模块</p><p>2.1 系统化训练方案</p><p>2.2 运动损伤与康复</p><p>2.3 饮食营养与工具图表</p><p>3 学员收益</p><p>4 赛普健身专业视频学习地址</p><h2 id="赛普健身专业视频合集价值与概览"><a href="#赛普健身专业视频合集价值与概览" class="headerlink" title="赛普健身专业视频合集价值与概览"></a>赛普健身专业视频合集价值与概览</h2><p>赛普健身专业视频 价值19800元，涵盖从理论到实操的全面课程。付费课程提供系统化教学，配合中外文献与健身流行观点，为每个训练环节提供科学依据。官方教学视频直观呈现动作要领，帮助学员快速掌握要领与技巧。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2023/08/%E8%B5%9B%E6%99%AE%E5%81%A5%E8%BA%AB%E4%B8%93%E4%B8%9A%E8%A7%86%E9%A2%91-%E4%BB%B7%E5%80%BC19800%E5%85%83-new.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201005%201139'%3E%3C/svg%3E" alt="赛普健身专业视频 价值19800元"><img src="//www.ahhhhfs.com/wp-content/uploads/2023/08/%E8%B5%9B%E6%99%AE%E5%81%A5%E8%BA%AB%E4%B8%93%E4%B8%9A%E8%A7%86%E9%A2%91-%E4%BB%B7%E5%80%BC19800%E5%85%83-new.jpg" alt="赛普健身专业视频 价值19800元"></a></p><h2 id="赛普健身专业视频核心训练模块"><a href="#赛普健身专业视频核心训练模块" class="headerlink" title="赛普健身专业视频核心训练模块"></a>赛普健身专业视频核心训练模块</h2><h3 id="系统化训练方案"><a href="#系统化训练方案" class="headerlink" title="系统化训练方案"></a>系统化训练方案</h3><ul><li><p><strong>减脂训练</strong> 与<strong>增肌训练</strong> ：结合器械与徒手动作，按目标进行周期化编排。</p></li><li><p><strong>部位专项训练</strong> ：手臂、肩部、背部、胸部、腹部、腿部、臀部各自独立课程，让每个肌群都能得到针对性锻炼。</p></li><li><p><strong>小器械与徒手训练</strong> ：在家也能完成的多样化练习，满足不同健身环境需求。</p></li></ul><h3 id="运动损伤与康复"><a href="#运动损伤与康复" class="headerlink" title="运动损伤与康复"></a>运动损伤与康复</h3><p>专设运动损伤与康复板块，详细讲解常见运动伤痛的成因与自我康复方法。体态矫正课程帮助改善不良姿势，预防训练过程中的潜在伤害。</p><h3 id="饮食营养与工具图表"><a href="#饮食营养与工具图表" class="headerlink" title="饮食营养与工具图表"></a>饮食营养与工具图表</h3><ul><li><p><strong>饮食营养</strong> ：提供科学的食物GI表与热量消耗参考，帮助合理制定膳食计划。</p></li><li><p><strong>实用工具图表</strong> ：BMI对应表、骨骼肌百分比对照表、人体肌肉骨骼神经图谱、体质判断对照图等，可视化数据支持健身效果评估。</p></li></ul><h2 id="学员收益"><a href="#学员收益" class="headerlink" title="学员收益"></a>学员收益</h2><p>学员完成本合集后，将具备科学训练思维、精准饮食规划与自我康复能力，能够根据个人目标灵活调整训练方案，真正实现健康与体型的双重提升。</p><h2 id="赛普健身专业视频学习地址"><a href="#赛普健身专业视频学习地址" class="headerlink" title="赛普健身专业视频学习地址"></a>赛普健身专业视频学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/7d4bc94ae5b9">夸克网盘</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
     
     
       
@@ -197,438 +628,6 @@
     <category term="Android" scheme="https://liuxingzhe.github.io/blog//blog/tags/Android/"/>
     
     <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deepseek+即梦短视频落地实操</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/30/deepseek-ji-meng-duan-shi-pin-luo-di/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/30/deepseek-ji-meng-duan-shi-pin-luo-di/</id>
-    <published>2025-07-31T05:29:40.000Z</published>
-    <updated>2025-07-31T19:00:19.294Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 Deepseek+即梦短视频落地实操课程概览</p><p>2 Deepseek+即梦短视频落地实操课程结构</p><p>2.1 基础篇</p><p>2.2 运营篇</p><p>2.3 火爆AI实操课</p><p>2.4 实操篇</p><p>3 Deepseek+即梦短视频落地实操学习地址</p><h2 id="Deepseek-即梦短视频落地实操课程概览"><a href="#Deepseek-即梦短视频落地实操课程概览" class="headerlink" title="Deepseek+即梦短视频落地实操课程概览"></a>Deepseek+即梦短视频落地实操课程概览</h2><p>Deepseek+即梦短视频落地实操，本课程聚焦图文短视频的全流程落地，结合 Deepseek 与 即梦 两大 AI 工具，从提问与文案、账号定位到平台运营与创意实操，系统讲解并演练多种热门视频类型，让学员迅速上手、快速成片。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/Deepseek%E5%8D%B3%E6%A2%A6%E7%9F%AD%E8%A7%86%E9%A2%91%E8%90%BD%E5%9C%B0%E5%AE%9E%E6%93%8D.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20788%202856'%3E%3C/svg%3E" alt="Deepseek+即梦短视频落地实操"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/Deepseek%E5%8D%B3%E6%A2%A6%E7%9F%AD%E8%A7%86%E9%A2%91%E8%90%BD%E5%9C%B0%E5%AE%9E%E6%93%8D.jpg" alt="Deepseek+即梦短视频落地实操"></a></p><h2 id="Deepseek-即梦短视频落地实操课程结构"><a href="#Deepseek-即梦短视频落地实操课程结构" class="headerlink" title="Deepseek+即梦短视频落地实操课程结构"></a>Deepseek+即梦短视频落地实操课程结构</h2><h3 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h3><p>在这一部分中，学员将掌握 Deepseek 提问方法，以及从抖音等平台获取优质文案、拆解分镜头、配音与图片制作等核心技能，为后续创作奠定坚实基础。</p><h3 id="运营篇"><a href="#运营篇" class="headerlink" title="运营篇"></a>运营篇</h3><p>运营篇深入解析四大平台特点与账号起号技巧，涵盖常见问题答疑、爆款短视频类型、播放量提升策略、核心投放方法，以及针对育儿、女性情感等细分领域的起号攻略。</p><h3 id="火爆AI实操课"><a href="#火爆AI实操课" class="headerlink" title="火爆AI实操课"></a>火爆AI实操课</h3><p>本模块演示 Deepseek 和 即梦 在提示词生成、图片制作、角色一致性保持、老照片修复、动画合成、AI换装与人像复活等多场景下的落地实操，帮助学员玩转 AI 创意。</p><h3 id="实操篇"><a href="#实操篇" class="headerlink" title="实操篇"></a>实操篇</h3><p>提供原创育儿、人性思维、古风文化、打字机书单、双人对话与诗词视频等完整案例，带学员一步步体验从脚本到成片的剪辑流程，强化实战能力。</p><hr><p>通过本课程，能够系统掌握 AI 驱动的图文短视频制作技巧，实现从策划、文案、素材获取到剪辑、发布、投放的全流程闭环。</p><h2 id="Deepseek-即梦短视频落地实操学习地址"><a href="#Deepseek-即梦短视频落地实操学习地址" class="headerlink" title="Deepseek+即梦短视频落地实操学习地址"></a>Deepseek+即梦短视频落地实操学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/d560ae3b53b7" title="Deepseek+即梦短视频落地实操学习地址">Deepseek+即梦短视频落地实操</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 Deepseek+即梦短视频落地实操课程概览&lt;/p&gt;
-&lt;p&gt;2 Deepseek+即梦短视频落地实操课程结构&lt;/p&gt;
-&lt;p&gt;2.1 基础篇&lt;/p&gt;
-&lt;p&gt;2.2 运营篇&lt;/p&gt;
-&lt;p&gt;2.3 火爆AI实操课</summary>
-      
-    
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
-    
-    <category term="短视频" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/30/newapi-kai-yuan-da-mo-xing-wang-guan-yu-ai-zi-chan-guan-li-xi-tong-30-fu-wu-shang/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/30/newapi-kai-yuan-da-mo-xing-wang-guan-yu-ai-zi-chan-guan-li-xi-tong-30-fu-wu-shang/</id>
-    <published>2025-07-30T23:09:13.000Z</published>
-    <updated>2025-07-31T19:00:20.370Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 New API概览</p><p>2 New API核心优势</p><p>3 New API关键功能</p><p>3.1 统一模型网关</p><p>3.2 灵活计费与充值</p><p>3.3 Realtime API 支持</p><p>3.4 Rerank 模型扩展</p><p>3.5 多样化登录与限流</p><p>4 New API典型使用场景</p><p>5 New API快速上手</p><p>6 New API资源链接</p><h2 id="New-API概览"><a href="#New-API概览" class="headerlink" title="New API概览"></a>New API概览</h2><p>New API 是基于 One API 深度二次开发的新一代大模型网关与 AI 资产管理系统，提供统一的接口管理与分发能力，让个人和企业能够便捷地接入并管理多种主流大模型服务，支持 OpenAI、Anthropic、Midjourney 等格式，覆盖 30+ AI 服务商，保证 99.9% 服务可用性并兼容多语言环境。该系统具备一键部署、灵活计费、安全稳定等亮点，可满足各类 AI 应用场景需求。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-main.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-main.jpg" alt="New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！"></a></p><h2 id="New-API核心优势"><a href="#New-API核心优势" class="headerlink" title="New API核心优势"></a>New API核心优势</h2><ul><li><strong>统一调用</strong> ：支持 OpenAI、Claude、Midjourney 等多种模型格式，可按需切换渠道</li><li><strong>全新 UI 与多语言</strong> ：界面重新设计，内置中英等多语言，提升全球团队协作效率</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-%E6%8E%A7%E5%88%B6%E5%8F%B0.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202524%201392'%3E%3C/svg%3E" alt="New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-%E6%8E%A7%E5%88%B6%E5%8F%B0.jpg" alt="New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！"></a></p><ul><li><strong>一键部署</strong> ：Docker 与常规环境均提供开箱即用脚本，最快数分钟上线</li><li><strong>灵活计费</strong> ：按调用次数计费，并可通过易支付在线充值，成本透明可控</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-%E6%B8%A0%E9%81%93%E7%AE%A1%E7%90%86.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202713%201494'%3E%3C/svg%3E" alt="New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-%E6%B8%A0%E9%81%93%E7%AE%A1%E7%90%86.jpg" alt="New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！"></a></p><ul><li><strong>安全与稳定</strong> ：多级令牌、模型限制与渠道加权随机算法，确保高并发场景下的稳定性</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201929%201117'%3E%3C/svg%3E" alt="New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/New-API%EF%BC%9A%E5%BC%80%E6%BA%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E4%B8%8E-AI-%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%8C30-%E6%9C%8D%E5%8A%A1%E5%95%86%E6%94%AF%E6%8C%81%EF%BC%81-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95.jpg" alt="New API：开源大模型网关与 AI 资产管理系统，30+ 服务商支持！"></a></p><h2 id="New-API关键功能"><a href="#New-API关键功能" class="headerlink" title="New API关键功能"></a>New API关键功能</h2><h3 id="统一模型网关"><a href="#统一模型网关" class="headerlink" title="统一模型网关"></a>统一模型网关</h3><p>通过自研路由层，New API 将各家模型封装为 OpenAI 兼容协议，开发者仅需更新 API Base 即可完成迁移 。</p><h3 id="灵活计费与充值"><a href="#灵活计费与充值" class="headerlink" title="灵活计费与充值"></a>灵活计费与充值</h3><p>平台内置按次计费逻辑，可为不同模型设定单价；接入易支付后，用户可自助充值并实时查看余额 。</p><h3 id="Realtime-API-支持"><a href="#Realtime-API-支持" class="headerlink" title="Realtime API 支持"></a>Realtime API 支持</h3><p>New API 原生接入 OpenAI Realtime API 及 Azure 通道，让语音-语音或多模态实时交互更低延迟 。</p><h3 id="Rerank-模型扩展"><a href="#Rerank-模型扩展" class="headerlink" title="Rerank 模型扩展"></a>Rerank 模型扩展</h3><p>平台已适配 Cohere Rerank 与 Jina Reranker，可在搜索或 RAG 场景中对结果进行语义重排，提高相关性 。</p><h3 id="多样化登录与限流"><a href="#多样化登录与限流" class="headerlink" title="多样化登录与限流"></a>多样化登录与限流</h3><p>支持 LinuxDO、Telegram、OIDC 等第三方登录方式，并可针对单一用户或令牌设置 QPS 与模型白名单，避免滥用 。</p><h2 id="New-API典型使用场景"><a href="#New-API典型使用场景" class="headerlink" title="New API典型使用场景"></a>New API典型使用场景</h2><table><thead><tr><th>场景</th><th>价值</th></tr></thead><tbody><tr><td>企业内部 AI 中台</td><td>用统一接口管理多云与本地模型，避免供应商锁定</td></tr><tr><td>SaaS 创业团队</td><td>通过按次计费将模型成本直接转嫁到终端用户</td></tr><tr><td>AI 应用开发者</td><td>借助 Realtime API 构建语音助手或流式翻译</td></tr><tr><td>搜索 &#x2F; RAG 系统</td><td>利用 Rerank 模型提升检索结果质量</td></tr></tbody></table><h2 id="New-API快速上手"><a href="#New-API快速上手" class="headerlink" title="New API快速上手"></a>New API快速上手</h2><ol><li>克隆或下载项目源码并执行一键部署脚本</li><li>登录控制台，添加模型渠道和密钥</li><li>在「令牌」页面创建访问令牌</li><li>将应用中的 <code>OPENAI_API_BASE</code> 指向新网关地址，键值为刚生成的令牌即可调用</li></ol><h2 id="New-API资源链接"><a href="#New-API资源链接" class="headerlink" title="New API资源链接"></a>New API资源链接</h2><ul><li>官方文档：docs.newapi.pro (<a href="https://www.newapi.pro/guide/document/" title="Documentation - New API">newapi.pro</a>)</li><li>GitHub 仓库：QuantumNous&#x2F;new-api (<a href="https://github.com/QuantumNous/new-api" title="QuantumNous/new-api: AI模型接口管理与分发系统，支持将多种大 ...">GitHub</a>)</li></ul><p>借助 New API，团队能够以最小成本整合并管理前沿大模型，快速落地多语言智能应用，同时保持计费透明与系统高可用。</p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 New API概览&lt;/p&gt;
-&lt;p&gt;2 New API核心优势&lt;/p&gt;
-&lt;p&gt;3 New API关键功能&lt;/p&gt;
-&lt;p&gt;3.1 统一模型网关&lt;/p&gt;
-&lt;p&gt;3.2 灵活计费与充值&lt;/p&gt;
-&lt;p&gt;3.3 Rea</summary>
-      
-    
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
-    
-    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>运镜剪辑实操课 从拍摄到剪辑</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/29/yun-jing-jian-ji-shi-cao-ke-cong-pai-she-dao/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/29/yun-jing-jian-ji-shi-cao-ke-cong-pai-she-dao/</id>
-    <published>2025-07-30T05:39:46.000Z</published>
-    <updated>2025-07-31T19:00:22.107Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 运镜剪辑实操课 从拍摄到剪辑课程概述</p><p>2 运镜剪辑实操课 从拍摄到剪辑课程目录</p><p>2.1 基础操作篇</p><p>2.2 运镜技巧篇</p><p>2.3 特效合成篇</p><p>2.4 NV进阶合成篇</p><p>3 运镜剪辑实操课 从拍摄到剪辑课程亮点</p><p>4 运镜剪辑实操课 从拍摄到剪辑课程学习地址</p><h2 id="运镜剪辑实操课-从拍摄到剪辑课程概述"><a href="#运镜剪辑实操课-从拍摄到剪辑课程概述" class="headerlink" title="运镜剪辑实操课 从拍摄到剪辑课程概述"></a>运镜剪辑实操课 从拍摄到剪辑课程概述</h2><p>运镜剪辑实操课 从拍摄到剪辑，本课程通过150余节实战演示视频，系统讲解手机拍摄与剪映剪辑的全流程。覆盖剪映基础操作、拍摄参数设置、构图与运镜技巧、延时摄影、多种转场效果，以及NV进阶特效合成，帮助创作者在手机端快速上手并实现高级视觉表现。</p><h2 id="运镜剪辑实操课-从拍摄到剪辑课程目录"><a href="#运镜剪辑实操课-从拍摄到剪辑课程目录" class="headerlink" title="运镜剪辑实操课 从拍摄到剪辑课程目录"></a>运镜剪辑实操课 从拍摄到剪辑课程目录</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E8%BF%90%E9%95%9C%E5%89%AA%E8%BE%91%E5%AE%9E%E6%93%8D%E8%AF%BE-%E4%BB%8E%E6%8B%8D%E6%91%84%E5%88%B0%E5%89%AA%E8%BE%91.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E8%BF%90%E9%95%9C%E5%89%AA%E8%BE%91%E5%AE%9E%E6%93%8D%E8%AF%BE-%E4%BB%8E%E6%8B%8D%E6%91%84%E5%88%B0%E5%89%AA%E8%BE%91.jpg" alt="运镜剪辑实操课 从拍摄到剪辑"></a></p><h3 id="基础操作篇"><a href="#基础操作篇" class="headerlink" title="基础操作篇"></a>基础操作篇</h3><ul><li>剪映软件入门与界面介绍，包括添加音乐、文字编辑、画中画、关键帧与蒙版基础应用</li><li>调色思路与技巧、变速功能、自由层级遮挡与文字叠加</li></ul><h3 id="运镜技巧篇"><a href="#运镜技巧篇" class="headerlink" title="运镜技巧篇"></a>运镜技巧篇</h3><ul><li>手机参数调校与摄像头焦段认识，掌握八大运动镜头和五大景别</li><li>构图八法、延时与运动延时摄影、360度旋转与环绕运镜等多种机位移动表达</li></ul><h3 id="特效合成篇"><a href="#特效合成篇" class="headerlink" title="特效合成篇"></a>特效合成篇</h3><ul><li>双胞胎、三胞胎分身对话，瞬移闪现、飞天转场等创意短片</li><li>黑色背景抠图、隔空取物、技术流左右上下、连续转手、转头与360度全身旋转等多样转场</li></ul><h3 id="NV进阶合成篇"><a href="#NV进阶合成篇" class="headerlink" title="NV进阶合成篇"></a>NV进阶合成篇</h3><ul><li>NV画中画穿梭玩法、自定义飞翔卡点系列、3D爱心立体旋转、圆环穿越分屏、曲线变色、墨水溶解发光等高级特效</li></ul><h2 id="运镜剪辑实操课-从拍摄到剪辑课程亮点"><a href="#运镜剪辑实操课-从拍摄到剪辑课程亮点" class="headerlink" title="运镜剪辑实操课 从拍摄到剪辑课程亮点"></a>运镜剪辑实操课 从拍摄到剪辑课程亮点</h2><ul><li><strong>全面覆盖</strong> ：从拍摄参数到剪映操作，从基础到进阶，一站式掌握</li><li><strong>实战案例</strong> ：大量创意示例带动思路，激发后续创作灵感</li><li><strong>零门槛上手</strong> ：所有示例均以手机拍摄与剪映软件完成，无需专业设备</li><li><strong>高质视觉</strong> ：融合关键帧与蒙版等技术，打造电影般画面效果</li></ul><p>学员通过本课程可以在短时间内熟练掌握手机拍摄、构图表达与剪映剪辑，实现多样化特效制作，持续丰富视频内容创作能力。</p><h2 id="运镜剪辑实操课-从拍摄到剪辑课程学习地址"><a href="#运镜剪辑实操课-从拍摄到剪辑课程学习地址" class="headerlink" title="运镜剪辑实操课 从拍摄到剪辑课程学习地址"></a>运镜剪辑实操课 从拍摄到剪辑课程学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/9972f379b59e" title="运镜剪辑实操课 从拍摄到剪辑学习地址">运镜剪辑实操课 从拍摄到剪辑</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 运镜剪辑实操课 从拍摄到剪辑课程概述&lt;/p&gt;
-&lt;p&gt;2 运镜剪辑实操课 从拍摄到剪辑课程目录&lt;/p&gt;
-&lt;p&gt;2.1 基础操作篇&lt;/p&gt;
-&lt;p&gt;2.2 运镜技巧篇&lt;/p&gt;
-&lt;p&gt;2.3 特效合成篇&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
-    
-    <category term="摄影剪辑" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数智学术：研究生必备的一站式全国科研与学术资源平台</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/29/shu-zhi-xue-zhu-yan-jiu-sheng-bi-bei-de-yi-zhan-shi-quan-guo-ke-yan-yu-xue-zhu-zi-yuan/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/29/shu-zhi-xue-zhu-yan-jiu-sheng-bi-bei-de-yi-zhan-shi-quan-guo-ke-yan-yu-xue-zhu-zi-yuan/</id>
-    <published>2025-07-30T05:09:06.000Z</published>
-    <updated>2025-07-31T19:00:23.847Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 数智学术概述</p><p>2 数智学术核心功能</p><p>2.1 多元化导航分类</p><p>2.2 全面学术支持</p><p>2.3 学术资讯与分享</p><p>3 数智学术目标用户与价值</p><h2 id="数智学术概述"><a href="#数智学术概述" class="headerlink" title="数智学术概述"></a>数智学术概述</h2><p>数智学术是面向全国用户的科研与学术资源服务平台，旨在帮助学习、工作和生活中需要获取、加工、管理与评价数字信息的个人提升数字素养。平台通过多维度的导航分类，将教育、政务、图书馆、博物馆、古典文献、财经等海量资源进行整合。为研究生和学者提供从文献检索、学术资讯到文献管理、投稿选刊的一站式支持，推动学术交流与资源共享。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E6%95%B0%E6%99%BA%E5%AD%A6%E6%9C%AF%EF%BC%9A%E7%A0%94%E7%A9%B6%E7%94%9F%E5%BF%85%E5%A4%87%E7%9A%84%E4%B8%80%E7%AB%99%E5%BC%8F%E5%85%A8%E5%9B%BD%E7%A7%91%E7%A0%94%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%B5%84%E6%BA%90%E5%B9%B3%E5%8F%B0.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E6%95%B0%E6%99%BA%E5%AD%A6%E6%9C%AF%EF%BC%9A%E7%A0%94%E7%A9%B6%E7%94%9F%E5%BF%85%E5%A4%87%E7%9A%84%E4%B8%80%E7%AB%99%E5%BC%8F%E5%85%A8%E5%9B%BD%E7%A7%91%E7%A0%94%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%B5%84%E6%BA%90%E5%B9%B3%E5%8F%B0.jpg" alt="数智学术：研究生必备的一站式全国科研与学术资源平台"></a></p><h2 id="数智学术核心功能"><a href="#数智学术核心功能" class="headerlink" title="数智学术核心功能"></a>数智学术核心功能</h2><h3 id="多元化导航分类"><a href="#多元化导航分类" class="headerlink" title="多元化导航分类"></a>多元化导航分类</h3><ul><li><strong>学习与教育</strong> ：涵盖电子书检索、英语学习、公文写作素材等常用资源。</li><li><strong>AIGC 与科研工具</strong> ：提供DeepL 翻译、DOI 解析、单位换算等在线工具。</li><li><strong>政务与公共资源</strong> ：集成各级政府门户和开放数据平台。</li><li><strong>图书馆与古典文献</strong> ：链接全国高校图书馆联盟、国家数字图书馆等权威馆藏。</li><li><strong>财经与大数据</strong> ：整合财经资讯、报纸、数据可视化资源。</li></ul><h3 id="全面学术支持"><a href="#全面学术支持" class="headerlink" title="全面学术支持"></a>全面学术支持</h3><ul><li><strong>文献检索与下载</strong> ：Google 学术、SCI-Hub、Web of Science、CNKI 等；</li><li><strong>期刊查询与投稿</strong> ：中外核心期刊查询系统、JCR 分区、LetPub 期刊建议等；</li><li><strong>文献管理与查重</strong> ：EndNote、Mendeley、知网查重、PaperPass 等；</li><li><strong>学术社区与互助</strong> ：ResearchGate、MedReading、小木虫等文献互助平台。</li></ul><h3 id="学术资讯与分享"><a href="#学术资讯与分享" class="headerlink" title="学术资讯与分享"></a>学术资讯与分享</h3><p>平台定期更新“史上最全，研究生必备的51种科研工具”、“中科院期刊分区表使用方法”等原创干货，帮助用户把握行业动态与方法论，增强科研效率。</p><h2 id="数智学术目标用户与价值"><a href="#数智学术目标用户与价值" class="headerlink" title="数智学术目标用户与价值"></a>数智学术目标用户与价值</h2><p>数智学术针对研究生、在职学者、科研人员及对数字素养有需求的普遍用户。通过一站式导航与工具整合，显著降低信息检索成本，提升学术研究与日常工作效率，是科研与学习路上的得力助手。</p><p>数智学术地址：<a href="https://szsyw.cn/xueshu">https://szsyw.cn/xueshu</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 数智学术概述&lt;/p&gt;
-&lt;p&gt;2 数智学术核心功能&lt;/p&gt;
-&lt;p&gt;2.1 多元化导航分类&lt;/p&gt;
-&lt;p&gt;2.2 全面学术支持&lt;/p&gt;
-&lt;p&gt;2.3 学术资讯与分享&lt;/p&gt;
-&lt;p&gt;3 数智学术目标用户与价值&lt;/</summary>
-      
-    
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>船长AI原创+小红书教辅资料项目实操手册</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/29/chuan-chang-ai-yuan-chuang-xiao-hong-shu-jiao-fu-zi-liao-xiang-mu-shi-cao/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/29/chuan-chang-ai-yuan-chuang-xiao-hong-shu-jiao-fu-zi-liao-xiang-mu-shi-cao/</id>
-    <published>2025-07-30T04:50:24.000Z</published>
-    <updated>2025-07-31T19:00:25.143Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 船长AI原创+小红书教辅资料项目实操手册课程概况</p><p>2 船长AI原创+小红书教辅资料项目实操手册课程目录</p><p>2.1 项目思维与心态建设</p><p>2.2 内容创作与设计工具</p><p>2.3 多平台发布与账号运营</p><p>2.4 AI智能辅助与教辅资料转换</p><p>3 船长AI原创+小红书教辅资料项目实操手册适合人群</p><p>4 船长AI原创+小红书教辅资料项目实操手册学习地址</p><h2 id="船长AI原创-小红书教辅资料项目实操手册课程概况"><a href="#船长AI原创-小红书教辅资料项目实操手册课程概况" class="headerlink" title="船长AI原创+小红书教辅资料项目实操手册课程概况"></a>船长AI原创+小红书教辅资料项目实操手册课程概况</h2><p>船长AI原创+小红书教辅资料项目实操手册，本套教程由60+个模块组成，涵盖从项目管理思维到视频与图文内容制作、AI智能工具应用、平台发布策略和教辅资料运营各个环节。课程以实战为导向，帮助学员快速上手、形成体系化流程并持续优化账号流量。</p><h2 id="船长AI原创-小红书教辅资料项目实操手册课程目录"><a href="#船长AI原创-小红书教辅资料项目实操手册课程目录" class="headerlink" title="船长AI原创+小红书教辅资料项目实操手册课程目录"></a>船长AI原创+小红书教辅资料项目实操手册课程目录</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E8%88%B9%E9%95%BFAI%E5%8E%9F%E5%88%9B%E5%B0%8F%E7%BA%A2%E4%B9%A6%E6%95%99%E8%BE%85%E8%B5%84%E6%96%99%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%93%8D%E6%89%8B%E5%86%8C.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20836%202706'%3E%3C/svg%3E" alt="船长AI原创+小红书教辅资料项目实操手册"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E8%88%B9%E9%95%BFAI%E5%8E%9F%E5%88%9B%E5%B0%8F%E7%BA%A2%E4%B9%A6%E6%95%99%E8%BE%85%E8%B5%84%E6%96%99%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%93%8D%E6%89%8B%E5%86%8C.jpg" alt="船长AI原创+小红书教辅资料项目实操手册"></a></p><h3 id="项目思维与心态建设"><a href="#项目思维与心态建设" class="headerlink" title="项目思维与心态建设"></a>项目思维与心态建设</h3><ul><li>刚开始做项目的定位与时间管理要点</li><li>打破创作惰性，持续产出的方法</li><li>学会与大脑“谈判”，克服放弃冲动</li></ul><h3 id="内容创作与设计工具"><a href="#内容创作与设计工具" class="headerlink" title="内容创作与设计工具"></a>内容创作与设计工具</h3><ul><li>即梦海报与封面生成技巧</li><li>对标账号练习：选题、封面黄金分割与留钩子方法</li><li>作图软件核心操作：蒙版、渐变、排版与底图融合</li><li>实拍与手持拍摄：图文格式变形与醒图对标修改</li></ul><h3 id="多平台发布与账号运营"><a href="#多平台发布与账号运营" class="headerlink" title="多平台发布与账号运营"></a>多平台发布与账号运营</h3><ul><li>小红书、抖音、视频号、快手的发布规范与流量特性</li><li>多账号同步发布与收入倍增策略</li><li>养号思路与系统推流底层逻辑</li><li>统一封面、关键词布局与搜索流量布局</li></ul><h3 id="AI智能辅助与教辅资料转换"><a href="#AI智能辅助与教辅资料转换" class="headerlink" title="AI智能辅助与教辅资料转换"></a>AI智能辅助与教辅资料转换</h3><ul><li>PDF&#x2F;Word转图片与网盘资料高效检索</li><li>文案提取、智能仿写与标题改稿技巧</li><li>图文互转与视频转文字图文制作</li><li>大模型入门与进阶用法（“AI原创课1-认识大模型”、“AI智能原创课-2.大模型基本用法介绍”）</li><li>软硬件工具介绍：文小言、Kimi、DeepSeek、点点、智谱清言</li></ul><h2 id="船长AI原创-小红书教辅资料项目实操手册适合人群"><a href="#船长AI原创-小红书教辅资料项目实操手册适合人群" class="headerlink" title="船长AI原创+小红书教辅资料项目实操手册适合人群"></a>船长AI原创+小红书教辅资料项目实操手册适合人群</h2><ul><li>短视频创作者、内容营销人员，渴望系统化运营思路</li><li>自媒体平台新人，需要快速掌握选题、封面、文案到发布全流程</li><li>教辅资料及知识付费从业者，寻求高效转换与交付方法</li><li>希望利用AI工具提升效率、丰富创意的各类内容生产者</li></ul><h2 id="船长AI原创-小红书教辅资料项目实操手册学习地址"><a href="#船长AI原创-小红书教辅资料项目实操手册学习地址" class="headerlink" title="船长AI原创+小红书教辅资料项目实操手册学习地址"></a>船长AI原创+小红书教辅资料项目实操手册学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/769b73e12d25" title="船长AI原创+小红书教辅资料项目实操手册学习地址">船长AI原创+小红书教辅资料项目实操手册</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 船长AI原创+小红书教辅资料项目实操手册课程概况&lt;/p&gt;
-&lt;p&gt;2 船长AI原创+小红书教辅资料项目实操手册课程目录&lt;/p&gt;
-&lt;p&gt;2.1 项目思维与心态建设&lt;/p&gt;
-&lt;p&gt;2.2 内容创作与设计工具&lt;/p</summary>
-      
-    
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
-    
-    <category term="短视频" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>装修避坑指南+装修避坑资料包</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/29/zhuang-xiu-bi-keng-zhi-nan-zhuang-xiu-bi-keng-zi/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/29/zhuang-xiu-bi-keng-zhi-nan-zhuang-xiu-bi-keng-zi/</id>
-    <published>2025-07-30T04:23:57.000Z</published>
-    <updated>2025-07-31T19:00:26.174Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 资源信息</p><p>2 资源目录</p><p>3 资源下载</p><h3 id="资源信息"><a href="#资源信息" class="headerlink" title="资源信息"></a>资源信息</h3><p>装修避坑指南+装修避坑资料包，包含实用装修避坑 装修小白 省钱避坑 视频教程和装修避坑文件包、资料包，夸克网盘资源下载。</p><h3 id="资源目录"><a href="#资源目录" class="headerlink" title="资源目录"></a>资源目录</h3><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2024/03/%E8%A3%85%E4%BF%AE%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97%E8%A3%85%E4%BF%AE%E9%81%BF%E5%9D%91%E8%B5%84%E6%96%99%E5%8C%85.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2024/03/%E8%A3%85%E4%BF%AE%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97%E8%A3%85%E4%BF%AE%E9%81%BF%E5%9D%91%E8%B5%84%E6%96%99%E5%8C%85.jpg" alt="装修避坑指南+装修避坑资料包"></a></p><h3 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h3><p>下载地址：<a href="https://pan.quark.cn/s/51f05d961059" title="装修避坑指南+装修避坑资料包">装修避坑指南+装修避坑资料包</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 资源信息&lt;/p&gt;
-&lt;p&gt;2 资源目录&lt;/p&gt;
-&lt;p&gt;3 资源下载&lt;/p&gt;
-&lt;h3 id=&quot;资源信息&quot;&gt;&lt;a href=&quot;#资源信息&quot; class=&quot;headerlink&quot; title=&quot;资源信息&quot;&gt;&lt;/a&gt;</summary>
-      
-    
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MidJourney精选图集与提示词生成器：免费无限制的AI创意灵感</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/29/midjourney-jing-xuan-tu-ji-yu-ti-shi-ci-sheng-cheng-qi-mian-fei-wu-xian-zhi-de-ai-chuang-yi/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/29/midjourney-jing-xuan-tu-ji-yu-ti-shi-ci-sheng-cheng-qi-mian-fei-wu-xian-zhi-de-ai-chuang-yi/</id>
-    <published>2025-07-30T03:01:23.000Z</published>
-    <updated>2025-07-31T19:00:27.616Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 MidJourney精选图集与提示词概览</p><p>2 MidJourney精选图集与提示词核心功能</p><p>2.1 精选图集浏览</p><p>2.2 提示词自动生成</p><p>3 MidJourney精选图集与提示词使用流程</p><p>4 MidJourney精选图集与提示词常见问题</p><p>5 MidJourney精选图集与提示词</p><h2 id="MidJourney精选图集与提示词概览"><a href="#MidJourney精选图集与提示词概览" class="headerlink" title="MidJourney精选图集与提示词概览"></a>MidJourney精选图集与提示词概览</h2><p>MidJourney精选图集与提示词生成器是一个MidJourney提示词和提示词生成器网站，拥有数万张公开的MidJourney Showcase精选作品，汇聚多位创作者的代表作与用户名，助你快速获取灵感。每条提示词都像魔法咒语，能够激发AI的想象力，让任何人都能创作出细节丰富、视觉风格多样的图片，并且网站提供提示词生成器，用户只需要提出的想法创意，让 AI 发挥想象力，每个人都能成为提示词大师。</p><h2 id="MidJourney精选图集与提示词核心功能"><a href="#MidJourney精选图集与提示词核心功能" class="headerlink" title="MidJourney精选图集与提示词核心功能"></a>MidJourney精选图集与提示词核心功能</h2><h3 id="精选图集浏览"><a href="#精选图集浏览" class="headerlink" title="精选图集浏览"></a>精选图集浏览</h3><p>展示多位艺术家的精选作品，涵盖风景、人物、抽象等多种风格，帮助用户洞察当前流行趋势并发现创作方向，提示词复制直接使用。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/MidJourney%E7%B2%BE%E9%80%89%E5%9B%BE%E9%9B%86%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%9A%E5%85%8D%E8%B4%B9%E6%97%A0%E9%99%90%E5%88%B6%E7%9A%84AI%E5%88%9B%E6%84%8F%E7%81%B5%E6%84%9F-main.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/MidJourney%E7%B2%BE%E9%80%89%E5%9B%BE%E9%9B%86%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%9A%E5%85%8D%E8%B4%B9%E6%97%A0%E9%99%90%E5%88%B6%E7%9A%84AI%E5%88%9B%E6%84%8F%E7%81%B5%E6%84%9F-main.jpg" alt="MidJourney精选图集与提示词生成器：免费无限制的AI创意灵感"></a></p><h3 id="提示词自动生成"><a href="#提示词自动生成" class="headerlink" title="提示词自动生成"></a>提示词自动生成</h3><p>根据你的简单描述，AI会提取关键词、检索相似示例并结合预设参数，为你生成专业级MidJourney提示词，保证细节与创意兼备。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/MidJourney%E7%B2%BE%E9%80%89%E5%9B%BE%E9%9B%86%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%9A%E5%85%8D%E8%B4%B9%E6%97%A0%E9%99%90%E5%88%B6%E7%9A%84AI%E5%88%9B%E6%84%8F%E7%81%B5%E6%84%9F.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202844%202018'%3E%3C/svg%3E" alt="MidJourney精选图集与提示词生成器：免费无限制的AI创意灵感"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/MidJourney%E7%B2%BE%E9%80%89%E5%9B%BE%E9%9B%86%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%9A%E5%85%8D%E8%B4%B9%E6%97%A0%E9%99%90%E5%88%B6%E7%9A%84AI%E5%88%9B%E6%84%8F%E7%81%B5%E6%84%9F.jpg" alt="MidJourney精选图集与提示词生成器：免费无限制的AI创意灵感"></a></p><h2 id="MidJourney精选图集与提示词使用流程"><a href="#MidJourney精选图集与提示词使用流程" class="headerlink" title="MidJourney精选图集与提示词使用流程"></a>MidJourney精选图集与提示词使用流程</h2><ol><li>输入创意想法或关键词</li><li>系统解析意图并提取核心元素</li><li>从数据库获取相关示例提示词</li><li>AI融合预设参数，输出最终提示词</li></ol><p>这种方法不仅适用于MidJourney，还可在其他图片生成模型中复用，帮助你在不同平台上保持创意一致性。</p><h2 id="MidJourney精选图集与提示词常见问题"><a href="#MidJourney精选图集与提示词常见问题" class="headerlink" title="MidJourney精选图集与提示词常见问题"></a>MidJourney精选图集与提示词常见问题</h2><p><strong>提示词生成器有什么作用？</strong><br>它能将你的描述转化为大师级提示词，生成细腻且风格多样的AI图片。<br><strong>无需登录使用安全吗？</strong><br>完全免费，无需注册或信用卡，也不设置使用上限。<br><strong>生成的提示词能否跨平台？</strong><br>提示词本质为内容描述，具备一定通用性，可用于多种AI图像模型。</p><h2 id="MidJourney精选图集与提示词"><a href="#MidJourney精选图集与提示词" class="headerlink" title="MidJourney精选图集与提示词"></a>MidJourney精选图集与提示词</h2><p>访问地址：<a href="https://mj.u14.app/zh">https://mj.u14.app/zh</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 MidJourney精选图集与提示词概览&lt;/p&gt;
-&lt;p&gt;2 MidJourney精选图集与提示词核心功能&lt;/p&gt;
-&lt;p&gt;2.1 精选图集浏览&lt;/p&gt;
-&lt;p&gt;2.2 提示词自动生成&lt;/p&gt;
-&lt;p&gt;3 MidJ</summary>
-      
-    
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
-    
-    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/29/englishdailyai-qu-dong-de-mian-fei-ying-yu-lian-xi-ping-tai-mei-ri-ti-sheng-ting-shuo-du-xie/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/29/englishdailyai-qu-dong-de-mian-fei-ying-yu-lian-xi-ping-tai-mei-ri-ti-sheng-ting-shuo-du-xie/</id>
-    <published>2025-07-30T02:10:15.000Z</published>
-    <updated>2025-07-31T19:00:29.531Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 English Daily概览</p><p>2 English Daily功能亮点</p><p>2.1 AI听力练习</p><p>2.2 AI口语练习</p><p>2.3 AI阅读练习</p><p>2.4 AI写作练习</p><p>3 English Daily平台优势</p><p>4 English Daily使用建议</p><p>5 行业趋势</p><p>6 English Daily官网地址</p><h2 id="English-Daily概览"><a href="#English-Daily概览" class="headerlink" title="English Daily概览"></a>English Daily概览</h2><p>English Daily 是一款由人工智能驱动的在线英语练习平台，核心围绕“听、说、读、写”四项能力，持续提供每日高质量学习素材与互动练习。平台承诺“永久免费”，用户无需付费即可体验基础功能，包括听力 TED 视频、口语发音评分、阅读精选文章以及写作语法纠错。其 AI 引擎会根据学习行为生成个性化反馈，让练习过程更贴近真实沟通场景。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-main.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203526%202456'%3E%3C/svg%3E" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-main.jpg" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"></a></p><h2 id="English-Daily功能亮点"><a href="#English-Daily功能亮点" class="headerlink" title="English Daily功能亮点"></a>English Daily功能亮点</h2><h3 id="AI听力练习"><a href="#AI听力练习" class="headerlink" title="AI听力练习"></a>AI听力练习</h3><ul><li><p>每日更新TED演讲视频和配套测验</p></li><li><p>选取经典公开演讲，帮助用户沉浸式提升听力理解</p></li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E5%90%AC%E5%8A%9B.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203254%202708'%3E%3C/svg%3E" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E5%90%AC%E5%8A%9B.jpg" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"></a></p><h3 id="AI口语练习"><a href="#AI口语练习" class="headerlink" title="AI口语练习"></a>AI口语练习</h3><ul><li><p>基于AI的发音检测与即时打分</p></li><li><p>提供发音改进建议，逐步提升语音流利度和准确度</p></li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E5%8F%A3%E8%AF%AD.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203280%202708'%3E%3C/svg%3E" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E5%8F%A3%E8%AF%AD.jpg" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"></a></p><h3 id="AI阅读练习"><a href="#AI阅读练习" class="headerlink" title="AI阅读练习"></a>AI阅读练习</h3><ul><li><p>精选BBC、Medium等权威媒体文章</p></li><li><p>结合词汇注释和阅读理解题，扩充词汇量并强化阅读技能</p></li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E9%98%85%E8%AF%BB.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203016%201704'%3E%3C/svg%3E" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E9%98%85%E8%AF%BB.jpg" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"></a></p><h3 id="AI写作练习"><a href="#AI写作练习" class="headerlink" title="AI写作练习"></a>AI写作练习</h3><ul><li><p>每日写作提示题目，涵盖实用场景</p></li><li><p>内置AI语法检查与表达优化，帮助用户润色句子、提升写作质量</p></li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E5%86%99%E4%BD%9C.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203160%202968'%3E%3C/svg%3E" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/English-Daily%EF%BC%9AAI%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%85%8D%E8%B4%B9%E8%8B%B1%E8%AF%AD%E7%BB%83%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%AF%8F%E6%97%A5%E6%8F%90%E5%8D%87%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99%E5%AE%9E%E5%8A%9B-%E5%86%99%E4%BD%9C.jpg" alt="English Daily：AI驱动的免费英语练习平台，每日提升听说读写实力"></a></p><h2 id="English-Daily平台优势"><a href="#English-Daily平台优势" class="headerlink" title="English Daily平台优势"></a>English Daily平台优势</h2><ul><li><p><strong>全免费体验</strong> ：无需付费即可使用基础版所有练习模块</p></li><li><p><strong>智能驱动</strong> ：AI算法实现个性化反馈和进阶指导</p></li><li><p><strong>内容新鲜</strong> ：每日推送时事热点与经典原文，保持学习动力</p></li><li><p><strong>实用导向</strong> ：不仅应试，更专注真实场景下的沟通能力培养</p></li></ul><h2 id="English-Daily使用建议"><a href="#English-Daily使用建议" class="headerlink" title="English Daily使用建议"></a>English Daily使用建议</h2><ul><li><p>建议每天坚持至少10分钟的听说读写综合练习，搭配平台测评反馈，逐步提升</p></li><li><p>口语练习可重复朗读平台提供的短段落，关注AI评分反馈中的具体发音细节</p></li><li><p>阅读时结合生词本做个人词汇笔记，定期复习巩固</p></li><li><p>写作完成后多对比AI优化建议，把握地道表达</p></li></ul><h2 id="行业趋势"><a href="#行业趋势" class="headerlink" title="行业趋势"></a>行业趋势</h2><p>人工智能正重塑语言学习生态，Duolingo 等头部应用也在 2024 年起密集推出 AI 会话与游戏化功能，表明“实时反馈 + 高频练习”已成行业共识。English Daily 在免费策略与多维练习深度上具有差异化优势，为用户提供了便捷且系统的自学路径。</p><hr><p>通过 AI 技术与每日新内容的结合，English Daily 让英语学习者能在真实语境中不断试错、修正、再输出，逐步构建流利而自然的语言能力。</p><h2 id="English-Daily官网地址"><a href="#English-Daily官网地址" class="headerlink" title="English Daily官网地址"></a>English Daily官网地址</h2><p>官网地址：<a href="https://englishdaily.ai/">https://englishdaily.ai/</a></p><p><a href="https://www.ahhhhfs.com/tag/learning-english/">更多英语学习相关</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 English Daily概览&lt;/p&gt;
-&lt;p&gt;2 English Daily功能亮点&lt;/p&gt;
-&lt;p&gt;2.1 AI听力练习&lt;/p&gt;
-&lt;p&gt;2.2 AI口语练习&lt;/p&gt;
-&lt;p&gt;2.3 AI阅读练习&lt;/p&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
-    
-    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代代木动画学院：零基础绘画课程（角色篇）</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/29/dai-dai-mu-dong-hua-xue-yuan-ling-ji-chu-hui-hua-ke-cheng-jiao/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/29/dai-dai-mu-dong-hua-xue-yuan-ling-ji-chu-hui-hua-ke-cheng-jiao/</id>
-    <published>2025-07-29T07:12:20.000Z</published>
-    <updated>2025-07-31T19:00:30.459Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 零基础绘画课程（角色篇）课程概览</p><p>2 零基础绘画课程（角色篇）课程目录</p><p>2.1 梦幻联动：2233娘JOJO风演绎</p><p>2.2 核心模块：15节课程拆解</p><p>3 零基础绘画课程（角色篇）课程亮点</p><p>4 零基础绘画课程（角色篇）课程学习地址</p><h2 id="零基础绘画课程（角色篇）课程概览"><a href="#零基础绘画课程（角色篇）课程概览" class="headerlink" title="零基础绘画课程（角色篇）课程概览"></a>零基础绘画课程（角色篇）课程概览</h2><p>代代木动画学院推出的零基础绘画课程（角色篇）共含15节内容，覆盖角色解剖到细节刻画的全流程。开篇呈现梦幻联动——2233娘以JOJO风格再现，帮助学员体验风格化创作。后续课程围绕人体结构与表现技法展开，循序引导学员从骨骼认知到肌肉刻画，进而掌握人物临摹与面部、头发、手脚等部位的精细处理。</p><h2 id="零基础绘画课程（角色篇）课程目录"><a href="#零基础绘画课程（角色篇）课程目录" class="headerlink" title="零基础绘画课程（角色篇）课程目录"></a>零基础绘画课程（角色篇）课程目录</h2><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E4%BB%A3%E4%BB%A3%E6%9C%A8%E5%8A%A8%E7%94%BB%E5%AD%A6%E9%99%A2%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80%E7%BB%98%E7%94%BB%E8%AF%BE%E7%A8%8B%EF%BC%88%E8%A7%92%E8%89%B2%E7%AF%87%EF%BC%89.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E4%BB%A3%E4%BB%A3%E6%9C%A8%E5%8A%A8%E7%94%BB%E5%AD%A6%E9%99%A2%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80%E7%BB%98%E7%94%BB%E8%AF%BE%E7%A8%8B%EF%BC%88%E8%A7%92%E8%89%B2%E7%AF%87%EF%BC%89.jpg" alt="代代木动画学院：零基础绘画课程（角色篇）"></a></p><h3 id="梦幻联动：2233娘JOJO风演绎"><a href="#梦幻联动：2233娘JOJO风演绎" class="headerlink" title="梦幻联动：2233娘JOJO风演绎"></a>梦幻联动：2233娘JOJO风演绎</h3><p>课程起点通过热门IP形象，演示二次元角色的风格化转换，强调线条张力与动态表情，为后续学习注入趣味与灵感。</p><h3 id="核心模块：15节课程拆解"><a href="#核心模块：15节课程拆解" class="headerlink" title="核心模块：15节课程拆解"></a>核心模块：15节课程拆解</h3><ul><li><strong>骨骼结构（3课）</strong><br>分步示范人体骨骼比例，剖析关节活动范围，夯实绘画基础。</li><li><strong>肌肉动态（3课）</strong><br>在骨骼基础上介绍主要肌群走向与肌理表现，强化立体感。</li><li><strong>人物临摹（2课）</strong><br>选取经典角色素材，教授观察与临摹技巧，提升造型能力。</li><li><strong>面部细节（2课）</strong><br>分解五官绘制步骤，指导光影与质感处理。</li><li><strong>头发表现（3课）</strong><br>拆解发丝结构与层次处理，掌握飘逸动感的绘制方法。</li><li><strong>深度刻画（3课）</strong><br>重点雕琢人体整体比例、手部和脚部的结构与姿态，完善角色表现。</li></ul><h2 id="零基础绘画课程（角色篇）课程亮点"><a href="#零基础绘画课程（角色篇）课程亮点" class="headerlink" title="零基础绘画课程（角色篇）课程亮点"></a>零基础绘画课程（角色篇）课程亮点</h2><p>课程设计贴合初学者需求，由浅入深覆盖角色绘画全流程。所有示范均配备分步图解与要点解析，学员可跟随练习并反复回顾。通过系统化教学与实战演示，帮助学员在短时间内建立完整的角色绘制思路。</p><p>学员完成课程后将能够：</p><ul><li>准确构建角色骨骼与肌肉框架</li><li>运用临摹方法快速提升造型基础</li><li>精细刻画面部轮廓与发丝层次</li><li>自信表现手部、脚部结构与动态</li></ul><h2 id="零基础绘画课程（角色篇）课程学习地址"><a href="#零基础绘画课程（角色篇）课程学习地址" class="headerlink" title="零基础绘画课程（角色篇）课程学习地址"></a>零基础绘画课程（角色篇）课程学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/4aabe65c99a3" title="代代木动画学院：零基础绘画课程（角色篇）学习地址">代代木动画学院：零基础绘画课程（角色篇）</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 零基础绘画课程（角色篇）课程概览&lt;/p&gt;
-&lt;p&gt;2 零基础绘画课程（角色篇）课程目录&lt;/p&gt;
-&lt;p&gt;2.1 梦幻联动：2233娘JOJO风演绎&lt;/p&gt;
-&lt;p&gt;2.2 核心模块：15节课程拆解&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>零基础到高阶的全能声乐课程：呼吸·共鸣·混声系统训练</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/28/ling-ji-chu-dao-gao-jie-de-quan-neng-sheng-le-ke-cheng-hu-xi-gong-ming-hun-sheng-xi-tong/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/28/ling-ji-chu-dao-gao-jie-de-quan-neng-sheng-le-ke-cheng-hu-xi-gong-ming-hun-sheng-xi-tong/</id>
-    <published>2025-07-29T06:40:57.000Z</published>
-    <updated>2025-07-31T19:00:31.834Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 零基础到高阶的全能声乐课程概览</p><p>1.1 核心模块</p><p>1.2 适合人群</p><p>1.3 学习收获</p><p>2 零基础到高阶的全能声乐课程学习地址</p><h2 id="零基础到高阶的全能声乐课程概览"><a href="#零基础到高阶的全能声乐课程概览" class="headerlink" title="零基础到高阶的全能声乐课程概览"></a>零基础到高阶的全能声乐课程概览</h2><p>全网最全-付费声乐技巧 唱歌技巧 乐理课程 视唱练耳教程合集：零基础到高阶的全能声乐课程：呼吸·共鸣·混声系统训练，这套声乐课程汇集 59 节高清视频，覆盖入门到高阶的完整训练体系。内容从音准、节奏与识谱启航，逐步深入呼吸控制、腹式呼吸、共鸣腔体定位，再到混声、咽音、怒音、转音与戏腔等进阶技巧；同时穿插《错位时空》三阶段实战教学，让学员在真实曲目中巩固所学。后续板块加入声调与气息结合、身体放松与喉头打开、真假声转换、丹田运力、嗓音保护及闭口元音训练，帮助学员打造稳定而富有表现力的声线。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8-%E4%BB%98%E8%B4%B9%E5%A3%B0%E4%B9%90%E6%8A%80%E5%B7%A7-%E5%94%B1%E6%AD%8C%E6%8A%80%E5%B7%A7-%E4%B9%90%E7%90%86%E8%AF%BE%E7%A8%8B-%E8%A7%86%E5%94%B1%E7%BB%83%E8%80%B3%E6%95%99%E7%A8%8B%E5%90%88%E9%9B%86.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8-%E4%BB%98%E8%B4%B9%E5%A3%B0%E4%B9%90%E6%8A%80%E5%B7%A7-%E5%94%B1%E6%AD%8C%E6%8A%80%E5%B7%A7-%E4%B9%90%E7%90%86%E8%AF%BE%E7%A8%8B-%E8%A7%86%E5%94%B1%E7%BB%83%E8%80%B3%E6%95%99%E7%A8%8B%E5%90%88%E9%9B%86.jpg" alt="零基础到高阶的全能声乐课程：呼吸·共鸣·混声系统训练"></a></p><h3 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h3><ul><li><strong>基础发声</strong> ：音准、节奏、识谱与声调训练，奠定音高与节奏感。</li><li><strong>呼吸与气息</strong> ：气息支撑、腹式呼吸、丹田发力，构建声音动力。</li><li><strong>共鸣与声区</strong> ：胸腔、口腔、头腔共鸣位置，高中低声区顺畅衔接。</li><li><strong>技巧提升</strong> ：混声切换、颤音控制、连音流畅度、声音前后明暗调节。</li><li><strong>乐理与节奏</strong> ：视唱练耳、基本乐理、语言基础与进阶发音。</li><li><strong>实战演练</strong> ：歌曲分段教学、高低音突破、无乐器与乐器辅助练声方法。</li></ul><h3 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h3><ul><li>声乐零基础、想系统学习唱歌的入门者</li><li>已有基础、希望突破高音或混声瓶颈的进阶学员</li><li>需要提升舞台表现力、声音情感与连贯性的歌手或主播</li><li>关注嗓音健康、寻求科学练声方案的爱好者</li></ul><h3 id="学习收获"><a href="#学习收获" class="headerlink" title="学习收获"></a>学习收获</h3><ul><li>掌握腹式呼吸与气息控制，让声音更持久有力</li><li>建立胸、口、头腔共鸣通路，实现声区无缝过渡</li><li>灵活切换真假声，轻松驾驭高低音与混声</li><li>通过颤音、转音等进阶技巧，增强歌曲感染力</li><li>了解嗓音保护与放松方法，避免用嗓损伤</li><li>找到最适合自己的声音色彩，塑造个人风格</li></ul><p>课程在系统性、实用性与趣味性之间取得平衡，既有严谨的技术拆解，也有曲目示范与节奏训练，帮助学员从基础到高阶全面提升歌唱实力。</p><h2 id="零基础到高阶的全能声乐课程学习地址"><a href="#零基础到高阶的全能声乐课程学习地址" class="headerlink" title="零基础到高阶的全能声乐课程学习地址"></a>零基础到高阶的全能声乐课程学习地址</h2><p>学习地址：<a href="https://pan.quark.cn/s/a59d763a1b87" title="全网最全-付费声乐技巧 唱歌技巧 乐理课程 视唱练耳教程合集学习地址">全网最全-付费声乐技巧 唱歌技巧 乐理课程 视唱练耳教程合集</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 零基础到高阶的全能声乐课程概览&lt;/p&gt;
-&lt;p&gt;1.1 核心模块&lt;/p&gt;
-&lt;p&gt;1.2 适合人群&lt;/p&gt;
-&lt;p&gt;1.3 学习收获&lt;/p&gt;
-&lt;p&gt;2 零基础到高阶的全能声乐课程学习地址&lt;/p&gt;
-&lt;h2 id=&quot;</summary>
-      
-    
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B5%84%E6%BA%90/"/>
-    
-    <category term="兴趣爱好" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>客群采集小程序：免费商户信息采集与客源管理神器</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/28/ke-qun-cai-ji-xiao-cheng-xu-mian-fei-shang-hu-xin-xi-cai-ji-yu-ke-yuan-guan-li/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/28/ke-qun-cai-ji-xiao-cheng-xu-mian-fei-shang-hu-xin-xi-cai-ji-yu-ke-yuan-guan-li/</id>
-    <published>2025-07-29T05:54:35.000Z</published>
-    <updated>2025-07-31T19:00:35.743Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 客群采集概述</p><p>2 客群采集核心功能</p><p>2.1 多维度采集方式</p><p>2.2 全面客源管理</p><p>3 客群采集使用场景</p><p>4 客群采集技术与优势</p><p>5 客群采集快速上手</p><p>6 客群采集如何使用</p><h2 id="客群采集概述"><a href="#客群采集概述" class="headerlink" title="客群采集概述"></a>客群采集概述</h2><p>“客群采集”是一款基于微信生态的免费小程序：免费商户信息采集与客源管理神器，利用地理位置和地图 API，快速批量抓取商户信息。用户可根据设定的关键字或区域，在地图平台内高效获取潜在客源，满足从周边精准定位到大范围行业筛选的多种场景需求。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-main.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-main.jpg" alt="客群采集小程序：免费商户信息采集与客源管理神器"></a></p><h2 id="客群采集核心功能"><a href="#客群采集核心功能" class="headerlink" title="客群采集核心功能"></a>客群采集核心功能</h2><h3 id="多维度采集方式"><a href="#多维度采集方式" class="headerlink" title="多维度采集方式"></a>多维度采集方式</h3><ul><li><strong>附近客源</strong> ：设定中心位置与半径，实时搜索周边 POI（兴趣点）信息，适合社区推广、门店周边营销。</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A801.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201179%202556'%3E%3C/svg%3E" alt="客群采集小程序：免费商户信息采集与客源管理神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A801.jpg" alt="客群采集小程序：免费商户信息采集与客源管理神器"></a></p><ul><li><strong>区域客源</strong> ：输入“省-市-区”，批量获取指定区域内所有目标商户，助力区域拓展或分销布局。</li><li><strong>行业客源</strong> ：在区域采集基础上，额外添加最多 5 个行业关键词，实现更细化的行业筛选，精确锁定潜在客户。</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A802.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201179%202556'%3E%3C/svg%3E" alt="客群采集小程序：免费商户信息采集与客源管理神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A802.jpg" alt="客群采集小程序：免费商户信息采集与客源管理神器"></a></p><h3 id="全面客源管理"><a href="#全面客源管理" class="headerlink" title="全面客源管理"></a>全面客源管理</h3><ul><li><strong>采集记录</strong> ：每次操作生成一条独立记录，集中展示符合条件的商户列表，支持按时间或关键词检索。</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A803.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201179%202556'%3E%3C/svg%3E" alt="客群采集小程序：免费商户信息采集与客源管理神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A803.jpg" alt="客群采集小程序：免费商户信息采集与客源管理神器"></a></p><ul><li><strong>批量操作</strong> ：对选中商户可一键拨号、导出通讯录、生成文本文件并通过微信分享，提高外出拜访或电话销售效率。</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A804.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201179%202556'%3E%3C/svg%3E" alt="客群采集小程序：免费商户信息采集与客源管理神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A804.jpg" alt="客群采集小程序：免费商户信息采集与客源管理神器"></a></p><ul><li><strong>地图展示与导航</strong> ：将客源信息在地图中可视化，点击即可调用微信导航，帮助业务人员直达目标位置。</li></ul><h2 id="客群采集使用场景"><a href="#客群采集使用场景" class="headerlink" title="客群采集使用场景"></a>客群采集使用场景</h2><ul><li><strong>门店引流</strong> ：零售、餐饮等本地商户可借助附近客源功能，快速获取周边同行或关联业态信息，实现跨界引流。</li><li><strong>区域拓展</strong> ：连锁品牌或分销商通过区域客源，精准覆盖目标区域内所有潜在合作商户。</li><li><strong>行业深耕</strong> ：在特定行业领域，利用多关键词组合筛选，助力精准推广与深度合作谈判。</li></ul><h2 id="客群采集技术与优势"><a href="#客群采集技术与优势" class="headerlink" title="客群采集技术与优势"></a>客群采集技术与优势</h2><ul><li><strong>免费使用</strong> ：零成本获取优质客源，无需额外付费即可享受完整功能。</li><li><strong>地图 API 支撑</strong> ：依托微信地图与第三方地图平台，保证数据覆盖广、更新及时。</li><li><strong>操作简便</strong> ：界面直观，功能模块化设计，无需复杂培训即可快速上手。</li></ul><h2 id="客群采集快速上手"><a href="#客群采集快速上手" class="headerlink" title="客群采集快速上手"></a>客群采集快速上手</h2><ol><li>打开小程序并授权定位权限</li><li>选择采集模式（附近、区域或行业）</li><li>设置关键词、范围后一键开始采集</li><li>在“采集记录”中查看并管理已抓取商户</li></ol><h2 id="客群采集如何使用"><a href="#客群采集如何使用" class="headerlink" title="客群采集如何使用"></a>客群采集如何使用</h2><p>微信搜索小程序：客群采集</p><p>扫码体验：👇👇👇</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-qr.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20430%20430'%3E%3C/svg%3E" alt="客群采集小程序：免费商户信息采集与客源管理神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%AE%A2%E7%BE%A4%E9%87%87%E9%9B%86%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%85%8D%E8%B4%B9%E5%95%86%E6%88%B7%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E4%B8%8E%E5%AE%A2%E6%BA%90%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8-qr.jpg" alt="客群采集小程序：免费商户信息采集与客源管理神器"></a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 客群采集概述&lt;/p&gt;
-&lt;p&gt;2 客群采集核心功能&lt;/p&gt;
-&lt;p&gt;2.1 多维度采集方式&lt;/p&gt;
-&lt;p&gt;2.2 全面客源管理&lt;/p&gt;
-&lt;p&gt;3 客群采集使用场景&lt;/p&gt;
-&lt;p&gt;4 客群采集技术与优势&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="软件" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="Android" scheme="https://liuxingzhe.github.io/blog//blog/tags/Android/"/>
-    
-    <category term="iOS" scheme="https://liuxingzhe.github.io/blog//blog/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/28/ke-yu-ai2025-xin-yi-dai-ai-zhi-bo-zhu-shou-300-xu-ni-shu-zi-ren-zhu-bo-chao-fang-zhen/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/28/ke-yu-ai2025-xin-yi-dai-ai-zhi-bo-zhu-shou-300-xu-ni-shu-zi-ren-zhu-bo-chao-fang-zhen/</id>
-    <published>2025-07-29T04:17:02.000Z</published>
-    <updated>2025-07-31T07:00:36.158Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 可遇AI概述</p><p>2 可遇AI核心功能</p><p>2.1 超拟真语音合成</p><p>2.2 弹幕互动与小玩法</p><p>2.3 DeepSeek话术改写</p><p>2.4 智能调度与冷场应对</p><p>3 可遇AI亮点优势</p><p>4 可遇AI应用场景</p><p>5 可遇AI如何使用&#x2F;下载地址</p><h2 id="可遇AI概述"><a href="#可遇AI概述" class="headerlink" title="可遇AI概述"></a>可遇AI概述</h2><p>可遇AI是一款基于先进人工智能技术的AI直播助手，支持无人直播与AI直播两种模式，覆盖电商带货、娱乐秀场等多种场景。平台提供300+款AI主播和本地运算配音能力，让用户无需真人出镜即可开展高仿真直播。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B0-main.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202796%201822'%3E%3C/svg%3E" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B0-main.jpg" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"></a></p><h2 id="可遇AI核心功能"><a href="#可遇AI核心功能" class="headerlink" title="可遇AI核心功能"></a>可遇AI核心功能</h2><h3 id="超拟真语音合成"><a href="#超拟真语音合成" class="headerlink" title="超拟真语音合成"></a>超拟真语音合成</h3><p>采用最新语音合成大模型，一键克隆超真实语音，让直播更具亲和力和代入感。主播语气自然、口语化表达，轻松融入电商话术与娱乐解说。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B001.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20929%20635'%3E%3C/svg%3E" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B001.jpg" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"></a></p><h3 id="弹幕互动与小玩法"><a href="#弹幕互动与小玩法" class="headerlink" title="弹幕互动与小玩法"></a>弹幕互动与小玩法</h3><p>内置视觉识别系统，实时解析直播画面与弹幕内容，支持弹幕游戏、礼物互动、点赞、分享、关注、粉丝团等全自动反馈。根据观众行为触发个性化话术，提升互动粘性。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B002.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20989%20720'%3E%3C/svg%3E" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B002.jpg" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"></a></p><h3 id="DeepSeek话术改写"><a href="#DeepSeek话术改写" class="headerlink" title="DeepSeek话术改写"></a>DeepSeek话术改写</h3><p>原生接入DeepSeek、豆包等大模型，一键生成或改写话术内容，内置动态变量功能，可根据实时数据自动替换信息，保持话术新鲜度与相关性。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B003.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20960%20725'%3E%3C/svg%3E" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/%E5%8F%AF%E9%81%87AI%EF%BC%9A2025%E6%96%B0%E4%B8%80%E4%BB%A3AI%E7%9B%B4%E6%92%AD%E5%8A%A9%E6%89%8B-300%E8%99%9A%E6%8B%9F%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD-%EF%BC%8C%E8%B6%85%E4%BB%BF%E7%9C%9F%E4%BA%BA%E5%A3%B003.jpg" alt="可遇AI：2025新一代AI直播助手 300+虚拟数字人主播 ，超仿真人声"></a></p><h3 id="智能调度与冷场应对"><a href="#智能调度与冷场应对" class="headerlink" title="智能调度与冷场应对"></a>智能调度与冷场应对</h3><p>系统根据优先级分层回复观众消息，高等级用户优先触达；支持条件触发话术与冷场自动话术，有效提升直播流畅度和专业感。</p><h2 id="可遇AI亮点优势"><a href="#可遇AI亮点优势" class="headerlink" title="可遇AI亮点优势"></a>可遇AI亮点优势</h2><ul><li><strong>虚拟数字人</strong> ：多种虚拟形象可选，支持全功能直播场景切换。</li><li><strong>全自动互动</strong> ：覆盖弹幕、礼物、点赞、分享等常见互动类型，省时省力。</li><li><strong>本地运算配音</strong> ：无需云端依赖，保障音质与稳定性。</li><li><strong>多场景适配</strong> ：电商带货、答题游戏、娱乐互动均可一键切换。</li></ul><h2 id="可遇AI应用场景"><a href="#可遇AI应用场景" class="headerlink" title="可遇AI应用场景"></a>可遇AI应用场景</h2><ul><li>电商直播：无需真人主播，快速上手，提高ROI</li><li>教育培训：自动讲解课件与答疑互动，解放教师精力</li><li>娱乐综艺：弹幕游戏与小玩法结合，增强观众黏性</li><li>品牌宣传：定制化虚拟形象，提升品牌科技感</li></ul><p>帮助力用户打造更生动、沉浸、高效的直播内容，让可遇AI成为您在直播行业脱颖而出的智能助力。</p><h2 id="可遇AI如何使用-下载地址"><a href="#可遇AI如何使用-下载地址" class="headerlink" title="可遇AI如何使用&#x2F;下载地址"></a>可遇AI如何使用&#x2F;下载地址</h2><p>下载地址：<a href="https://pan.quark.cn/s/863b91dfd63b" title="可遇AI下载地址">可遇AI下载地址</a></p><p>官网地址：<a href="https://www.keyu.live/">https://www.keyu.live/</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 可遇AI概述&lt;/p&gt;
-&lt;p&gt;2 可遇AI核心功能&lt;/p&gt;
-&lt;p&gt;2.1 超拟真语音合成&lt;/p&gt;
-&lt;p&gt;2.2 弹幕互动与小玩法&lt;/p&gt;
-&lt;p&gt;2.3 DeepSeek话术改写&lt;/p&gt;
-&lt;p&gt;2.4 智能调度</summary>
-      
-    
-    
-    
-    <category term="软件" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="软件" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="Windows" scheme="https://liuxingzhe.github.io/blog//blog/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的神器</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/28/zreadai-yi-jian-jiang-github-xiang-mu-zhuan-hua-wei-jie-gou-hua-tong-shou-yi-dong-zhong-wen-shou-ce-de/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/28/zreadai-yi-jian-jiang-github-xiang-mu-zhuan-hua-wei-jie-gou-hua-tong-shou-yi-dong-zhong-wen-shou-ce-de/</id>
-    <published>2025-07-29T03:32:10.000Z</published>
-    <updated>2025-07-31T07:00:38.248Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 Zread.AI介绍</p><p>2 Zread.AI工具概述</p><p>3 Zread.AI核心功能</p><p>3.1 项目结构自动解析</p><p>3.2 Guidebook 可视化指南</p><p>3.3 Buzz 社区洞察</p><p>3.4 多语言 &amp; 热榜</p><p>4 Zread.AI优势亮点</p><p>5 Zread.AI典型场景</p><p>6 Zread.AI快速上手</p><p>7 Zread.AI注意事项与发展方向</p><p>8 Zread.AI官网地址</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8.jpg" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"></a></p><h2 id="Zread-AI介绍"><a href="#Zread-AI介绍" class="headerlink" title="Zread.AI介绍"></a>Zread.AI介绍</h2><p>Zread.AI 由智谱 Z.ai 推出，是一款面向开发者的 AI 代码维基工具，可在几秒内把任何公开 GitHub 仓库转化为结构化中文手册，并通过独家 Buzz 面板聚合 commits、issues 与相关新闻，让项目脉搏一目了然。相比 Cognition 的 DeepWiki，Zread.AI 在界面与输出内容上原生支持中文，对国内开发者更友好。</p><p><a href="https://video-s.twimg.com/amplify_video/1947314558168948736/vid/avc1/1332x720/6KZAx_SiK59GbS1b.mp4">https://video-s.twimg.com/amplify_video/1947314558168948736/vid/avc1/1332x720/6KZAx_SiK59GbS1b.mp4</a></p><h2 id="Zread-AI工具概述"><a href="#Zread-AI工具概述" class="headerlink" title="Zread.AI工具概述"></a>Zread.AI工具概述</h2><ul><li><strong>定位</strong> ：面向开源项目的深度阅读与研究平台，可自动索引热门仓库，也支持为冷门项目发起索引申请。</li><li><strong>目标</strong> ：降低阅读复杂代码的门槛，让开发者像读书一样读代码。</li></ul><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-ask-ai.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204336%202806'%3E%3C/svg%3E" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-ask-ai.jpg" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"></a></p><h2 id="Zread-AI核心功能"><a href="#Zread-AI核心功能" class="headerlink" title="Zread.AI核心功能"></a>Zread.AI核心功能</h2><h3 id="项目结构自动解析"><a href="#项目结构自动解析" class="headerlink" title="项目结构自动解析"></a>项目结构自动解析</h3><p>粘贴 GitHub 链接后，系统会生成文件树与模块关系图，帮助用户迅速锁定关键目录。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-01.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203928%202654'%3E%3C/svg%3E" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-01.jpg" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"></a></p><h3 id="Guidebook-可视化指南"><a href="#Guidebook-可视化指南" class="headerlink" title="Guidebook 可视化指南"></a>Guidebook 可视化指南</h3><p>左侧按照“概览→实现细节→最佳实践”的逻辑铺陈，右侧目录随滚动高亮，阅读流畅不跳脱。</p><h3 id="Buzz-社区洞察"><a href="#Buzz-社区洞察" class="headerlink" title="Buzz 社区洞察"></a>Buzz 社区洞察</h3><p>首创 Buzz 面板同步展示最近 commits、活跃 issues 及外部新闻，实时衡量项目活跃度与风险。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-%E7%83%AD%E8%AE%AE.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203902%202476'%3E%3C/svg%3E" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-%E7%83%AD%E8%AE%AE.jpg" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"></a></p><h3 id="多语言-热榜"><a href="#多语言-热榜" class="headerlink" title="多语言 &amp; 热榜"></a>多语言 &amp; 热榜</h3><p>目前已覆盖主流语言（Python、JavaScript 等），并上线“本周热门仓库”榜单供快速探索。</p><h2 id="Zread-AI优势亮点"><a href="#Zread-AI优势亮点" class="headerlink" title="Zread.AI优势亮点"></a>Zread.AI优势亮点</h2><ul><li><strong>中文原生</strong> ：界面、手册与算法均针对中文阅读习惯优化，在理解变量与注释时更自然。</li><li><strong>零配置</strong> ：无需注册或安装，输入网址即可生成手册，个人与小团队免费使用。</li><li><strong>结构+语义双视角</strong> ：AST 解析结合 NLP 摘要，既给出目录，也提炼函数作用与调用关系。</li><li><strong>社区实时性</strong> ：Buzz 数据取自 GitHub API 与精选新闻源，避免文档过时</li></ul><h2 id="Zread-AI典型场景"><a href="#Zread-AI典型场景" class="headerlink" title="Zread.AI典型场景"></a>Zread.AI典型场景</h2><ul><li><strong>新成员入职</strong> ：快速熟悉项目脉络，平均节省约 70 % 上手时间。</li><li><strong>代码评审 &#x2F; Due Diligence</strong> ：用结构图定位风险模块，结合 Buzz 查看未解决 issues。</li><li><strong>技术学习</strong> ：学生或自学者可用它解析 TensorFlow、React 等大型仓库，理解架构设计。</li><li><strong>开源推广</strong> ：维护者将生成的手册嵌入 README，提升外部贡献者体验。</li></ul><h2 id="Zread-AI快速上手"><a href="#Zread-AI快速上手" class="headerlink" title="Zread.AI快速上手"></a>Zread.AI快速上手</h2><ol><li>访问 <a href="https://zread.ai/">https://zread.ai/</a></li><li>粘贴目标仓库链接，点击 <strong>Analyze</strong> 。</li><li>等待数秒，浏览左右分栏输出；如需关注动态，可切换到 <strong>Buzz</strong> 页签。</li></ol><h2 id="Zread-AI注意事项与发展方向"><a href="#Zread-AI注意事项与发展方向" class="headerlink" title="Zread.AI注意事项与发展方向"></a>Zread.AI注意事项与发展方向</h2><p>当前版本仅支持公开仓库，私有仓库与比对多版本功能仍在规划中。官方透露后续会开放模板定制与跨仓库对比，进一步提升团队协作效率。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-main.jpg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201196%201744'%3E%3C/svg%3E" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/Zread.AI%EF%BC%9A%E4%B8%80%E9%94%AE%E5%B0%86GitHub-%E9%A1%B9%E7%9B%AE%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%BB%93%E6%9E%84%E5%8C%96%E9%80%9A%E7%86%9F%E6%98%93%E6%87%82%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C%E7%9A%84%E5%BC%80%E6%BA%90%E7%A5%9E%E5%99%A8-main.jpg" alt="Zread.AI：一键将GitHub 项目转化为结构化通熟易懂中文手册的开源神器"></a></p><hr><h2 id="Zread-AI官网地址"><a href="#Zread-AI官网地址" class="headerlink" title="Zread.AI官网地址"></a>Zread.AI官网地址</h2><p>借助 Zread.AI，开发者终于可以摆脱“先翻 README 再满仓搜索”的低效模式，让 AI 替你梳理结构、整合社区动态，再把时间投入真正的创新。</p><p>官网地址：<a href="https://zread.ai/">https://zread.ai/</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 Zread.AI介绍&lt;/p&gt;
-&lt;p&gt;2 Zread.AI工具概述&lt;/p&gt;
-&lt;p&gt;3 Zread.AI核心功能&lt;/p&gt;
-&lt;p&gt;3.1 项目结构自动解析&lt;/p&gt;
-&lt;p&gt;3.2 Guidebook 可视化指南&lt;/</summary>
-      
-    
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
-    
-    
-    <category term="GitHub项目" scheme="https://liuxingzhe.github.io/blog//blog/tags/GitHub%E9%A1%B9%E7%9B%AE/"/>
-    
-    <category term="AI工具" scheme="https://liuxingzhe.github.io/blog//blog/tags/AI%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Color Generator Kigen：颜色生成器 一键打造专业级设计系统配色方案</title>
-    <link href="https://liuxingzhe.github.io/blog//blog/2025/07/28/colorgeneratorkigen-yan-se-sheng-cheng-qi-yi-jian-da-zao-zhuan-ye-ji-she-ji-xi-tong-pei-se/"/>
-    <id>https://liuxingzhe.github.io/blog//blog/2025/07/28/colorgeneratorkigen-yan-se-sheng-cheng-qi-yi-jian-da-zao-zhuan-ye-ji-she-ji-xi-tong-pei-se/</id>
-    <published>2025-07-29T02:12:13.000Z</published>
-    <updated>2025-07-31T07:00:40.333Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>文章目录</strong> 显示</p><p>1 Color Generator Kigen简介</p><p>1.1 支持的色彩格式</p><p>2 Color Generator核心功能</p><p>2.1 多算法配色</p><p>2.2 可调阴影梯度</p><p>2.3 多格式导出</p><p>2.4 预设设计系统色板</p><p>3 Color Generator适用人群与场景</p><p>4 Color Generator使用优势</p><p>5 Color Generator快速上手指南</p><p>6 Color Generator Kigen官网地址</p><p>在配色效率与一致性日益重要的今天，Kigen 颜色生成器为设计师与前端开发者提供了快速、可扩展且语义清晰的调色解决方案。它借助预设的 Material、Fluent、Tailwind、Polaris 等热门设计系统原始色板，结合多种算法与现代色彩空间，帮助团队在几分钟内生成可落地的品牌色调，并直接导出到 Figma、Tailwind CSS 及原生 CSS 变量。</p><h2 id="Color-Generator-Kigen简介"><a href="#Color-Generator-Kigen简介" class="headerlink" title="Color Generator Kigen简介"></a>Color Generator Kigen简介</h2><p>Color Generator Kigen是一款在线调色板生成器，同时也是一枚 Figma 插件，可在插件面板里一键创建设计系统变量、样式与文档，省去手动配置的繁琐流程。工具界面允许输入 RGB 数值，自由切换不同生成算法，并实时预览配色结果。</p><p><a href="https://www.ahhhhfs.com/wp-content/uploads/2025/07/Color-Generator-Kigen%EF%BC%9A%E9%A2%9C%E8%89%B2%E7%94%9F%E6%88%90%E5%99%A8-%E4%B8%80%E9%94%AE%E6%89%93%E9%80%A0%E4%B8%93%E4%B8%9A%E7%BA%A7%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88.jpg"><img src="//www.ahhhhfs.com/wp-content/uploads/2025/07/Color-Generator-Kigen%EF%BC%9A%E9%A2%9C%E8%89%B2%E7%94%9F%E6%88%90%E5%99%A8-%E4%B8%80%E9%94%AE%E6%89%93%E9%80%A0%E4%B8%93%E4%B8%9A%E7%BA%A7%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88.jpg" alt="Color Generator Kigen：颜色生成器 一键打造专业级设计系统配色方案"></a></p><h3 id="支持的色彩格式"><a href="#支持的色彩格式" class="headerlink" title="支持的色彩格式"></a>支持的色彩格式</h3><ul><li>HEX、RGBA、HSL 与 OKLCH 四种格式同步输出，满足设计到开发的全链路需求。</li><li>OKLCH 采用感知亮度模型，低对比度陷阱更少，且原生支持 P3 广色域，适合未来的无障碍与高保真场景。在线转换器可随时将现有 HEX&#x2F;HSL 转为 OKLCH。</li></ul><h2 id="Color-Generator核心功能"><a href="#Color-Generator核心功能" class="headerlink" title="Color Generator核心功能"></a>Color Generator核心功能</h2><h3 id="多算法配色"><a href="#多算法配色" class="headerlink" title="多算法配色"></a>多算法配色</h3><p>用户可在界面中切换多种配色算法，快速调试“对比分移”“互补色”等效果。</p><h3 id="可调阴影梯度"><a href="#可调阴影梯度" class="headerlink" title="可调阴影梯度"></a>可调阴影梯度</h3><ul><li>Shade Count 默认 11 级，让浅色到深色过渡更平滑。</li><li>Naming Pattern 遵循 50-900 阶梯，与 Tailwind CSS 的色阶一致；这一命名体系最早来自 Material&#x2F;Tailwind 社区，易于在 token 中引用。</li></ul><h3 id="多格式导出"><a href="#多格式导出" class="headerlink" title="多格式导出"></a>多格式导出</h3><p>生成结果可一键导出为：</p><ul><li>CSS&#x2F;SCSS 变量</li><li>Tailwind v4 token 文件</li><li>JSON 配色清单<br>方便在任何技术栈中复用。</li></ul><h3 id="预设设计系统色板"><a href="#预设设计系统色板" class="headerlink" title="预设设计系统色板"></a>预设设计系统色板</h3><p>内置 Material、Fluent、Tailwind、Polaris 等热门设计系统的原始调色板，供品牌直接套用或二次扩展。</p><h2 id="Color-Generator适用人群与场景"><a href="#Color-Generator适用人群与场景" class="headerlink" title="Color Generator适用人群与场景"></a>Color Generator适用人群与场景</h2><ul><li><strong>UI&#x2F;UX 设计师</strong> ：需要快速建立品牌基准色、语义色并在 Figma 中生成文档。</li><li><strong>前端开发者</strong> ：希望获得带有 Tailwind CSS 标准阶梯的 token 文件，减少手写变量。</li><li><strong>品牌与增长团队</strong> ：在营销活动中，需要灵活调整对比度与情绪色调，提高视觉一致性。</li></ul><h2 id="Color-Generator使用优势"><a href="#Color-Generator使用优势" class="headerlink" title="Color Generator使用优势"></a>Color Generator使用优势</h2><ul><li><strong>效率</strong> ：预设色板 + 一键导出，初次搭建设计系统仅需数分钟。</li><li><strong>一致性</strong> ：跨 HEX、OKLCH、CSS 变量与 Tailwind token，避免手动换算误差。</li><li><strong>可访问性</strong> ：借助 OKLCH 的感知亮度机制，轻松生成高对比度配色方案。</li></ul><h2 id="Color-Generator快速上手指南"><a href="#Color-Generator快速上手指南" class="headerlink" title="Color Generator快速上手指南"></a>Color Generator快速上手指南</h2><ol><li>打开 Kigen 在线页面或在 Figma 安装插件。</li><li>选择基础色或从预设设计系统中挑选色板。</li><li>调整算法、对比分移与 Shade Count，实时预览结果。</li><li>检查 OKLCH 及常规格式数值是否满足无障碍标准。</li><li>点击导出，获取 CSS &#x2F; Tailwind &#x2F; JSON 文档，直接集成到项目。</li></ol><hr><h2 id="Color-Generator-Kigen官网地址"><a href="#Color-Generator-Kigen官网地址" class="headerlink" title="Color Generator Kigen官网地址"></a>Color Generator Kigen官网地址</h2><p>借助 Kigen，配色再也不是“拍脑袋”式的灵感碰撞，而是兼顾美学、可用性与工程实现的系统化流程，为品牌色彩资产打下坚实基础。</p><p>地址：<a href="https://kigen.design/color">https://kigen.design/color</a></p><p>其他类似工具</p><p><a href="https://www.ahhhhfs.com/67531/">colorsandfonts：Web 开发人员和设计师的颜色和排版工具</a></p><p><a href="https://www.ahhhhfs.com/65218/">AI 调色板生成器：Colorify Rocks</a></p><p><a href="https://www.ahhhhfs.com/42281/">AI Colors-在线AI 调色板生成器 输入关键词就能配色</a></p><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a><em>相关</em></h3><p>__</p><ol><li>转载请保留原文链接谢谢！ </li><li>本站所有资源文章出自互联网收集整理，本站不参与制作，如果侵犯了您的合法权益，请联系本站我们会及时删除。 </li><li>本站发布资源来源于互联网，可能存在水印或者引流等信息，请用户擦亮眼睛自行鉴别，做一个有主见和判断力的用户。</li><li>本站资源仅供研究、学习交流之用，若使用商业用途，请购买正版授权，否则产生的一切后果将由下载用户自行承担。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;文章目录&lt;/strong&gt; 显示&lt;/p&gt;
-&lt;p&gt;1 Color Generator Kigen简介&lt;/p&gt;
-&lt;p&gt;1.1 支持的色彩格式&lt;/p&gt;
-&lt;p&gt;2 Color Generator核心功能&lt;/p&gt;
-&lt;p&gt;2.1 多算法配色&lt;/p&gt;
-&lt;p&gt;2.2 可调阴</summary>
-      
-    
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/categories/%E8%B6%A3%E7%AB%99/"/>
-    
-    
-    <category term="趣站" scheme="https://liuxingzhe.github.io/blog//blog/tags/%E8%B6%A3%E7%AB%99/"/>
     
   </entry>
   
